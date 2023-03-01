@@ -1,5 +1,5 @@
-public class Property {
-    public int[] properties;
+public class Property extends BoardSpaceType {
+    //public int[] properties;
     public String propertyName;
     public String color;
     public int spaceIdentifier;
@@ -24,6 +24,8 @@ public class Property {
         this.color = color;
         this.oneHouse = oneHouse;
     }
+
+    
 
     //brown properties 
     Property rodney = new Property("Rodney's House", 1, 60,2, 30, 2.0, "brown", 10);
@@ -84,4 +86,25 @@ public class Property {
     
     Property raymond = new Property("Raymond's House", 39, 400, 50, 200, 2.8, "dark blue", 200);
 
+
+    //utilities
+    //-1 or NA means it is not applicible for this specific property type
+        //waterworks
+        Property ableSis = new Property("Able Sisters", 28 , 150, -1, 75, -1, "NA", -1);
+
+        //electrical
+        Property nooksCranny = new Property("Nooks Cranny", 12, 150, -1, 75, -1, "NA", -1);
+    
+    //railroads
+    //railroad one- idk what we want to make it match the theme yet
+    Property rr1 = new Property("Railroad", 5, 200, 25, 100, 2.0, "NA", -1);
+
+    //railroad two- idk what we want to make it match the theme yet
+    Property rr2 = new Property("Railroad", 15, 200, 25, 100, 2.0, "NA", -1);
+
+    //railroad three- idk what we want to make it match the theme yet
+    Property rr3 = new Property("Railroad", 25, 200, 25, 100, 2.0, "NA", -1);
+
+    //railroad four- idk what we want to make it match the theme yet
+    Property rr4 = new Property("Railroad", 5, 200, 35, 100, 2.0, "NA", -1);
 }

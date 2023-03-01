@@ -1,9 +1,10 @@
 public class Board {
     private final int spaces = 40;
-    private final Square[] board;
+    //private final Square[] board;
+    private BoardSpaceType[] board = new BoardSpaceType[spaces];
 
     //constructor to remove later
-    public Board(Square[] board) {
+    public Board(BoardSpaceType[] board) {
         this.board = board;
     }
 
@@ -12,6 +13,10 @@ public class Board {
         return player;
     }
 
+    //get board space type function - is it a property, community chest, etc
+    public BoardSpaceType getSpaceType(int spaceIdentifier) {
+
+    }
     //please god just kill me
     
 }
