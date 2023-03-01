@@ -26,48 +26,62 @@ public class Property {
     }
 
     //brown properties 
-    Property rodney = new Property("Rodney's House", 1, 60, 8, 30, 3.0, "brown", 10);
+    Property rodney = new Property("Rodney's House", 1, 60,2, 30, 2.0, "brown", 10);
 
-    Property rocket = new Property("Rocket's House", 2, 60, 10, 30, 3.0, "brown", 20);
+    Property rocket = new Property("Rocket's House", 3, 60, 4, 30, 2.3, "brown", 20);
 
 
     //light blue properties
+    Property melba = new Property("Melba's House", 6, 100, 6, 50, 2.6, "light blue", 30);
 
-    // brown properties - shitty ones
-    //Node rodney = new Node(1, )
-    // rodney
-    // rocket
-    // blue properties - normal
-    // marina
-    // mitzi
-    // melbaS
+    Property marina = new Property("Marina's House", 8, 100, 6, 50, 2.6, "light blue", 30);
 
-    // pink properties - peppy
-    // rosie
-    // chrissy
-    // flora
+    Property mitzi = new Property("Mitzi's House", 9, 120, 8, 60, 2.6, "light blue", 40);
 
-    // organe properties - lazy
-    // bones
-    // cephalobot
-    // hopkins
+   
+    //pink properties
+    Property flora = new Property("Flora's House", 11, 140, 10, 70, 3.0, "pink", 50);
 
-    // red properties - cranky
-    // octavin
-    // kabuki
-    // fang
+    Property rosie = new Property("Rosie's House", 13, 140, 10, 70, 3.0, "pink", 50);
 
-    // yellow properties - i actually hate sisterly so these are random
-    // shino
-    // stitches
-    // bob
-    // green properties - snooty
-    // francine
-    // judy
-    // diana
+    Property chrissy = new Property("Chrissy's House", 15, 160, 12, 80, 2.8, "pink", 60);
+   
 
-    // dark blue properties - populat ones for some reason
-    // raymond
-    // marshall
+    //orange properties
+    Property bones = new Property("Bones House", 15, 180, 14, 90, 2.5, "orange", 70);
+
+    Property cephalobot = new Property("Cephalobot's House", 17, 180, 14, 90, 2.5, "orange", 70);
+
+    Property hopkins = new Property("Hopkin's House", 18, 200, 16, 100, 2.9, "orange", 80);
+
+
+    //red properties
+    Property octavin = new Property("Octavin's House", 19, 220, 18, 110, 2.8, "red", 90);
+
+    Property fang = new Property("Fang's House", 21, 220, 18, 110, 2.8, "red", 90);
+
+    Property kabuki = new Property("Kabuki's House", 22, 240, 20, 120, 2.8, "red", 100);
+   
+
+    //yellow properties
+    Property stitches = new Property("Stiches's House", 22, 260, 22, 130, 2.8, "yellow", 110);
+
+    Property shino = new Property("Shino's House", 25, 260, 22, 130, 2.8, "yellow", 110);
+
+    Property bob = new Property("Bob's House", 27, 280, 24, 140, 2.8, "yellow", 120);
+    
+
+    //green properties
+    Property francine = new Property("Francine's House", 29, 300, 26, 150, 2.8, "green", 130);
+
+    Property judy = new Property("Judy's House", 30, 300, 26, 150, 2.8, "green", 130);
+
+    Property diana = new Property("Diana's House", 32, 320, 28, 160, 2.8, "green", 150);
+    
+    
+    //dark blue properties
+    Property marshall = new Property("Marshall's House", 35, 350, 35, 175, 2.8, "dark blue", 175);
+    
+    Property raymond = new Property("Raymond's House", 37, 400, 50, 200, 2.8, "dark blue", 200);
 
 }
