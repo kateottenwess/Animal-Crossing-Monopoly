@@ -2,6 +2,9 @@ public class Player {
     private String name;
     private int boardPos;
     private int bells;
+    
+    //indices are the space identifiers, the value in the array will be either 0 (false-not owned) or 1 (true-owned)
+    private int[] properties;
 
     public Player(String name) {
         this.name = name;
