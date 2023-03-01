@@ -6,10 +6,14 @@ public class Board {
     public Board(Square[] board) {
         this.board = board;
     }
-    public Player getPlayer(Square space, Player player){
+
+    public Player getPlayer(Square space, Player player) {
         //return player on square if we need this idfk
         return player;
     }
+
+    //please god just kill me
+    
 }
 
 
