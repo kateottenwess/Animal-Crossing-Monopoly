@@ -3,5 +3,5 @@ public class BoardSpaceType {
     Property p;
     CommunityChest cc;
     Chance c;
-    Jail j;
+    MiscSpaces m;
 }

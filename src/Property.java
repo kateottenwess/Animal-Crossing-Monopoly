@@ -1,5 +1,5 @@
 public class Property extends BoardSpaceType {
-    //public int[] properties;
+    public int[] properties;
     public String propertyName;
     public String color;
     public int spaceIdentifier;
@@ -24,7 +24,6 @@ public class Property extends BoardSpaceType {
         this.color = color;
         this.oneHouse = oneHouse;
     }
-
     
 
     //brown properties 
