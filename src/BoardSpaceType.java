@@ -4,4 +4,5 @@ public class BoardSpaceType {
     CommunityChest cc;
     Chance c;
     MiscSpaces m;
+    Jail j;
 }

@@ -35,4 +35,9 @@ public class Player {
     public void setBells(int bells) {
         this.bells = bells;
     }
+
+    public int hasProperty(Player player, Property property) {
+        //wip
+        return 1;
+    }
 }
