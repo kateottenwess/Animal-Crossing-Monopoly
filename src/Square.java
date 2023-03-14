@@ -2,17 +2,20 @@ public class Square {
     private String name;
     private int position;
     private int price;
-    private Player owner;
+    private Player player;
     private PropertyType propertyType;
     private Property property;
+    private BoardSpaceType spaceType;
 
-    public Square(String name, int position, int price, PropertyType propertyType, Property property) {
+    public Square(String name, int position, int price, PropertyType propertyType, Property property, 
+    BoardSpaceType spaceType) {
         this.name = name;
         this.position = position;
         this.price = price;
-        this.owner = null;
+        this.player = null;
         this.propertyType = propertyType;
         this.property = property;
+        this.spaceType = spaceType;
     }
 
     public String getName() {
@@ -28,7 +31,7 @@ public class Square {
     }
 
     public Player getPlayer() {
-        return owner;
+        return player;
     }
 
     public PropertyType getPropertyType() {
@@ -36,11 +39,15 @@ public class Square {
     }
 
     public Property getProperty() {
-        return property; 
+        return property;
+    }
+    
+    public BoardSpaceType getSpaceType(){
+        return spaceType;
     }
 
-    public boolean isOwned() {
-        if (owner != null) {
+    public boolean hasPlayer(Square position, Player player) {
+        if (position.getPlayer() != null) {
             return true;
         } else {
             return false;
