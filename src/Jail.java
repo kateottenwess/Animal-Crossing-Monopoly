@@ -1,4 +1,4 @@
-public class Jail {
+public class Jail extends MiscSpaces {
     //class to configure the jail code for use in board/space classes
     private Square square;
     private BoardSpaceType spaceType;

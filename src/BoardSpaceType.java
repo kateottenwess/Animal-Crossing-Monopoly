@@ -1,8 +1,10 @@
 public class BoardSpaceType {
     //i need to look into more i have forgotten so much about inheritance
     Property p;
-    CommunityChest cc;
-    Chance c;
     MiscSpaces m;
-    Jail j;
+
+    public BoardSpaceType () {
+        p = null;
+        m = null;
+    }
 }

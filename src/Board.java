@@ -5,19 +5,15 @@ public class Board extends BoardSpaceType {
 
     //constructor
     public Board() {
+        BoardSpaceType b = new BoardSpaceType();
         int i = 0;
         while (i < spaces) {
-            if (i == 0 || i == 4 || i == 10 || i == 20 || i == 30 || i == 38) {
-                board[i] = m;
+            if (i == 0 || i ==2 || i == 4 || i == 7 || i == 10 || i == 17 || i == 20 || i == 22 || i == 30 || i == 33 || i ==  36 || i == 38) {
+                board[i] = b.m.getType(i);
             }
-            else if (i == 2 || i == 17 || i == 33) {
-                board[i] = cc;
-            }
-            else if (i == 7 || i == 22 || i == 36) {
-                board[i] = c;
-            }
+            
             else {
-                board[i] = p;
+                board[i] = b.p.getProperty(i);
             }
 
             i++;
@@ -40,6 +36,17 @@ public class Board extends BoardSpaceType {
 
         return type;
     } 
+
+    //return the space info of the space
+    public BoardSpaceType returnSpaceInfo(int spaceIdentifier) {
+        if (board[spaceIdentifier].p.getProperty(spaceIdentifier) != null) {
+            return board[spaceIdentifier].p.getProperty(spaceIdentifier);
+        }
+        else {
+            return board[spaceIdentifier].m.getType(spaceIdentifier);
+        }
+    }
+
 }
 
 
