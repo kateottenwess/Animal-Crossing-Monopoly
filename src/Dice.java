@@ -1,6 +1,6 @@
 public class Dice {
 
-    private static int dice1;
+    private int dice1;
     private int dice2;
     private int numDouble = 0;
 
