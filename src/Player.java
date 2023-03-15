@@ -40,4 +40,14 @@ public class Player {
         //wip
         return 1;
     }
+
+    // public void buyProperty(int spaceIdentifier) {
+        
+    // }
+
+    // public void mortageProperty(int spaceIdentifier) {}
+
+    // public int rollDice() {
+
+    // }
 }
