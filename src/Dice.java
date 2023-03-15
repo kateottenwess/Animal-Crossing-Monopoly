@@ -1,15 +1,21 @@
 public class Dice {
 
     private static int dice1;
-    private static int dice2;
-    private static int numDouble = 0;
+    private int dice2;
+    private int numDouble = 0;
 
-    public static int rollDice() {
+    public int rollDice1() {
 
         dice1 = (int) (Math.random() * 6 + 1);
+        
+        return dice1;
+    }
+
+    public int rollDice2() {
+
         dice2 = (int) (Math.random() * 6 + 1);
 
-        return dice1 + dice2;
+        return dice2;
     }
     
     public boolean doubleRoll() {
