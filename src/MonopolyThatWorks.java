@@ -227,6 +227,19 @@ public class MonopolyThatWorks implements MouseListener {
             }
         }
 
+        //Bar up top
+        //Properties Button
+        if ((x >= 365) && (x <= 530)){
+            if ((y >= 10) && (y <= 60)){
+                System.out.println("Properties Button");
+            }
+        }
+        //Cards Button
+        if ((x >= 803) && (x <= 932)){
+            if ((y >= 10) && (y <= 60)){
+                System.out.println("Cards Button");
+            }
+        }
 
 //        throw new UnsupportedOperationException("Unimplemented method 'mouseClicked'");
     }
