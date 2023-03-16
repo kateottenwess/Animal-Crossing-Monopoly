@@ -1,3 +1,9 @@
+/**********************************************************************
+ * Class stores monopoly board and runs game logic
+ *
+ * @author Kate Ottenwess, Kira B, Abby Svec
+ * @version Winter 2023
+ **********************************************************************/
 public class Board extends BoardSpaceType {
     private final int spaces = 40;
     //private final Square[] board;

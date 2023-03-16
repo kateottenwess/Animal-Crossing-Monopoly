@@ -1,3 +1,9 @@
+/**********************************************************************
+ * Class stores jail capabilities and actions
+ *
+ * @author Kate Ottenwess, Kira B, Abby Svec
+ * @version Winter 2023
+ **********************************************************************/
 public class Jail extends MiscSpaces {
     //class to configure the jail code for use in board/space classes
     private Square square;

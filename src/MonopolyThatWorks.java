@@ -1,3 +1,9 @@
+/**********************************************************************
+ * GUI for the monopoly board
+ *
+ * @author Kate Ottenwess, Kira B, Abby Svec
+ * @version Winter 2023
+ **********************************************************************/
 /*import javax.swing.*;
 import java.awt.event.*;
 import java.util.*;
@@ -218,20 +224,6 @@ public class MonopolyThatWorks implements MouseListener {
             }
             else if (y > 690){
                 System.out.println("PASS GO");
-            }
-        }
-
-        //Bar up top
-        //Properties Button
-        if ((x >= 365) && (x <= 530)){
-            if ((y >= 10) && (y <= 60)){
-                System.out.println("Properties Button");
-            }
-        }
-        //Cards Button
-        if ((x >= 803) && (x <= 932)){
-            if ((y >= 10) && (y <= 60)){
-                System.out.println("Cards Button");
             }
         }
 
