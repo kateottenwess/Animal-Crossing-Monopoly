@@ -11,9 +11,10 @@ public class Dice {
     private int numDouble = 0;
 
     
-    /** 
+    /*******************************************************************
+     * Method to roll dice 1
      * @return int
-     */
+     ******************************************************************/
     public int rollDice1() {
 
         dice1 = (int) (Math.random() * 6 + 1);
@@ -21,6 +22,11 @@ public class Dice {
         return dice1;
     }
 
+
+    /*******************************************************************
+     * Method to roll dice 2
+     * @return int
+     ******************************************************************/
     public int rollDice2() {
 
         dice2 = (int) (Math.random() * 6 + 1);
@@ -28,6 +34,11 @@ public class Dice {
         return dice2;
     }
     
+
+    /*******************************************************************
+     * Method to determine if a double was rolled
+     * @return boolean true if double was rolled
+     ******************************************************************/
     public boolean doubleRoll() {
         if (dice1 == dice2) {
             numDouble++;
@@ -38,6 +49,11 @@ public class Dice {
         }
     }
 
+
+    /*******************************************************************
+     * Method to determine if three doubles were rolled
+     * @return boolean true if 3 doubles were rolled
+     ******************************************************************/
     public boolean doubleJail() {
         if (numDouble == 3) {
             return true;
