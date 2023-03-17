@@ -325,7 +325,7 @@ public class Property extends BoardSpaceType {
         this.owned = owned;
     }
 
-    //if 1 is return, the rent cost could be increased, else it cant be increased
+    
     /******************************************************************
      * Method to increase the rent of a property if houses are purchased
      * If 1 is return, the rent cost could be increased, else it can't  * be increased
