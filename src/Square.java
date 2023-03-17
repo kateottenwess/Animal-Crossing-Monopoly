@@ -16,6 +16,10 @@ public class Square {
         this.spaceType = spaceType;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getName() {
         return name;
     }

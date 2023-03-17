@@ -10,6 +10,10 @@ public class Dice {
     private int dice2;
     private int numDouble = 0;
 
+    
+    /** 
+     * @return int
+     */
     public int rollDice1() {
 
         dice1 = (int) (Math.random() * 6 + 1);

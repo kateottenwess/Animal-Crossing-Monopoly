@@ -150,6 +150,11 @@ public class Property extends BoardSpaceType {
     // railroad four- idk what we want to make it match the theme yet
     Property rr4 = new Property("Railroad", 35, 200, 35, 100, 2.0, "NA", -1, false);
 
+    
+    /** 
+     * @param spaceIdentifier
+     * @return Property
+     */
     // fill the properties array
     public Property getProperty(int spaceIdentifier) {
         switch (spaceIdentifier) {

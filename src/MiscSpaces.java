@@ -12,6 +12,11 @@ public class MiscSpaces extends BoardSpaceType {
     public MiscSpaces luxuryTax;
     public MiscSpaces jail;
 
+    
+    /** 
+     * @param spaceIdentifier
+     * @return MiscSpaces
+     */
     public MiscSpaces getType(int spaceIdentifier) {
         switch (spaceIdentifier) {
             case 0:

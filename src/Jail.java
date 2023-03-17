@@ -14,6 +14,10 @@ public class Jail extends MiscSpaces {
         this.spaceType = spaceType;
     }
     
+    
+    /** 
+     * @param jailed
+     */
     public void jailPlayer(Player jailed) {
         
     }

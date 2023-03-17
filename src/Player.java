@@ -18,6 +18,10 @@ public class Player {
         this.boardPos = 0;
     }
     
+    
+    /** 
+     * @return String
+     */
     public String getName() {
         return name;
     }
