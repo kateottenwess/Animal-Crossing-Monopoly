@@ -198,7 +198,7 @@ commit 72447b94cd3be257b32fa7d98c677e2186f28db2
 Author: Kira <breitenk@mail.gvsu.edu>
 Date:   Tue Feb 28 09:15:47 2023 -0500
 
-    changing shit to be able to push from IDEs for java
+    changing stuff to be able to push from IDEs for java
 
 commit 7558bad913a12f36dbcbbf61323dd4d9b929b151
 Author: kirab24 <112416483+kirab24@users.noreply.github.com>
