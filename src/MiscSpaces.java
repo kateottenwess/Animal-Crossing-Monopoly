@@ -31,7 +31,7 @@ public class MiscSpaces extends BoardSpaceType {
      * @param spaceIdentifier
      * @return MiscSpaces
      ************************************************************/
-    public MiscSpaces getType(int spaceIdentifier) {
+    public MiscSpaces getType(final int spaceIdentifier) {
         switch (spaceIdentifier) {
             case 0:
                 return go;

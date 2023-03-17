@@ -14,17 +14,17 @@ public class Jail extends MiscSpaces {
     /*******************************************************************
     * Constructor that sets the space type and the square
     ******************************************************************/
-    public Jail(Square square, BoardSpaceType spaceType) {
+    public Jail(final Square square, final BoardSpaceType spaceType) {
         this.square = square;
         this.spaceType = spaceType;
     }
-    
-    
+
     /******************************************************************
      * Method to jail player
+     * 
      * @param jailed Player
      ******************************************************************/
-    public void jailPlayer(Player jailed) {
+    public void jailPlayer(final Player jailed) {
         
     }
     

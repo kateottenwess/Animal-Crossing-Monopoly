@@ -1,4 +1,4 @@
-/**********************************************************************
+/**********************************************************************.
  * Class stores the dice functionailty for the game
  *
  * @author Kate Ottenwess, Kira B, Abby Svec
@@ -55,10 +55,6 @@ public class Dice {
      * @return boolean true if 3 doubles were rolled
      ******************************************************************/
     public boolean doubleJail() {
-        if (numDouble == 3) {
-            return true;
-        } else {
-            return false;
-        }
+        return numDouble == 3;
     }
 }
