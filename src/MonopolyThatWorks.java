@@ -31,6 +31,12 @@ import java.awt.*;
 
 public class MonopolyThatWorks implements MouseListener { 
 
+    
+    /** 
+     * @param args
+     * @throws IOException
+     * @throws URISyntaxException
+     */
     public static void main(String[] args) throws IOException, URISyntaxException {
 
         new MonopolyThatWorks();
@@ -207,7 +213,7 @@ public class MonopolyThatWorks implements MouseListener {
             else if ((y > 366) && (y <= 422)){
                 System.out.println("Francine's House");
             }
-            else if ((y > 422) && (y <= 480)){
+            else if ((y > 422) && (y <= 4)){
                 System.out.println("Short Line");
             }
             else if ((y > 480) && (y <= 532)){
@@ -244,76 +250,28 @@ public class MonopolyThatWorks implements MouseListener {
 //        throw new UnsupportedOperationException("Unimplemented method 'mouseClicked'");
     }
 
-    @Override
-    public void mousePressed(MouseEvent e) { }
+        @Override
+        public void mousePressed(MouseEvent e) { }
 
-    @Override
-    public void mouseReleased(MouseEvent e) { }
+        @Override
+        public void mouseReleased(MouseEvent e) { }
 
-    @Override
-    public void mouseEntered(MouseEvent e) { }
+        @Override
+        public void mouseEntered(MouseEvent e) { }
 
-    @Override
-    public void mouseExited(MouseEvent e) { }
+        @Override
+        public void mouseExited(MouseEvent e) { }
 
 
-        //Locations for game pieces
+    //Set up grid
+    //private void setUpGrid(){}
 
-        //Bottom of board
-    Point passGo1 = new Point(945, 768);
-    Point rodneysHouse = new Point(808, 768);
-    Point cc1 = new Point(728, 768);
-    Point rocketsHouse = new Point(651, 768);
-    Point incomeTax = new Point(574, 768);
-    Point readingRailroad = new Point(493, 768);
-    Point melbasHouse = new Point(259, 768);
-    Point chance1 = new Point(336, 768);
-    Point marinasHouse = new Point(259, 768);
-    Point mitzisHouse = new Point(181, 768);
-    Point jailSpace = new Point(20, 768);
-
-    //Left side of board
-    Point chrissysHouse = new Point(60, 656);
-    Point electricCompany = new Point(60, 596);
-    Point rosiesHouse = new Point(60, 544);
-    Point florasHouse = new Point(60, 495);
-    Point pennsylvaniaRailroad = new Point(60, 444);
-    Point cephalobotsHouse = new Point(60, 388);
-    Point cc2 = new Point(60, 281);
-    Point hopkinsHouse = new Point(60, 281);
-    Point bonesHouse = new Point(60, 226);
-    Point freeDocking = new Point(73, 138);
-
-    //Top of board
-    Point octaviasHouse = new Point(181, 120);
-    Point chance2 = new Point(257, 120);
-    Point fangsHouse = new Point(336, 120);
-    Point kabukisHouse = new Point(413, 120);
-    Point boRailroad = new Point(493, 120);
-    Point stitchesHouse = new Point(574, 120);
-    Point shinosHouse = new Point(651, 120);
-    Point waterWorks = new Point(728, 120);
-    Point bobsHouse = new Point(808, 120);
-
-    //Right side of board
-    Point goToJail = new Point(945, 143);
-    Point judysHouse = new Point(945, 233);
-    Point dianasHouse = new Point(945, 287);
-    Point cc3 = new Point(945, 340);
-    Point francinesHouse = new Point(945, 394);
-    Point shortLine = new Point(945, 451);
-    Point chance3 = new Point(945, 506);
-    Point marshallsHouse = new Point(945, 559);
-    Point luxuryTax = new Point(945, 611);
-    Point raymondsHouse = new Point(945, 663);
-
-    //array of spaces' locations
-    Point spacesArray[] = {passGo1,rodneysHouse,cc1,rocketsHouse,incomeTax,readingRailroad,melbasHouse,
-        chance1,marinasHouse,mitzisHouse,jailSpace,chrissysHouse,electricCompany,rosiesHouse,florasHouse,
-        pennsylvaniaRailroad,cephalobotsHouse,cc2,hopkinsHouse,bonesHouse,freeDocking,octaviasHouse,chance2,
-        fangsHouse,kabukisHouse,boRailroad,stitchesHouse,shinosHouse,waterWorks,bobsHouse,goToJail,judysHouse,
-        dianasHouse,cc3,francinesHouse,shortLine,chance3,marshallsHouse,luxuryTax,raymondsHouse};
-
+    //ACTION EVENT
+    /*@Override
+    public void actionPerformed(ActionEvent e) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
+    }*/
 
     
 }
