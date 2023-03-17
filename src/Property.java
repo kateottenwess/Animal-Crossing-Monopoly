@@ -77,85 +77,101 @@ public class Property extends BoardSpaceType {
         this.owned = owned;
     }
 
-    // brown properties
+    
     Property rodney = new Property("Rodney's House", 1, 60, 2, 30, 2.0, "brown", 10, false);
+
 
     Property rocket = new Property("Rocket's House", 3, 60, 4, 30, 2.3, "brown", 20, false);
 
-    // light blue properties
+    
     Property melba = new Property("Melba's House", 6, 100, 6, 50, 2.6, "light blue", 30, false);
+
 
     Property marina = new Property("Marina's House", 8, 100, 6, 50, 2.6, "light blue", 30, false);
 
+
     Property mitzi = new Property("Mitzi's House", 9, 120, 8, 60, 2.6, "light blue", 40, false);
 
-    // pink properties
+    
+
     Property flora = new Property("Flora's House", 11, 140, 10, 70, 3.0, "pink", 50, false);
+
 
     Property rosie = new Property("Rosie's House", 13, 140, 10, 70, 3.0, "pink", 50, false);
 
+
     Property chrissy = new Property("Chrissy's House", 14, 160, 12, 80, 2.8, "pink", 60, false);
 
-    // orange properties
+    
     Property bones = new Property("Bones House", 16, 180, 14, 90, 2.5, "orange", 70, false);
+
 
     Property cephalobot = new Property("Cephalobot's House", 18, 180, 14, 90, 2.5, "orange", 70, false);
 
+
     Property hopkins = new Property("Hopkin's House", 19, 200, 16, 100, 2.9, "orange", 80, false);
 
-    // red properties
+    
     Property octavin = new Property("Octavin's House", 21, 220, 18, 110, 2.8, "red", 90, false);
+
 
     Property fang = new Property("Fang's House", 23, 220, 18, 110, 2.8, "red", 90, false);
 
+
     Property kabuki = new Property("Kabuki's House", 24, 240, 20, 120, 2.8, "red", 100, false);
 
-    // yellow properties
+    
     Property stitches = new Property("Stiches's House", 26, 260, 22, 130, 2.8, "yellow", 110, false);
+
 
     Property shino = new Property("Shino's House", 27, 260, 22, 130, 2.8, "yellow", 110, false);
 
+
     Property bob = new Property("Bob's House", 29, 280, 24, 140, 2.8, "yellow", 120, false);
 
-    // green properties
+    
     Property francine = new Property("Francine's House", 31, 300, 26, 150, 2.8, "green", 130, false);
+
 
     Property judy = new Property("Judy's House", 32, 300, 26, 150, 2.8, "green", 130, false);
 
+
     Property diana = new Property("Diana's House", 34, 320, 28, 160, 2.8, "green", 150, false);
 
-    // dark blue properties
+    
     Property marshall = new Property("Marshall's House", 37, 350, 35, 175, 2.8, "dark blue", 175, false);
+
 
     Property raymond = new Property("Raymond's House", 39, 400, 50, 200, 2.8, "dark blue", 200, false);
 
-    // utilities
+    
     // -1 or NA means it is not applicible for this specific property type
     // waterworks
     Property ableSis = new Property("Able Sisters", 28, 150, -1, 75, -1, "NA", -1, false);
 
+
     // electrical
     Property nooksCranny = new Property("Nooks Cranny", 12, 150, -1, 75, -1, "NA", -1, false);
 
+
     // railroads
-    // railroad one- idk what we want to make it match the theme yet
     Property rr1 = new Property("Railroad", 5, 200, 25, 100, 2.0, "NA", -1, false);
 
-    // railroad two- idk what we want to make it match the theme yet
+    
     Property rr2 = new Property("Railroad", 15, 200, 25, 100, 2.0, "NA", -1, false);
 
-    // railroad three- idk what we want to make it match the theme yet
+    
     Property rr3 = new Property("Railroad", 25, 200, 25, 100, 2.0, "NA", -1, false);
 
-    // railroad four- idk what we want to make it match the theme yet
+    
     Property rr4 = new Property("Railroad", 35, 200, 35, 100, 2.0, "NA", -1, false);
 
     
-    /** 
+    /********************************************************
+     * Method to return which property is which space
      * @param spaceIdentifier
      * @return Property
-     */
-    // fill the properties array
+     *********************************************************/
     public Property getProperty(int spaceIdentifier) {
         switch (spaceIdentifier) {
             case 1:
@@ -219,47 +235,103 @@ public class Property extends BoardSpaceType {
         }
     }
 
+
+    /******************************************************************
+     * Getter to return property name
+     * @return String
+     ******************************************************************/
     public String getPropertyName() {
         return this.propertyName;
     }
 
+
+    /******************************************************************
+     * Getter to return property color
+     * @return String
+     ******************************************************************/
     public String getColor() {
         return this.color;
     }
 
+
+    /******************************************************************
+     * Getter to return property space
+     * @return int
+     ******************************************************************/
     public int getSpaceIndentifier() {
         return this.spaceIdentifier;
     }
 
+
+    /******************************************************************
+     * Getter to return property purchase cost
+     * @return int
+     ******************************************************************/
     public int getPurchaseCost() {
         return this.purchaseCost;
     }
 
+
+    /******************************************************************
+     * Getter to return property rent cost
+     * @return int
+     ******************************************************************/
     public int getRentCost() {
         return this.rentCost;
     }
 
+
+    /******************************************************************
+     * Getter to return property mortgage
+     * @return int
+     ******************************************************************/
     public int getMortgage() {
         return this.mortgage;
     }
 
+
+    /******************************************************************
+     * Getter to return price of one house for the property
+     * @return int
+     ******************************************************************/
     public int getOneHouse() {
         return this.oneHouse;
     }
 
+
+    /******************************************************************
+     * Getter to return property rent increase rate
+     * @return double
+     ******************************************************************/
     public double getRentIncreaseRate() {
         return this.rentIncreaseRate;
     }
 
+
+    /******************************************************************
+     * Getter to return if property is owned
+     * @return boolean
+     ******************************************************************/
     public boolean isOwned() {
         return this.owned;
     }
 
+
+    /******************************************************************
+     * Setter to set if property is owned or not
+     * @param owned boolean
+     ******************************************************************/
     public void setOwned(boolean owned) {
         this.owned = owned;
     }
 
     //if 1 is return, the rent cost could be increased, else it cant be increased
+    /******************************************************************
+     * Method to increase the rent of a property if houses are purchased
+     * If 1 is return, the rent cost could be increased, else it can't  * be increased
+     * @param houseNum number of houses purchased
+     * @return int
+     ******************************************************************/
     public int increaseRent(int houseNum) {
         if (houseNum == 1) {
             this.rentCost += this.oneHouse;
