@@ -5,11 +5,17 @@
  * @version Winter 2023
  **********************************************************************/
 public class Board extends BoardSpaceType {
+
+    //amount of spaces on the board
     private final int spaces = 40;
+
     //private final Square[] board;
     private BoardSpaceType[] board = new BoardSpaceType[spaces];
 
-    //constructor
+
+    /*******************************************************************
+    * Constructor that sets the board array with the boardSpaceType     * that goes to that specific space type
+    ******************************************************************/
     public Board() {
         BoardSpaceType b = new BoardSpaceType();
         int i = 0;
@@ -26,12 +32,14 @@ public class Board extends BoardSpaceType {
         }
     }
 
-    // public Player getPlayer(BoardSpaceType space) {
-    //     //return player on square if we need this idfk
-    //     return player;
-    // }
-
-    //get board space type function - is it a property, community chest, etc
+    
+    /****************************************************************** 
+     * Method to return the type of space the space spaceidentifier is
+     * for example, is it a property or a misc space
+     * 
+     * @param spaceIdentifier int representation of space
+     * @return BoardSpaceType
+     ******************************************************************/
     public BoardSpaceType getSpaceType(int spaceIdentifier) {
         int i = 0;
         BoardSpaceType type = board[0];
@@ -43,7 +51,14 @@ public class Board extends BoardSpaceType {
         return type;
     } 
 
-    //return the space info of the space
+    
+    /****************************************************************** 
+     * Method to return the space information of the space located at  * spaceIdentifier.
+     * It will return the property or the misc space- which are         * BoardSpaceTypes
+     * 
+     * @param spaceIdentifier int representation of space
+     * @return BoardSpaceType
+     ******************************************************************/
     public BoardSpaceType returnSpaceInfo(int spaceIdentifier) {
         if (board[spaceIdentifier].p.getProperty(spaceIdentifier) != null) {
             return board[spaceIdentifier].p.getProperty(spaceIdentifier);
