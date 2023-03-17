@@ -1,3 +1,9 @@
+/**********************************************************************
+ * Class contains player information and actions
+ *
+ * @author Kate Ottenwess, Kira B, Abby Svec
+ * @version Winter 2023
+ **********************************************************************/
 public class Player {
     private String name;
     private int boardPos;
@@ -50,4 +56,5 @@ public class Player {
     // public int rollDice() {
 
     // }
+
 }

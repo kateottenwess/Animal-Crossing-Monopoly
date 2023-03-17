@@ -1,20 +1,69 @@
+/**********************************************************************
+ * Class stores all monopoly properties
+ *
+ * @author Kate Ottenwess, Kira B, Abby Svec
+ * @version Winter 2023
+ **********************************************************************/
 public class Property extends BoardSpaceType {
+
+    /* Array to store the properties for easier access */
     public int[] properties;
+
+    /* Name of the property */
     public String propertyName;
+
+    /* Color of the property */
     public String color;
+
+    /* Integer value of what space it is on the board */
     public int spaceIdentifier;
+
+    /* Cost to purchase the property */
     public int purchaseCost;
+
+    /* Cost to rent the property */
     public int rentCost;
+
+    /* Cost to mortgage the property */
     public int mortgage;
+
+    /* Cost of rent with one house */
     public int oneHouse;
+
+    /* Rent increase rate when more than one home is placed */
     public double rentIncreaseRate;
+
+    /* Boolean representing if the property is owned or not */
     public boolean owned;
+
+    /* Percent multiplied by mortgage price- this is price to unmortgage */
     final double UNMORTAGE_PERC = 1.1;
+
+
     final double RR_INITIAL_COST = 25;
     final double RR_INCREASE = 2;
+
+    /* Rate * value of dice roll is the amount of rent if one is owned */
     final int UTILITIES_ONE_OWNED = 4;
+
+    /* Rate * value of dice roll is the amount of rent if both are owned by the same player */
     final int UTILITIES_TWO_OWNED = 10;
 
+
+    /*******************************************************************
+	 * Constructor used to set each property for the game.
+     * Values -1 or "NA" means that the specification it is associated * with is not applicable for that property type.
+	 * 
+	 * @param name name of the property
+     * @param space the space on the board
+     * @param purchase purchase price of the property
+     * @param rent rent price of the property
+     * @param mortgage price to mortgage the property
+     * @param rentIncreaseRate the rate rent increases when homes are   *        added to the property
+     * @param color color of the property
+     * @param oneHouse price of one house to place on the property
+     * @param owned boolean representing if owned or not
+	 ******************************************************************/
     public Property(String name, int space, int purchase, int rent, int mortgage, double rentIncreaseRate, String color,
             int oneHouse, boolean owned) {
         this.propertyName = name;

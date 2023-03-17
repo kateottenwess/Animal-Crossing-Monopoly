@@ -1,3 +1,9 @@
+/**********************************************************************
+ * Class stores the dice functionailty for the game
+ *
+ * @author Kate Ottenwess, Kira B, Abby Svec
+ * @version Winter 2023
+ **********************************************************************/
 public class Dice {
 
     private int dice1;

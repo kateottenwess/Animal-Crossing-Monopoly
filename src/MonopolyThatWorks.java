@@ -1,3 +1,9 @@
+/**********************************************************************
+ * GUI for the monopoly board
+ *
+ * @author Kate Ottenwess, Kira B, Abby Svec
+ * @version Winter 2023
+ **********************************************************************/
 /*import javax.swing.*;
 import java.awt.event.*;
 import java.util.*;
@@ -234,7 +240,6 @@ public class MonopolyThatWorks implements MouseListener {
                 System.out.println("Cards Button");
             }
         }
-
 
 //        throw new UnsupportedOperationException("Unimplemented method 'mouseClicked'");
     }

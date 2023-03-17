@@ -1,10 +1,16 @@
+/**********************************************************************
+ * Class stores non-property spaces in the board
+ *
+ * @author Kate Ottenwess, Kira B, Abby Svec
+ * @version Winter 2023
+ **********************************************************************/
 public class MiscSpaces extends BoardSpaceType {
-    MiscSpaces go;
-    MiscSpaces incomeTax;
-    MiscSpaces freeParking;
-    MiscSpaces goToJail;
-    MiscSpaces luxuryTax;
-    MiscSpaces jail;
+    public MiscSpaces go;
+    public MiscSpaces incomeTax;
+    public MiscSpaces freeParking;
+    public MiscSpaces goToJail;
+    public MiscSpaces luxuryTax;
+    public MiscSpaces jail;
 
     public MiscSpaces getType(int spaceIdentifier) {
         switch (spaceIdentifier) {
