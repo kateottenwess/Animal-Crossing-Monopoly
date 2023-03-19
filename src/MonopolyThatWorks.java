@@ -18,10 +18,10 @@ import javax.imageio.ImageIO;
 //import javax.lang.model.util.ElementScanner14;
 //import javax.swing.JComponent;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
-import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.awt.event.*;
 import java.io.File;
@@ -58,6 +58,18 @@ public class MonopolyThatWorks implements MouseListener {
         
         
     }
+
+    //method for rolling dice
+   /*public void rollDice() {
+        JFrame diceFrame = buildFrame();
+
+        JLabel dice = new JLabel("Dice Roll");
+
+        JLabel dice1 = new JLabel("Dice 1:" + Dice.rollDice1());
+        JLabel dice2 = new JLabel("Dice 2:"+ Dice.rollDice2());
+        
+
+    }*/
 
     //Frame constructor
     private JFrame buildFrame() {
@@ -238,6 +250,42 @@ public class MonopolyThatWorks implements MouseListener {
         if ((x >= 803) && (x <= 932)){
             if ((y >= 10) && (y <= 60)){
                 System.out.println("Cards Button");
+            }
+        }
+
+        //Roll Dice Button
+        if ((x >= 680) && (x <= 830)){
+            if ((y >= 235) && (y <= 265)){
+                System.out.println("Roll Dice Button");
+                JFrame diceFrame = new JFrame();
+                //diceFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+                diceFrame.setSize(500, 200);
+                diceFrame.setVisible(true);
+
+                JLabel diceLabel = new JLabel("Dice Roll");
+                //Dimension size = diceLabel.getPreferredSize();
+                diceLabel.setBounds(0, 0, 50, 10);
+
+                diceFrame.add(diceLabel);
+
+                JLabel dice1 = new JLabel("Dice 1:" + Dice.rollDice1());
+                Dimension size1 = dice1.getPreferredSize();
+                diceLabel.setBounds(50, 0, size1.width, size1.height);
+                JLabel dice2 = new JLabel("Dice 2:"+ Dice.rollDice2());
+                Dimension size2 = dice2.getPreferredSize();
+                diceLabel.setBounds(80, 0, size2.width, size2.height);
+
+                diceFrame.add(dice1);
+                diceFrame.add(dice2);
+
+
+
+            }
+        }
+        //Trade Button
+        if ((x >= 692) && (x <= 830)){
+            if ((y >= 280) && (y <= 810)){
+                System.out.println("Trade Button");
             }
         }
 
