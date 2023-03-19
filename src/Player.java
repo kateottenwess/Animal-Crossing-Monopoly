@@ -97,14 +97,15 @@ public class Player {
         
         int totalmove = dice1 + dice2;
         
-        if (totalmove + this.getBoardPos() >= Board.spaces) {
-            //do this
+        if (totalmove + this.getBoardPos() >= 40) {
+            int greater40 = totalmove + this.getBoardPos();
+            int afterGo = greater40-40;
+            this.setBoardPos(afterGo-1);
+            bells += 200;
         }
         else {
             this.setBoardPos(this.getBoardPos() + totalmove);
-        }
-        
-        
+        } 
     }
     
 
