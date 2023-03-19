@@ -41,7 +41,7 @@ public class MonopolyThatWorks implements MouseListener {
         JFrame frame = buildFrame();
         
         //Upload image of Monopoly board and resize to fit size of window
-        BufferedImage board = ImageIO.read(new File(getClass().getResource("/resources/ACMonopolyBoard.jpg").toURI()));
+        BufferedImage board = ImageIO.read(new File(getClass().getResource("/resources/ACBoard.jpg").toURI()));
         Image newBoard = board.getScaledInstance(1000, 778, Image.SCALE_DEFAULT);
 
         JPanel panel = new JPanel();
