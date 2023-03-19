@@ -17,9 +17,8 @@ public class Dice {
      ******************************************************************/
     public static int rollDice1() {
 
-        dice1 = (int) (Math.random() * 6 + 1);
+        return ((int) (Math.random() * 6 + 1));
         
-        return dice1;
     }
 
 
@@ -29,9 +28,8 @@ public class Dice {
      ******************************************************************/
     public static int rollDice2() {
 
-        dice2 = (int) (Math.random() * 6 + 1);
+        return ((int) (Math.random() * 6 + 1));
 
-        return dice2;
     }
     
 
