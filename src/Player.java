@@ -6,6 +6,7 @@
  **********************************************************************/
 public class Player {
     private static String name;
+    private int playerNum;
     private static int boardPos;
     private static int bells;
     
@@ -17,7 +18,8 @@ public class Player {
     * Constructor that initializes the players name, money amount, and 
     * board position
     ******************************************************************/
-    public Player(final String name) {
+    public Player(int playerNum, String name) {
+        this.playerNum = playerNum;
         this.name = name;
         this.bells = 1500;
         this.boardPos = 0;
