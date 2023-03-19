@@ -12,6 +12,9 @@ public class Board extends BoardSpaceType {
     //private final Square[] board;
     private BoardSpaceType[] board = new BoardSpaceType[spaces];
 
+    //int array to contain which players owns which space
+    private int[] ownedProperties = new int[spaces];
+
 
     /*******************************************************************
     * Constructor that sets the board array with the boardSpaceType     * that goes to that specific space type
@@ -29,6 +32,10 @@ public class Board extends BoardSpaceType {
             }
 
             i++;
+        }
+
+        for(int j = 0; j < spaces; j++) {
+            ownedProperties[i] = 0;
         }
     }
 
