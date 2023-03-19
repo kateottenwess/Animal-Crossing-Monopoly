@@ -14,7 +14,8 @@ public class BoardSpaceType {
 
 
     /*******************************************************************
-    * Constructor that sets p and m to null as their purpose is simply * to signify their type
+    * Constructor that sets p and m to null as their purpose is simply 
+    * to signify their type
     ******************************************************************/
     public BoardSpaceType () {
         p = null;
