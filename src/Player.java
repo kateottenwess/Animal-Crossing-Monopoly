@@ -91,20 +91,21 @@ public class Player {
         return 1;
     }
 
-    public void move() {
+    public void move(Player mPlayer) {
         int dice1 = Dice.rollDice1();
         int dice2 = Dice.rollDice2();
         
         int totalmove = dice1 + dice2;
         
-        if (totalmove + this.getBoardPos() >= 40) {
-            int greater40 = totalmove + this.getBoardPos();
+        if (totalmove + mPlayer.getBoardPos() >= 40) {
+            int greater40 = totalmove + mPlayer.getBoardPos();
             int afterGo = greater40-40;
-            this.setBoardPos(afterGo-1);
-            bells += 200;
+            mPlayer.setBoardPos(afterGo - 1);
+            int currentBells = mPlayer.getBells();
+            mPlayer.setBells(currentBells + 200);
         }
         else {
-            this.setBoardPos(this.getBoardPos() + totalmove);
+            mPlayer.setBoardPos(mPlayer.getBoardPos() + totalmove);
         } 
     }
     
