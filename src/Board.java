@@ -15,11 +15,19 @@ public class Board extends BoardSpaceType {
     //int array to contain which players owns which space
     private int[] ownedProperties = new int[spaces];
 
+    private Player player1;
+
+    private Player player2;
+     
+    private Player player3;
+
+    private Player player4;
+
 
     /*******************************************************************
     * Constructor that sets the board array with the boardSpaceType     * that goes to that specific space type
     ******************************************************************/
-    public Board() {
+    public Board(String name1, String name2, String name3, String name4) {
         BoardSpaceType b = new BoardSpaceType();
         int i = 0;
         while (i < spaces) {
@@ -37,6 +45,14 @@ public class Board extends BoardSpaceType {
         for(int j = 0; j < spaces; j++) {
             ownedProperties[i] = 0;
         }
+
+        player1 = new Player(1, name1);
+
+        player2 = new Player(2, name2);
+
+        player3 = new Player(3, name3);
+
+        player4 = new Player (4, name4);
     }
 
     
