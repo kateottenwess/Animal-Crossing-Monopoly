@@ -5,19 +5,19 @@
  * @version Winter 2023
  **********************************************************************/
 public class Player {
-
-    /* public int playernum */
-    public int playerNum;
-    private String name;
-    private int boardPos;
-    private int bells;
+    private static String name;
+    private static int boardPos;
+    private static int bells;
     
+    //indices are the space identifiers, the value in the array will be either 0 (false-not owned) or 1 (true-owned)
+    private int[] properties;
+
 
     /*******************************************************************
-    * Constructor that initializes the players name, money amount, and * board position
+    * Constructor that initializes the players name, money amount, and 
+    * board position
     ******************************************************************/
-    public Player(int playerNum, String name) {
-        this.playerNum = playerNum;
+    public Player(final String name) {
         this.name = name;
         this.bells = 1500;
         this.boardPos = 0;
@@ -37,7 +37,7 @@ public class Player {
      * Setter to set player name
      * @param name String
      ******************************************************************/
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -46,7 +46,7 @@ public class Player {
      * Getter to return players board position
      * @return int
      ******************************************************************/
-    public int getBoardPos() {
+    public static int getBoardPos() {
         return boardPos;
     }
 
@@ -55,7 +55,7 @@ public class Player {
      * Setter to set player board position
      * @param boardPos int
      ******************************************************************/
-    public void setBoardPos(int boardPos) {
+    public static void setBoardPos(final int boardPos) {
         this.boardPos = boardPos;
     }
 
@@ -73,7 +73,7 @@ public class Player {
      * Setter to set player bells amount
      * @param bells int
      ******************************************************************/
-    public void setBells(int bells) {
+    public void setBells(final int bells) {
         this.bells = bells;
     }
 
@@ -84,10 +84,19 @@ public class Player {
      * @param property Property
      * @return int
      ******************************************************************/
-    public int hasProperty(Player player, Property property) {
+    public int hasProperty(final Player player, final Property property) {
         //wip
         return 1;
     }
+
+    public void move() {
+        int dice1 = Dice.rollDice1();
+        int dice2 = Dice.rollDice2();
+        
+        int currentPos = Player.getBoardPos();
+        Player.setBoardPos(currentPos+dice1+dice2);
+    }
+    
 
     // public void buyProperty(int spaceIdentifier) {
         
