@@ -9,9 +9,6 @@ public class Player {
     private int boardPos;
     private int bells;
     
-    //indices are the space identifiers, the value in the array will be either 0 (false-not owned) or 1 (true-owned)
-    private int[] properties;
-
 
     /*******************************************************************
     * Constructor that initializes the players name, money amount, and * board position
