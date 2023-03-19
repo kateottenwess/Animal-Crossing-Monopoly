@@ -5,6 +5,9 @@
  * @version Winter 2023
  **********************************************************************/
 public class Player {
+
+    /* public int playernum */
+    public int playerNum;
     private String name;
     private int boardPos;
     private int bells;
@@ -13,7 +16,8 @@ public class Player {
     /*******************************************************************
     * Constructor that initializes the players name, money amount, and * board position
     ******************************************************************/
-    public Player(String name) {
+    public Player(int playerNum, String name) {
+        this.playerNum = playerNum;
         this.name = name;
         this.bells = 1500;
         this.boardPos = 0;
