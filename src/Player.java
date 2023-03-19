@@ -46,7 +46,7 @@ public class Player {
      * Getter to return players board position
      * @return int
      ******************************************************************/
-    public static int getBoardPos() {
+    public int getBoardPos() {
         return boardPos;
     }
 
@@ -55,7 +55,7 @@ public class Player {
      * Setter to set player board position
      * @param boardPos int
      ******************************************************************/
-    public static void setBoardPos(final int boardPos) {
+    public void setBoardPos(final int boardPos) {
         this.boardPos = boardPos;
     }
 
@@ -93,8 +93,16 @@ public class Player {
         int dice1 = Dice.rollDice1();
         int dice2 = Dice.rollDice2();
         
-        int currentPos = Player.getBoardPos();
-        Player.setBoardPos(currentPos+dice1+dice2);
+        int totalmove = dice1 + dice2;
+        
+        if (totalmove + this.getBoardPos() >= Board.spaces) {
+            //do this
+        }
+        else {
+            this.setBoardPos(this.getBoardPos() + totalmove);
+        }
+        
+        
     }
     
 

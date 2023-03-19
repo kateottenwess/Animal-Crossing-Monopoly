@@ -7,7 +7,7 @@
 public class Board extends BoardSpaceType {
 
     //amount of spaces on the board
-    private final int spaces = 40;
+    public final static int spaces = 40;
 
     //private final Square[] board;
     private BoardSpaceType[] board = new BoardSpaceType[spaces];
