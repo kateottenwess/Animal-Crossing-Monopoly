@@ -60,8 +60,9 @@ public class Board extends BoardSpaceType {
 
     
     /****************************************************************** 
-     * Method to return the space information of the space located at  * spaceIdentifier.
-     * It will return the property or the misc space- which are         * BoardSpaceTypes
+     * Method to return the space information of the space located at  
+     * spaceIdentifier. It will return the property or the misc space-
+     * which are BoardSpaceTypes
      * 
      * @param spaceIdentifier int representation of space
      * @return BoardSpaceType

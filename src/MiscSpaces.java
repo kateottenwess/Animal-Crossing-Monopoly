@@ -26,7 +26,8 @@ public class MiscSpaces extends BoardSpaceType {
 
     
     /***********************************************************
-     * Method that returns the specific mis space from the space       * identifier
+     * Method that returns the specific mis space from the space       
+     * identifier
      *  
      * @param spaceIdentifier
      * @return MiscSpaces
