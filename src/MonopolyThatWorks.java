@@ -15,6 +15,7 @@ import java.imageio.*;
 import java.net.*; */
 
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 //import javax.lang.model.util.ElementScanner14;
 //import javax.swing.JComponent;
 import javax.swing.JFrame;
@@ -47,8 +48,8 @@ public class MonopolyThatWorks implements MouseListener {
         Image newBoard = board.getScaledInstance(1000, 778, Image.SCALE_DEFAULT);
 
         //Upload immage of piece 1
-        //this.piece1 = ImageIO.read(new File(getClass().getResource("/resources/Piece1ACMon.jpg").toURI()));
-        //Image newPiece1 = board.getScaledInstance(50, 100, Image.SCALE_DEFAULT);
+        piece1 = ImageIO.read(new File(getClass().getResource("/resources/Piece1ACMon.png").toURI()));
+        Image p1Label = piece1.getScaledInstance(50, 50, Image.SCALE_DEFAULT);
 
         JPanel panel = new JPanel();
 
@@ -57,11 +58,12 @@ public class MonopolyThatWorks implements MouseListener {
 
         frame.add(panel);
         frame.repaint();
+        //frame.add(p1Label);
 
         //Make the image show up on the window
         Graphics g = frame.getGraphics();
         g.drawImage(newBoard, 0, 30, null);
-        //g.drawImage(newPiece1, 945, 768, null);
+        g.drawImage(p1Label, 930, 740, null);
         
         
     }
@@ -264,16 +266,27 @@ public class MonopolyThatWorks implements MouseListener {
 
                 diceFrame.add(diceLabel);
 
+                int dice1Val = Dice.rollDice1();
+                int dice2Val = Dice.rollDice2();
+
                 //Using rollDice() from Dice class and add to frame
-                JLabel dice1 = new JLabel("Dice 1: " + Dice.rollDice1());
+                JLabel dice1 = new JLabel("Dice 1: " + dice1Val);
                 Dimension size1 = dice1.getPreferredSize();
                 dice1.setBounds(100, 30, size1.width, size1.height);
-                JLabel dice2 = new JLabel("Dice 2: "+ Dice.rollDice2());
+                JLabel dice2 = new JLabel("Dice 2: "+ dice2Val);
                 Dimension size2 = dice2.getPreferredSize();
                 dice2.setBounds(200, 30, size2.width, size2.height);
 
                 diceFrame.add(dice1);
                 diceFrame.add(dice2);
+                
+
+                //Get piece to move that many spaces
+                //int totalMove = dice1Val + dice2Val;
+
+
+                //Point newSpace = spacesArray[totalMove];
+                //piece1.setLocation(newSpace.getX(), newSpace.getY());
 
             }
         }
