@@ -1,3 +1,13 @@
 public class GameState {
-    //number of players setting for constructor, basically creating a new game and shit for each run
+
+
+    private GUI gui;
+    private Board board;
+    private Player[] players;
+    private Dice dice;
+    private Property[] properties;
+    private Jail jail;
+    
+    private int currentPlayerIndex;
+    private boolean gameEnded;
 }
