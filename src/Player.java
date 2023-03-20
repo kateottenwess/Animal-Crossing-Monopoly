@@ -91,9 +91,7 @@ public class Player {
         return 1;
     }
 
-    public void move() {
-        int dice1 = Dice.rollDice1();
-        int dice2 = Dice.rollDice2();
+    public void move(int dice1, int dice2) {
         
         int totalmove = dice1 + dice2;
         
