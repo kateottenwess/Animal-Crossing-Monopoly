@@ -31,6 +31,8 @@ import java.awt.*;
 
 public class MonopolyThatWorks implements MouseListener { 
 
+    BufferedImage piece1;
+
     public static void main(String[] args) throws IOException, URISyntaxException {
 
         new MonopolyThatWorks();
@@ -44,6 +46,10 @@ public class MonopolyThatWorks implements MouseListener {
         BufferedImage board = ImageIO.read(new File(getClass().getResource("/resources/ACBoard.jpg").toURI()));
         Image newBoard = board.getScaledInstance(1000, 778, Image.SCALE_DEFAULT);
 
+        //Upload immage of piece 1
+        //this.piece1 = ImageIO.read(new File(getClass().getResource("/resources/Piece1ACMon.jpg").toURI()));
+        //Image newPiece1 = board.getScaledInstance(50, 100, Image.SCALE_DEFAULT);
+
         JPanel panel = new JPanel();
 
         //Make spaces clickable
@@ -55,21 +61,11 @@ public class MonopolyThatWorks implements MouseListener {
         //Make the image show up on the window
         Graphics g = frame.getGraphics();
         g.drawImage(newBoard, 0, 30, null);
+        //g.drawImage(newPiece1, 945, 768, null);
         
         
     }
 
-    //method for rolling dice
-   /*public void rollDice() {
-        JFrame diceFrame = buildFrame();
-
-        JLabel dice = new JLabel("Dice Roll");
-
-        JLabel dice1 = new JLabel("Dice 1:" + Dice.rollDice1());
-        JLabel dice2 = new JLabel("Dice 2:"+ Dice.rollDice2());
-        
-
-    }*/
 
     //Frame constructor
     private JFrame buildFrame() {
@@ -256,29 +252,28 @@ public class MonopolyThatWorks implements MouseListener {
         //Roll Dice Button
         if ((x >= 680) && (x <= 830)){
             if ((y >= 235) && (y <= 265)){
-                System.out.println("Roll Dice Button");
+                
+                //Create new frame to show dice results
                 JFrame diceFrame = new JFrame();
-                //diceFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
                 diceFrame.setSize(500, 200);
                 diceFrame.setVisible(true);
 
-                JLabel diceLabel = new JLabel("Dice Roll");
+                JLabel diceLabel = new JLabel("Dice");
                 //Dimension size = diceLabel.getPreferredSize();
-                diceLabel.setBounds(0, 0, 50, 10);
+                diceLabel.setBounds(200, 10, 100, 10);
 
                 diceFrame.add(diceLabel);
 
-                JLabel dice1 = new JLabel("Dice 1:" + Dice.rollDice1());
+                //Using rollDice() from Dice class and add to frame
+                JLabel dice1 = new JLabel("Dice 1: " + Dice.rollDice1());
                 Dimension size1 = dice1.getPreferredSize();
-                diceLabel.setBounds(50, 0, size1.width, size1.height);
-                JLabel dice2 = new JLabel("Dice 2:"+ Dice.rollDice2());
+                dice1.setBounds(100, 30, size1.width, size1.height);
+                JLabel dice2 = new JLabel("Dice 2: "+ Dice.rollDice2());
                 Dimension size2 = dice2.getPreferredSize();
-                diceLabel.setBounds(80, 0, size2.width, size2.height);
+                dice2.setBounds(200, 30, size2.width, size2.height);
 
                 diceFrame.add(dice1);
                 diceFrame.add(dice2);
-
-
 
             }
         }
@@ -309,6 +304,9 @@ public class MonopolyThatWorks implements MouseListener {
 
         //Bottom of board
     Point passGo1 = new Point(945, 768);
+    Point passGo2 = new Point(945, 778);
+    Point passGo3 = new Point(955, 768);
+    Point passGo4 = new Point(955, 778);
     Point rodneysHouse = new Point(808, 768);
     Point cc1 = new Point(728, 768);
     Point rocketsHouse = new Point(651, 768);
