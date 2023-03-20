@@ -27,7 +27,7 @@ public class Board extends BoardSpaceType {
     /*******************************************************************
     * Constructor that sets the board array with the boardSpaceType     * that goes to that specific space type
     ******************************************************************/
-    public Board(String name1, String name2, String name3, String name4) {
+    public Board() {
         BoardSpaceType b = new BoardSpaceType();
         int i = 0;
         while (i < spaces) {
@@ -46,13 +46,7 @@ public class Board extends BoardSpaceType {
             ownedProperties[i] = 0;
         }
 
-        player1 = new Player(1, name1);
 
-        player2 = new Player(2, name2);
-
-        player3 = new Player(3, name3);
-
-        player4 = new Player (4, name4);
     }
 
     
