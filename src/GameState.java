@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 public class GameState {
     private int numPlayers;
-    private ArrayList<Player> players;
+    private static ArrayList<Player> players;
     private Board board;
-    private Dice dice;
+    private static Dice dice;
     private GUI gui;
     private Jail jail;
     private boolean gameEnded;
@@ -20,23 +20,27 @@ public class GameState {
             Player player = new Player(i, name);
             players.add(player);
         }
-        //board = new Board();
-        //dice = new Dice();
+        //board = new Board(); is throwing null pointer
+        dice = new Dice();
         gui = new GUI();
 
     }
     
-    public void startGame() {
-        ////boolean notDone = true;
+    public static void startGame() {
+        boolean notDone = true;
         //while (notDone) {
-          //  for (Player player : players) {
-
-            //}
-        //}
+          for (Player player : players) {
+              int dice1 = dice.rollDice1();
+              int dice2 = dice.rollDice2();
+              player.move(dice1, dice2);
+              
+            }
+       // }
     }
     
     public static void main(String[] args) throws IOException, URISyntaxException {
         new GameState(1);
+        startGame();
     }
 
 }

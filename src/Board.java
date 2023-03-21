@@ -15,13 +15,7 @@ public class Board extends BoardSpaceType {
     //int array to contain which players owns which space
     private int[] ownedProperties = new int[spaces];
 
-    private Player player1;
 
-    private Player player2;
-     
-    private Player player3;
-
-    private Player player4;
 
 
     /*******************************************************************
