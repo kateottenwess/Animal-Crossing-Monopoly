@@ -248,10 +248,10 @@ public class GUI implements MouseListener {
                 //Using rollDice() from Dice class and add to frame
                 JLabel dice1 = new JLabel("Dice 1: " + dice1Val);
                 Dimension size1 = dice1.getPreferredSize();
-                dice1.setBounds(100, 30, size1.width, size1.height);
+                dice1.setBounds(200, 30, size1.width, size1.height);
                 JLabel dice2 = new JLabel("Dice 2: " + dice2Val);
                 Dimension size2 = dice2.getPreferredSize();
-                dice2.setBounds(200, 30, size2.width, size2.height);
+                dice2.setBounds(100, 30, size1.width, size1.height);
 
                 diceFrame.add(dice1);
                 diceFrame.add(dice2);
