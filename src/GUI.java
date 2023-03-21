@@ -35,9 +35,10 @@ public class GUI implements MouseListener {
     BufferedImage piece1;
     Image p1Label;
     Player player;
+    JFrame frame;
 
     public GUI() throws IOException, URISyntaxException {
-        JFrame frame = buildFrame();
+        frame = buildFrame();
         frame.setVisible(true);
         
         //Upload image of Monopoly board and resize to fit size of window
@@ -209,6 +210,7 @@ public class GUI implements MouseListener {
                 System.out.println("Luxury Tax");
             } else if ((y > 635) && (y <= 690)) {
                 System.out.println("Raymond's House");
+                System.out.println(raymondsHouse.getX() + raymondsHouse.getY());
             } else if (y > 690) {
                 System.out.println("PASS GO");
             }
@@ -262,10 +264,11 @@ public class GUI implements MouseListener {
                 movePlayerIcon(player.getBoardPos());
                 // move player icon
                 movePlayerIcon(player.getBoardPos());
+                
                 //Get piece to move that many spaces
                 //int totalMove = dice1Val + dice2Val;
-
-                //Point newSpace = spacesArray[totalMove];
+                //Point newSpace = spacesArray[totalMove-1];
+                //g.drawImage(p1Label, (int)raymondsHouse.getX(),(int)raymondsHouse.getY(), null);
                 //piece1.setLocation(newSpace.getX(), newSpace.getY());
             }
         }
@@ -282,7 +285,7 @@ public class GUI implements MouseListener {
 
     /*********************************NEW************************************************ */
     public void movePlayerIcon(int pos) {
-        Graphics g = p1Label.getGraphics();
+        Graphics g = frame.getGraphics();
         g.clearRect(0, 0, 50, 50);
         g.drawImage(piece1, pos % 10 * 59 + 930, 740 - (pos / 10 * 59), null);
     }
