@@ -13,7 +13,7 @@ public class GameState {
     private Jail jail;
     private boolean gameEnded;
 
-    public GameState(int numPlayers) {
+    public GameState(int numPlayers) throws IOException, URISyntaxException {
         this.numPlayers = numPlayers;
         players = new ArrayList<>();
         for (int i = 1; i <= numPlayers; i++) {
