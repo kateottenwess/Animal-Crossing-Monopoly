@@ -34,7 +34,9 @@ public class GUI implements MouseListener {
 
     BufferedImage piece1;
     Image p1Label;
-    Player player;
+    //I added getPlayer in gameState and idk i can't call it here but
+    //i think this is what he meant when he said it wasn't initialized
+    Player player = getPlayer();
     JFrame frame;
 
     public GUI() throws IOException, URISyntaxException {
@@ -264,7 +266,7 @@ public class GUI implements MouseListener {
                 movePlayerIcon(player.getBoardPos());
                 // move player icon
                 movePlayerIcon(player.getBoardPos());
-                
+
                 //Get piece to move that many spaces
                 //int totalMove = dice1Val + dice2Val;
                 //Point newSpace = spacesArray[totalMove-1];
@@ -287,7 +289,7 @@ public class GUI implements MouseListener {
     public void movePlayerIcon(int pos) {
         Graphics g = frame.getGraphics();
         g.clearRect(0, 0, 50, 50);
-        g.drawImage(piece1, pos % 10 * 59 + 930, 740 - (pos / 10 * 59), null);
+        g.drawImage(p1Label, pos % 10 * 59 + 930, 740 - (pos / 10 * 59), null);
     }
     @Override
     public void mousePressed(MouseEvent e) { }

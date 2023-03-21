@@ -43,4 +43,9 @@ public class GameState {
         startGame();
     }
 
+    //help initialize player in gui? only works for one player rn but that's all we need
+    public Player getPlayer(){
+        return players.get(0);
+    } 
+
 }
