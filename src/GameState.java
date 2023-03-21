@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -21,9 +20,23 @@ public class GameState {
             Player player = new Player(i, name);
             players.add(player);
         }
-        board = new Board();
-        dice = new Dice();
+        //board = new Board();
+        //dice = new Dice();
         gui = new GUI();
-        
+
     }
+    
+    public void startGame() {
+        ////boolean notDone = true;
+        //while (notDone) {
+          //  for (Player player : players) {
+
+            //}
+        //}
+    }
+    
+    public static void main(String[] args) throws IOException, URISyntaxException {
+        new GameState(1);
+    }
+
 }

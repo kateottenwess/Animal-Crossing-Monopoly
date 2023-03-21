@@ -34,12 +34,6 @@ public class GUI implements MouseListener {
 
     BufferedImage piece1;
 
-    public static void main(String[] args) throws IOException, URISyntaxException {
-
-        new GUI();
-
-    }
-
     public GUI() throws IOException, URISyntaxException {
         JFrame frame = buildFrame();
         

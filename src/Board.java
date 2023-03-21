@@ -46,7 +46,6 @@ public class Board extends BoardSpaceType {
             ownedProperties[i] = 0;
         }
 
-
     }
 
     
