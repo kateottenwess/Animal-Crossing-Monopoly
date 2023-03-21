@@ -38,6 +38,7 @@ public class GUI implements MouseListener {
 
     public GUI() throws IOException, URISyntaxException {
         JFrame frame = buildFrame();
+        frame.setVisible(true);
         
         //Upload image of Monopoly board and resize to fit size of window
         BufferedImage board = ImageIO.read(new File(getClass().getResource("/resources/ACBoard.jpg").toURI()));
