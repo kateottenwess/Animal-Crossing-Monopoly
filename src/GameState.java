@@ -8,7 +8,7 @@ public class GameState {
     private static ArrayList<Player> players;
     private Board board;
     private static Dice dice;
-    private GUI gui;
+    private static GUI gui;
     private Jail jail;
     private boolean gameEnded;
 
@@ -27,15 +27,16 @@ public class GameState {
     }
     
     public static void startGame() throws IOException, URISyntaxException {
-        //boolean notDone = true;
-        //while (notDone) {
-          for (Player player : players) {
-              int dice1 = dice.rollDice1();
-              int dice2 = dice.rollDice2();
-              player.move(dice1, dice2);
-              
+        for (Player player : players) {
+            int dice1 = dice.rollDice1();
+            int dice2 = dice.rollDice2();
+            int newPosition = player.getBoardPos() + dice1 + dice2;
+            if (newPosition >= 40) {
+                newPosition -= 40;
             }
-       // }
+            player.move(dice1, dice2, newPosition);
+            gui.movePiece(newPosition);
+        }
     }
     
     public static void main(String[] args) throws IOException, URISyntaxException {

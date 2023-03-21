@@ -261,12 +261,6 @@ public class GUI implements MouseListener {
                 diceFrame.add(dice1);
                 diceFrame.add(dice2);
 
-                /************ NEW********************************************************* */
-                player.move(dice1Val, dice2Val);
-                movePlayerIcon(player.getBoardPos());
-                // move player icon
-                movePlayerIcon(player.getBoardPos());
-
                 //Get piece to move that many spaces
                 //int totalMove = dice1Val + dice2Val;
                 //Point newSpace = spacesArray[totalMove-1];
@@ -286,10 +280,12 @@ public class GUI implements MouseListener {
     }
 
     /*********************************NEW************************************************ */
-    public void movePlayerIcon(int pos) {
+    public void movePiece(int newPosition) {
+        // Move the player's piece to the new position
         Graphics g = frame.getGraphics();
-        g.clearRect(0, 0, 50, 50);
-        g.drawImage(p1Label, pos % 10 * 59 + 930, 740 - (pos / 10 * 59), null);
+        g.clearRect(930, 740, 50, 50);
+        g.drawImage(p1Label, newPosition, 740, null);
+        frame.repaint();
     }
     @Override
     public void mousePressed(MouseEvent e) { }
