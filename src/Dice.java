@@ -15,7 +15,7 @@ public class Dice {
      * Method to roll dice 1
      * @return int
      ******************************************************************/
-    public static int rollDice1() {
+    public int rollDice1() {
 
         return ((int) (Math.random() * 6 + 1));
         
@@ -26,7 +26,7 @@ public class Dice {
      * Method to roll dice 2
      * @return int
      ******************************************************************/
-    public static int rollDice2() {
+    public int rollDice2() {
 
         return ((int) (Math.random() * 6 + 1));
 
