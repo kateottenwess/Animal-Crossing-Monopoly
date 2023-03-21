@@ -36,7 +36,7 @@ public class GUI implements MouseListener {
     Image p1Label;
     //I added getPlayer in gameState and idk i can't call it here but
     //i think this is what he meant when he said it wasn't initialized
-    Player player = getPlayer();
+    Player player = new Player(1, "player1");
     JFrame frame;
 
     public GUI() throws IOException, URISyntaxException {
@@ -256,7 +256,7 @@ public class GUI implements MouseListener {
                 dice1.setBounds(200, 30, size1.width, size1.height);
                 JLabel dice2 = new JLabel("Dice 2: " + dice2Val);
                 Dimension size2 = dice2.getPreferredSize();
-                dice2.setBounds(100, 30, size1.width, size1.height);
+                dice2.setBounds(100, 30, size2.width, size2.height);
 
                 diceFrame.add(dice1);
                 diceFrame.add(dice2);
