@@ -26,8 +26,8 @@ public class GameState {
 
     }
     
-    public static void startGame() {
-        boolean notDone = true;
+    public static void startGame() throws IOException, URISyntaxException {
+        //boolean notDone = true;
         //while (notDone) {
           for (Player player : players) {
               int dice1 = dice.rollDice1();
