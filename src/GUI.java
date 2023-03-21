@@ -282,7 +282,7 @@ public class GUI implements MouseListener {
     /*********************************NEW************************************************ */
     public void movePlayerIcon(int pos) {
         Graphics g = p1Label.getGraphics();
-        g.clearRect(0, 0, p1Label.getWidth(50), p1Label.getHeight(50));
+        g.clearRect(0, 0, 50, 50);
         g.drawImage(piece1, pos % 10 * 59 + 930, 740 - (pos / 10 * 59), null);
     }
     @Override
