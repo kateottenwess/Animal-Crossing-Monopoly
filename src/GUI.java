@@ -36,10 +36,6 @@ public class GUI implements MouseListener {
     Image p1Label;
     //I added getPlayer in gameState and idk i can't call it here but
     //i think this is what he meant when he said it wasn't initialized
-
-    //Player player = getPlayer(); ->this is where the error occurs
-
-    //this is what were keeping for now just to run it:
     Player player = new Player(1, "player1");
     JFrame frame;
 
