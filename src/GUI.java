@@ -92,129 +92,328 @@ public class GUI implements MouseListener {
         if ((x >= 0) && (x <= 144)) {
             // System.out.println("Sort of working"); //it is not
             if ((y >= 75) && (y <= 200)) {
-                System.out.println("Free Docking");
+                JFrame freeDocking = new JFrame();
+                freeDocking.setSize(500, 200);
+                freeDocking.setVisible(true);
+                JLabel freeDockingLabel = new JLabel("Free Docking");
+                freeDockingLabel.setBounds(200, 10, 100, 10);
+                freeDocking.add(freeDockingLabel);
             } else if ((y > 200) && (y <= 252)) {
-                System.out.println("Bone's House");
+                JFrame bonesHouse = new JFrame();
+                bonesHouse.setSize(500, 200);
+                bonesHouse.setVisible(true);
+                JLabel bonesHouseLabel = new JLabel("Bones House");
+                bonesHouseLabel.setBounds(200, 10, 100, 10);
+                bonesHouse.add(bonesHouseLabel);
             } else if ((y > 252) && (y <= 310)) {
-                System.out.println("Hopkin's House");
+                JFrame hopkinsHouse = new JFrame();
+                hopkinsHouse.setSize(500, 200);
+                hopkinsHouse.setVisible(true);
+                JLabel hopkinsHouseLabel = new JLabel("Hopkin's House");
+                hopkinsHouseLabel.setBounds(200, 10, 100, 10);
+                hopkinsHouse.add(hopkinsHouseLabel);
             } else if ((y > 310) && (y <= 358)) {
-                System.out.println("Community Chest");
+                JFrame cc2 = new JFrame();
+                cc2.setSize(500, 200);
+                cc2.setVisible(true);
+                JLabel cc2Label = new JLabel("Community Chest");
+                cc2Label.setBounds(200, 10, 100, 10);
+                cc2.add(cc2Label);
             } else if ((y > 358) && (y <= 417)) {
-                System.out.println("Cephalobot's House");
+                JFrame cephalobotsHouse = new JFrame();
+                cephalobotsHouse.setSize(500, 200);
+                cephalobotsHouse.setVisible(true);
+                JLabel cephalobotsHouseLabel = new JLabel("Cephalobot's House");
+                cephalobotsHouseLabel.setBounds(200, 10, 100, 10);
+                cephalobotsHouse.add(cephalobotsHouseLabel);
             } else if ((y > 417) && (y <= 471)) {
-                System.out.println("Pennsylvania Railroad");
+                JFrame pennsylvalnia = new JFrame();
+                pennsylvalnia.setSize(500, 200);
+                pennsylvalnia.setVisible(true);
+                JLabel pennsylvaniaLabel = new JLabel("Pennsylvania Railroad");
+                pennsylvaniaLabel.setBounds(200, 10, 100, 10);
+                pennsylvalnia.add(pennsylvaniaLabel);
             } else if ((y > 471) && (y <= 518)) {
-                System.out.println("Flora's House");
+                JFrame florasHouse = new JFrame();
+                florasHouse.setSize(500, 200);
+                florasHouse.setVisible(true);
+                JLabel florasHouseLabel = new JLabel("Flora's House");
+                florasHouseLabel.setBounds(200, 10, 100, 10);
+                florasHouse.add(florasHouseLabel);
             } else if ((y > 518) && (y <= 570)) {
-                System.out.println("Rosie's House");
+                JFrame rosiesHouse = new JFrame();
+                rosiesHouse.setSize(500, 200);
+                rosiesHouse.setVisible(true);
+                JLabel rosiesHouseLabel = new JLabel("Rosie's House");
+                rosiesHouseLabel.setBounds(200, 10, 100, 10);
+                rosiesHouse.add(rosiesHouseLabel);
             } else if ((y > 570) && (y <= 622)) {
-                System.out.println("Electric Company");
+                JFrame electric = new JFrame();
+                electric.setSize(500, 200);
+                electric.setVisible(true);
+                JLabel electricLabel = new JLabel("Electric Company");
+                electricLabel.setBounds(200, 10, 100, 10);
+                electric.add(electricLabel);
             } else if ((y > 622) && (y <= 690)) {
-                System.out.println("Chrissy's House");
+                JFrame chrissysHouse = new JFrame();
+                chrissysHouse.setSize(500, 200);
+                chrissysHouse.setVisible(true);
+                JLabel chrissysHouseLabel = new JLabel("Chrissy's House");
+                chrissysHouseLabel.setBounds(200, 10, 100, 10);
+                chrissysHouse.add(chrissysHouseLabel);
             } else if (y > 690) {
-                System.out.println("Jail Space");
+                JFrame jail = new JFrame();
+                jail.setSize(500, 200);
+                jail.setVisible(true);
+                JLabel jailLabel = new JLabel("Jail");
+                jailLabel.setBounds(200, 10, 100, 10);
+                jail.add(jailLabel);
             }
         }
 
         // Middle of Board
         if ((x > 144) && (x <= 217)) {
             if ((y >= 75) && (y <= 200)) {
-                System.out.println("Octavia's House");
+                JFrame octaviasHouse = new JFrame();
+                octaviasHouse.setSize(500, 200);
+                octaviasHouse.setVisible(true);
+                JLabel octaviasHouseLabel = new JLabel("Octavia's House");
+                octaviasHouseLabel.setBounds(200, 10, 100, 10);
+                octaviasHouse.add(octaviasHouseLabel);
             }
             if (y > 690) {
-                System.out.println("Mitzi's House");
+                JFrame mitzisHouse = new JFrame();
+                mitzisHouse.setSize(500, 200);
+                mitzisHouse.setVisible(true);
+                JLabel mitzisHouseLabel = new JLabel("Mitzi's House");
+                mitzisHouseLabel.setBounds(200, 10, 100, 10);
+                mitzisHouse.add(mitzisHouseLabel);
             }
         }
         if ((x > 217) && (x <= 296)) {
             if ((y >= 75) && (y <= 200)) {
-                System.out.println("Chance");
+                JFrame chance2 = new JFrame();
+                chance2.setSize(500, 200);
+                chance2.setVisible(true);
+                JLabel chance2Label = new JLabel("Chance");
+                chance2Label.setBounds(200, 10, 100, 10);
+                chance2.add(chance2Label);
             }
             if (y > 690) {
-                System.out.println("Marina's House");
+                JFrame marinasHouse = new JFrame();
+                marinasHouse.setSize(500, 200);
+                marinasHouse.setVisible(true);
+                JLabel marinasHouseLabel = new JLabel("Marina's House");
+                marinasHouseLabel.setBounds(200, 10, 100, 10);
+                marinasHouse.add(marinasHouseLabel);
             }
         }
         if ((x > 296) && (x <= 375)) {
             if ((y >= 75) && (y <= 200)) {
-                System.out.println("Fang's House");
+                JFrame fangsHouse = new JFrame();
+                fangsHouse.setSize(500, 200);
+                fangsHouse.setVisible(true);
+                JLabel fangsHouseLabel = new JLabel("Fang's House");
+                fangsHouseLabel.setBounds(200, 10, 100, 10);
+                fangsHouse.add(fangsHouseLabel);
             }
             if (y > 690) {
-                System.out.println("Chance");
+                JFrame chance1 = new JFrame();
+                chance1.setSize(500, 200);
+                chance1.setVisible(true);
+                JLabel chance1Label = new JLabel("Chance");
+                chance1Label.setBounds(200, 10, 100, 10);
+                chance1.add(chance1Label);
             }
         }
         if ((x > 375) && (x <= 451)) {
             if ((y >= 75) && (y <= 200)) {
-                System.out.println("Kabuki's House");
+                JFrame kabukisHouse = new JFrame();
+                kabukisHouse.setSize(500, 200);
+                kabukisHouse.setVisible(true);
+                JLabel kabukisHouseLabel = new JLabel("Kabuki's House");
+                kabukisHouseLabel.setBounds(200, 10, 100, 10);
+                kabukisHouse.add(kabukisHouseLabel);
             }
             if (y > 690) {
-                System.out.println("Melba's House");
+                JFrame melbasHouse = new JFrame();
+                melbasHouse.setSize(500, 200);
+                melbasHouse.setVisible(true);
+                JLabel melbasHouseLabel = new JLabel("Melba's House");
+                melbasHouseLabel.setBounds(200, 10, 100, 10);
+                melbasHouse.add(melbasHouseLabel);
             }
         }
         if ((x > 451) && (x <= 534)) {
             if ((y >= 75) && (y <= 200)) {
-                System.out.println("B. & O. Railroad");
+                JFrame borr = new JFrame();
+                borr.setSize(500, 200);
+                borr.setVisible(true);
+                JLabel borrLabel = new JLabel("B. & O. Railroad");
+                borrLabel.setBounds(200, 10, 100, 10);
+                borr.add(borrLabel);
             }
             if (y > 690) {
-                System.out.println("Reading Railroad");
+                JFrame rr = new JFrame();
+                rr.setSize(500, 200);
+                rr.setVisible(true);
+                JLabel rrLabel = new JLabel("Reading Railroad");
+                rrLabel.setBounds(200, 10, 100, 10);
+                rr.add(rrLabel);
             }
         }
         if ((x > 534) && (x <= 614)) {
             if ((y >= 75) && (y <= 200)) {
-                System.out.println("Stitches's House");
+                JFrame stitchesHouse = new JFrame();
+                stitchesHouse.setSize(500, 200);
+                stitchesHouse.setVisible(true);
+                JLabel stitchesHouseLabel = new JLabel("Stitches' House");
+                stitchesHouseLabel.setBounds(200, 10, 100, 10);
+                stitchesHouse.add(stitchesHouseLabel);
             }
             if (y > 690) {
-                System.out.println("Income Tax");
+                JFrame incomeTax = new JFrame();
+                incomeTax.setSize(500, 200);
+                incomeTax.setVisible(true);
+                JLabel incomeTaxLabel = new JLabel("Income Tax");
+                incomeTaxLabel.setBounds(200, 10, 100, 10);
+                incomeTax.add(incomeTaxLabel);
             }
         }
         if ((x > 614) && (x <= 687)) {
             if ((y >= 75) && (y <= 200)) {
-                System.out.println("Shino's House");
+                JFrame shinosHouse = new JFrame();
+                shinosHouse.setSize(500, 200);
+                shinosHouse.setVisible(true);
+                JLabel shinosHouseLabel = new JLabel("Shino's House");
+                shinosHouseLabel.setBounds(200, 10, 100, 10);
+                shinosHouse.add(shinosHouseLabel);
             }
             if (y > 690) {
-                System.out.println("Rocket's House");
+                JFrame rocketsHouse = new JFrame();
+                rocketsHouse.setSize(500, 200);
+                rocketsHouse.setVisible(true);
+                JLabel rocketsHouseLabel = new JLabel("Rocket's House");
+                rocketsHouseLabel.setBounds(200, 10, 100, 10);
+                rocketsHouse.add(rocketsHouseLabel);
             }
         }
         if ((x > 687) && (x <= 769)) {
             if ((y >= 75) && (y <= 200)) {
-                System.out.println("Water Works");
+                JFrame ww = new JFrame();
+                ww.setSize(500, 200);
+                ww.setVisible(true);
+                JLabel wwLabel = new JLabel("Water Works");
+                wwLabel.setBounds(200, 10, 100, 10);
+                ww.add(wwLabel);
             }
             if (y > 690) {
-                System.out.println("Community Chest");
+                JFrame cc1 = new JFrame();
+                cc1.setSize(500, 200);
+                cc1.setVisible(true);
+                JLabel cc1Label = new JLabel("Community Chest");
+                cc1Label.setBounds(200, 10, 100, 10);
+                cc1.add(cc1Label);
             }
         }
         if ((x > 769) && (x <= 846)) {
             if ((y >= 75) && (y <= 200)) {
-                System.out.println("Bob's House");
+                JFrame bobsHouse = new JFrame();
+                bobsHouse.setSize(500, 200);
+                bobsHouse.setVisible(true);
+                JLabel bobsHouseLabel = new JLabel("Bob's House");
+                bobsHouseLabel.setBounds(200, 10, 100, 10);
+                bobsHouse.add(bobsHouseLabel);
             }
             if (y > 690) {
-                System.out.println("Rodney's House");
+                JFrame rodneysHouse = new JFrame();
+                rodneysHouse.setSize(500, 200);
+                rodneysHouse.setVisible(true);
+                JLabel rodneysHouseLabel = new JLabel("Rodney's House");
+                rodneysHouseLabel.setBounds(200, 10, 100, 10);
+                rodneysHouse.add(rodneysHouseLabel);
             }
         }
 
         // Right Side of Board
         if (x > 846) {
             if ((y >= 80) && (y <= 205)) {
-                System.out.println("Go To Jail");
+                JFrame goToJail = new JFrame();
+                goToJail.setSize(500, 200);
+                goToJail.setVisible(true);
+                JLabel goToJailLabel = new JLabel("Go To Jail");
+                goToJailLabel.setBounds(200, 10, 100, 10);
+                goToJail.add(goToJailLabel);
             } else if ((y > 205) && (y <= 260)) {
-                System.out.println("Judy's House");
+                JFrame judysHouse = new JFrame();
+                judysHouse.setSize(500, 200);
+                judysHouse.setVisible(true);
+                JLabel judysHouseLabel = new JLabel("Judy's House");
+                judysHouseLabel.setBounds(200, 10, 100, 10);
+                judysHouse.add(judysHouseLabel);
             } else if ((y > 260) && (y <= 314)) {
-                System.out.println("Diana's House");
+                JFrame dianasHouse = new JFrame();
+                dianasHouse.setSize(500, 200);
+                dianasHouse.setVisible(true);
+                JLabel dianasHouseLabel = new JLabel("Diana's House");
+                dianasHouseLabel.setBounds(200, 10, 100, 10);
+                dianasHouse.add(dianasHouseLabel);
             } else if ((y > 314) && (y <= 366)) {
-                System.out.println("Community Chest");
+                JFrame cc3 = new JFrame();
+                cc3.setSize(500, 200);
+                cc3.setVisible(true);
+                JLabel cc3Label = new JLabel("Community Chest");
+                cc3Label.setBounds(200, 10, 100, 10);
+                cc3.add(cc3Label);
             } else if ((y > 366) && (y <= 422)) {
-                System.out.println("Francine's House");
+                JFrame francinesHouse = new JFrame();
+                francinesHouse.setSize(500, 200);
+                francinesHouse.setVisible(true);
+                JLabel francinesHouseLabel = new JLabel("Francine's House");
+                francinesHouseLabel.setBounds(200, 10, 100, 10);
+                francinesHouse.add(francinesHouseLabel);
             } else if ((y > 422) && (y <= 480)) {
-                System.out.println("Short Line");
+                JFrame shortLine = new JFrame();
+                shortLine.setSize(500, 200);
+                shortLine.setVisible(true);
+                JLabel shortLineLabel = new JLabel("Short Line");
+                shortLineLabel.setBounds(200, 10, 100, 10);
+                shortLine.add(shortLineLabel);
             } else if ((y > 480) && (y <= 532)) {
-                System.out.println("Chance");
+                JFrame chance3 = new JFrame();
+                chance3.setSize(500, 200);
+                chance3.setVisible(true);
+                JLabel chance3Label = new JLabel("Chance");
+                chance3Label.setBounds(200, 10, 100, 10);
+                chance3.add(chance3Label);
             } else if ((y > 532) && (y <= 586)) {
-                System.out.println("Marshall's House");
+                JFrame marshallsHouse = new JFrame();
+                marshallsHouse.setSize(500, 200);
+                marshallsHouse.setVisible(true);
+                JLabel marshallsHouseLabel = new JLabel("Marshall's House");
+                marshallsHouseLabel.setBounds(200, 10, 100, 10);
+                marshallsHouse.add(marshallsHouseLabel);
             } else if ((y > 586) && (y <= 635)) {
-                System.out.println("Luxury Tax");
+                JFrame luxury = new JFrame();
+                luxury.setSize(500, 200);
+                luxury.setVisible(true);
+                JLabel luxuryLabel = new JLabel("Luxury Tax");
+                luxuryLabel.setBounds(200, 10, 100, 10);
+                luxury.add(luxuryLabel);
             } else if ((y > 635) && (y <= 690)) {
-                System.out.println("Raymond's House");
-                System.out.println(raymondsHouse.getX() + raymondsHouse.getY());
+                JFrame raymondsHouse = new JFrame();
+                raymondsHouse.setSize(500, 200);
+                raymondsHouse.setVisible(true);
+                JLabel raymondsHouseLabel = new JLabel("Raymond's House");
+                raymondsHouseLabel.setBounds(200, 10, 100, 10);
+                raymondsHouse.add(raymondsHouseLabel);
             } else if (y > 690) {
-                System.out.println("PASS GO");
+                JFrame passGo = new JFrame();
+                passGo.setSize(500, 200);
+                passGo.setVisible(true);
+                JLabel passGoLabel = new JLabel("Pass Go");
+                passGoLabel.setBounds(200, 10, 100, 10);
+                passGo.add(passGoLabel);
             }
         }
 
@@ -222,13 +421,23 @@ public class GUI implements MouseListener {
         // Properties Button
         if ((x >= 365) && (x <= 530)) {
             if ((y >= 10) && (y <= 60)) {
-                System.out.println("Properties Button");
+                JFrame propertiesBtn = new JFrame();
+                propertiesBtn.setSize(500, 200);
+                propertiesBtn.setVisible(true);
+                JLabel propertiesLabel = new JLabel("Properties you own will show up here:");
+                propertiesLabel.setBounds(200, 10, 100, 10);
+                propertiesBtn.add(propertiesLabel);
             }
         }
         // Cards Button
         if ((x >= 803) && (x <= 932)) {
             if ((y >= 10) && (y <= 60)) {
-                System.out.println("Cards Button");
+                JFrame cardsBtn = new JFrame();
+                cardsBtn.setSize(500, 200);
+                cardsBtn.setVisible(true);
+                JLabel cardsLabel = new JLabel("If you have a Get Out Of Jail Free card it will show up here:");
+                cardsLabel.setBounds(200, 10, 100, 10);
+                cardsBtn.add(cardsLabel);
             }
         }
 
@@ -274,7 +483,12 @@ public class GUI implements MouseListener {
         // Trade Button
         if ((x >= 692) && (x <= 830)) {
             if ((y >= 280) && (y <= 810)) {
-                System.out.println("Trade Button");
+                JFrame tradeBtn = new JFrame();
+                tradeBtn.setSize(500, 200);
+                tradeBtn.setVisible(true);
+                JLabel tradeLabel = new JLabel("Trade Button");
+                tradeLabel.setBounds(200, 10, 100, 10);
+                tradeBtn.add(tradeLabel);
             }
         }
 
