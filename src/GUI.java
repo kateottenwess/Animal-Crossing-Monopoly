@@ -40,7 +40,7 @@ public class GUI implements MouseListener {
     JFrame frame;
 
     public GUI() throws IOException, URISyntaxException {
-        frame = buildFrame();
+        JFrame frame = buildFrame();
         frame.setVisible(true);
         
         //Upload image of Monopoly board and resize to fit size of window
@@ -81,16 +81,16 @@ public class GUI implements MouseListener {
 
     //Click on spaces
     @Override
-    public void mouseClicked(MouseEvent e) {
+    public final void mouseClicked(final MouseEvent e) {
 
         int x = e.getX();
         int y = e.getY();
 
-        //System.out.println("mouseClicked: (" + x + ", " + y + ")");
+        // System.out.println("mouseClicked: (" + x + ", " + y + ")");
 
-        //Left side of board
+        // Left side of board
         if ((x >= 0) && (x <= 144)) {
-            //System.out.println("Sort of working"); //it is not
+            // System.out.println("Sort of working"); //it is not
             if ((y >= 75) && (y <= 200)) {
                 System.out.println("Free Docking");
             } else if ((y > 200) && (y <= 252)) {
@@ -116,7 +116,7 @@ public class GUI implements MouseListener {
             }
         }
 
-        //Middle of Board
+        // Middle of Board
         if ((x > 144) && (x <= 217)) {
             if ((y >= 75) && (y <= 200)) {
                 System.out.println("Octavia's House");
@@ -190,7 +190,7 @@ public class GUI implements MouseListener {
             }
         }
 
-        //Right Side of Board
+        // Right Side of Board
         if (x > 846) {
             if ((y >= 80) && (y <= 205)) {
                 System.out.println("Go To Jail");
@@ -218,39 +218,41 @@ public class GUI implements MouseListener {
             }
         }
 
-        //Bar up top
-        //Properties Button
+        // Bar up top
+        // Properties Button
         if ((x >= 365) && (x <= 530)) {
             if ((y >= 10) && (y <= 60)) {
                 System.out.println("Properties Button");
             }
         }
-        //Cards Button
+        // Cards Button
         if ((x >= 803) && (x <= 932)) {
             if ((y >= 10) && (y <= 60)) {
                 System.out.println("Cards Button");
             }
         }
 
-        //Roll Dice Button
+        // Roll Dice Button
         if ((x >= 680) && (x <= 830)) {
             if ((y >= 235) && (y <= 265)) {
 
-                //Create new frame to show dice results
+                // Create new frame to show dice results
                 JFrame diceFrame = new JFrame();
                 diceFrame.setSize(500, 200);
                 diceFrame.setVisible(true);
 
                 JLabel diceLabel = new JLabel("Dice");
-                //Dimension size = diceLabel.getPreferredSize();
+                // Dimension size = diceLabel.getPreferredSize();
                 diceLabel.setBounds(200, 10, 100, 10);
 
                 diceFrame.add(diceLabel);
 
-                int dice1Val = Dice.rollDice1();
-                int dice2Val = Dice.rollDice2();
+                Dice d = new Dice();
 
-                //Using rollDice() from Dice class and add to frame
+                int dice1Val = d.rollDice1();
+                int dice2Val = d.rollDice2();
+
+                // Using rollDice() from Dice class and add to frame
                 JLabel dice1 = new JLabel("Dice 1: " + dice1Val);
                 Dimension size1 = dice1.getPreferredSize();
                 dice1.setBounds(200, 30, size1.width, size1.height);
@@ -261,48 +263,56 @@ public class GUI implements MouseListener {
                 diceFrame.add(dice1);
                 diceFrame.add(dice2);
 
-                //Get piece to move that many spaces
-                //int totalMove = dice1Val + dice2Val;
-                //Point newSpace = spacesArray[totalMove-1];
-                //g.drawImage(p1Label, (int)raymondsHouse.getX(),(int)raymondsHouse.getY(), null);
-                //piece1.setLocation(newSpace.getX(), newSpace.getY());
+                // Get piece to move that many spaces
+                // int totalMove = dice1Val + dice2Val;
+                // Point newSpace = spacesArray[totalMove-1];
+                // g.drawImage(p1Label, (int)raymondsHouse.getX(),(int)raymondsHouse.getY(),
+                // null);
+                // piece1.setLocation(newSpace.getX(), newSpace.getY());
             }
         }
-        //Trade Button
+        // Trade Button
         if ((x >= 692) && (x <= 830)) {
             if ((y >= 280) && (y <= 810)) {
                 System.out.println("Trade Button");
             }
         }
 
-        //        throw new UnsupportedOperationException("Unimplemented method 'mouseClicked'");
+        // throw new UnsupportedOperationException("Unimplemented method
+        // 'mouseClicked'");
 
     }
 
-    /*********************************NEW************************************************ */
-    public void movePiece(int newPosition) {
+    /*********************************
+     * NEW************************************************
+     */
+    public void movePiece(final int newPosition) {
         // Move the player's piece to the new position
         Graphics g = frame.getGraphics();
         g.clearRect(930, 740, 50, 50);
         g.drawImage(p1Label, newPosition, 740, null);
         frame.repaint();
     }
-    @Override
-    public void mousePressed(MouseEvent e) { }
 
     @Override
-    public void mouseReleased(MouseEvent e) { }
+    public void mousePressed(final MouseEvent e) {
+    }
 
     @Override
-    public void mouseEntered(MouseEvent e) { }
+    public void mouseReleased(final MouseEvent e) {
+    }
 
     @Override
-    public void mouseExited(MouseEvent e) { }
+    public void mouseEntered(final MouseEvent e) {
+    }
 
+    @Override
+    public void mouseExited(final MouseEvent e) {
+    }
 
-        //Locations for game pieces
+    // Locations for game pieces
 
-        //Bottom of board
+    // Bottom of board
     Point passGo1 = new Point(945, 768);
     Point passGo2 = new Point(945, 778);
     Point passGo3 = new Point(955, 768);
@@ -318,7 +328,7 @@ public class GUI implements MouseListener {
     Point mitzisHouse = new Point(181, 768);
     Point jailSpace = new Point(20, 768);
 
-    //Left side of board
+    // Left side of board
     Point chrissysHouse = new Point(60, 656);
     Point electricCompany = new Point(60, 596);
     Point rosiesHouse = new Point(60, 544);
@@ -330,7 +340,7 @@ public class GUI implements MouseListener {
     Point bonesHouse = new Point(60, 226);
     Point freeDocking = new Point(73, 138);
 
-    //Top of board
+    // Top of board
     Point octaviasHouse = new Point(181, 120);
     Point chance2 = new Point(257, 120);
     Point fangsHouse = new Point(336, 120);
@@ -341,7 +351,7 @@ public class GUI implements MouseListener {
     Point waterWorks = new Point(728, 120);
     Point bobsHouse = new Point(808, 120);
 
-    //Right side of board
+    // Right side of board
     Point goToJail = new Point(945, 143);
     Point judysHouse = new Point(945, 233);
     Point dianasHouse = new Point(945, 287);
@@ -353,8 +363,8 @@ public class GUI implements MouseListener {
     Point luxuryTax = new Point(945, 611);
     Point raymondsHouse = new Point(945, 663);
 
-    //array of spaces' locations
-    Point spacesArray[] = {passGo1,rodneysHouse,cc1,rocketsHouse,incomeTax,readingRailroad,melbasHouse,
+    // array of spaces' locations
+    Point[] spacesArray = { passGo1, rodneysHouse, cc1, rocketsHouse, incomeTax, readingRailroad, melbasHouse,
         chance1,marinasHouse,mitzisHouse,jailSpace,chrissysHouse,electricCompany,rosiesHouse,florasHouse,
         pennsylvaniaRailroad,cephalobotsHouse,cc2,hopkinsHouse,bonesHouse,freeDocking,octaviasHouse,chance2,
         fangsHouse,kabukisHouse,boRailroad,stitchesHouse,shinosHouse,waterWorks,bobsHouse,goToJail,judysHouse,
