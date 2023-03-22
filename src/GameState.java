@@ -33,8 +33,9 @@ public class GameState {
             int newPosition = player.getBoardPos() + dice1 + dice2;
             if (newPosition >= 40) {
                 newPosition -= 40;
+            } else {
+                player.move(dice1, dice2);
             }
-            player.move(dice1, dice2, newPosition);
             gui.movePiece(newPosition);
         }
     }

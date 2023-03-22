@@ -283,10 +283,8 @@ public class GUI implements MouseListener {
 
     }
 
-    /*********************************
-     * NEW************************************************
-     */
-    public void movePiece(final int newPosition) {
+    /********************************** NEW*************************************************/
+    public void movePiece(int newPosition) {
         // Move the player's piece to the new position
         Graphics g = frame.getGraphics();
         g.clearRect(930, 740, 50, 50);

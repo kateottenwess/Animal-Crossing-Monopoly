@@ -91,9 +91,8 @@ public class Player {
         return 1;
     }
 
-    public void move(int dice1, int dice2, int newPosition) {
+    public void move(int dice1, int dice2) {
         int totalmove = dice1 + dice2;
-        this.setBoardPos(newPosition);
     
         if (totalmove + this.getBoardPos() >= 40) {
             int greater40 = totalmove + this.getBoardPos();
