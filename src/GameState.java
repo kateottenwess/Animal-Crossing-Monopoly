@@ -37,6 +37,7 @@ public class GameState {
                 player.move(dice1, dice2);
             }
             gui.movePiece(newPosition);
+            
         }
     }
     

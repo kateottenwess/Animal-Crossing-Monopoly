@@ -1,3 +1,14 @@
 {
-    "java.checkstyle.configuration": "/sun_checks.xml"
+    "java.checkstyle.configuration": "/sun_checks.xml",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\kirap\\OneDrive\\Documents\\javafx-sdk-20\\lib\\javafx.base.jar",
+        "c:\\Users\\kirap\\OneDrive\\Documents\\javafx-sdk-20\\lib\\javafx.controls.jar",
+        "c:\\Users\\kirap\\OneDrive\\Documents\\javafx-sdk-20\\lib\\javafx.fxml.jar",
+        "c:\\Users\\kirap\\OneDrive\\Documents\\javafx-sdk-20\\lib\\javafx.graphics.jar",
+        "c:\\Users\\kirap\\OneDrive\\Documents\\javafx-sdk-20\\lib\\javafx.media.jar",
+        "c:\\Users\\kirap\\OneDrive\\Documents\\javafx-sdk-20\\lib\\javafx.swing.jar",
+        "c:\\Users\\kirap\\OneDrive\\Documents\\javafx-sdk-20\\lib\\javafx.web.jar",
+        "c:\\Users\\kirap\\OneDrive\\Documents\\javafx-sdk-20\\lib\\javafx-swt.jar"
+    ]
 }
