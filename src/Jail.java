@@ -6,7 +6,6 @@
  **********************************************************************/
 public class Jail extends MiscSpaces {
     //class to configure the jail code for use in board/space classes
-    private Square square;
     private BoardSpaceType spaceType;
 
 
@@ -14,8 +13,7 @@ public class Jail extends MiscSpaces {
     /*******************************************************************
     * Constructor that sets the space type and the square
     ******************************************************************/
-    public Jail(final Square square, final BoardSpaceType spaceType) {
-        this.square = square;
+    public Jail(final BoardSpaceType spaceType) {
         this.spaceType = spaceType;
     }
 

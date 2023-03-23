@@ -16,9 +16,9 @@ public class GameState {
         this.numPlayers = numPlayers;
         players = new ArrayList<>();
         for (int i = 1; i <= numPlayers; i++) {
-            String name = JOptionPane.showInputDialog("Enter name for Player " + i);
-            Player player = new Player(i, name);
-            players.add(player);
+            //String name = JOptionPane.showInputDialog("Enter name for Player " + i);
+            //Player player = new Player(i, name);
+            //players.add(player);
         }
         //board = new Board(); is throwing null pointer
         dice = new Dice();
@@ -36,7 +36,6 @@ public class GameState {
             } else {
                 player.move(dice1, dice2);
             }
-            gui.movePiece(newPosition);
             
         }
     }
@@ -48,7 +47,8 @@ public class GameState {
 
     //help initialize player in gui? only works for one player rn but that's all we need
     public Player getPlayer(){
-        return players.get(0);
+        Player player1 = new Player(1, "player1");
+        return player1;
     } 
 
 }
