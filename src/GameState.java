@@ -27,17 +27,13 @@ public class GameState {
     }
     
     public static void startGame() throws IOException, URISyntaxException {
-        for (Player player : players) {
-            int dice1 = dice.rollDice1();
-            int dice2 = dice.rollDice2();
-            int newPosition = player.getBoardPos() + dice1 + dice2;
-            if (newPosition >= 40) {
-                newPosition -= 40;
-            } else {
-                player.move(dice1, dice2);
-            }
-            
-        }
+        Player player = new Player(1, "player1");
+        int dice1 = dice.getDice1();
+        System.out.println(dice1);
+        int dice2 = dice.getDice2();
+        System.out.println(dice2);
+        player.move(dice1, dice2);
+        System.out.println(player.getBoardPos());
     }
     
     public static void main(String[] args) throws IOException, URISyntaxException {

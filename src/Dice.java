@@ -47,6 +47,14 @@ public class Dice {
         }
     }
 
+    public int getDice1() {
+        return dice1;
+    }
+
+    public int getDice2() {
+        return dice2;
+    }
+
 
     /*******************************************************************
      * Method to determine if three doubles were rolled
