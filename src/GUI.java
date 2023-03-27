@@ -77,7 +77,7 @@
     private JFrame buildFrame() {
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setSize(1000, 1500);
+        frame.setSize(1008, 815);
         frame.setVisible(true);
         return frame;
     }
