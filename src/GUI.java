@@ -4,52 +4,56 @@
  * @author Kate Ottenwess, Kira B, Abby Svec
  * @version Winter 2023
  **********************************************************************/
-/*import javax.swing.*;
-import java.awt.event.*;
-import java.util.*;
-import java.text.*;
-import java.io.IOException;
-import java.awt.*;
-import java.io.*;
-import java.imageio.*;
-import java.net.*; */
 
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-//import javax.lang.model.util.ElementScanner14;
-//import javax.swing.JComponent;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.WindowConstants;
-
-import java.awt.image.BufferedImage;
-import java.awt.event.*;
-import java.io.File;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.awt.*;
-
-public class GUI implements MouseListener { 
-
-    BufferedImage piece1;
-    Image p1Label;
-    //I added getPlayer in gameState and idk i can't call it here but
-    //i think this is what he meant when he said it wasn't initialized
-    Player player = new Player(1, "player1");
-    JFrame frame;
-
-    public GUI() throws IOException, URISyntaxException {
-        JFrame frame = buildFrame();
-        frame.setVisible(true);
-        
-        //Upload image of Monopoly board and resize to fit size of window
-        BufferedImage board = ImageIO.read(new File(getClass().getResource("/resources/ACBoard.jpg").toURI()));
-        Image newBoard = board.getScaledInstance(1000, 778, Image.SCALE_DEFAULT);
-
-        //Upload immage of piece 1
-        piece1 = ImageIO.read(new File(getClass().getResource("/resources/Piece1ACMon.png").toURI()));
-        Image p1Label = piece1.getScaledInstance(50, 50, Image.SCALE_DEFAULT);
+ import javax.imageio.ImageIO;
+ import javax.swing.Icon;
+ import javax.swing.ImageIcon;
+ import javax.swing.JFrame;
+ import javax.swing.JLabel;
+ import javax.swing.JPanel;
+ import javax.swing.WindowConstants;
+ 
+ import java.awt.image.BufferedImage;
+ import java.awt.event.*;
+ import java.io.File;
+ import java.io.IOException;
+ import java.net.URISyntaxException;
+ import java.awt.*;
+ 
+ public class GUI implements MouseListener { 
+ 
+     BufferedImage piece1;
+     BufferedImage board;
+     BufferedImage dice1Buffer;
+     BufferedImage dice2Buffer;
+     Image p1Label;
+     Image newBoard;
+     Image dice1Img;
+     Image dice2Img;
+     GameState gameState;
+     Player player;
+     JFrame frame;
+ 
+     public GUI() throws IOException, URISyntaxException {
+         player = new Player(1, "Player1");
+         frame = buildFrame();
+         frame.setVisible(true);
+         
+         //Upload image of Monopoly board and resize to fit size of window
+         board = ImageIO.read(new File(getClass().getResource("/resources/ACBoard.jpg").toURI()));
+         newBoard = board.getScaledInstance(1000, 778, Image.SCALE_SMOOTH);
+ 
+         //Upload immage of piece 1
+         piece1 = ImageIO.read(new File(getClass().getResource("/resources/Piece1ACMon.png").toURI()));
+         p1Label = piece1.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+ 
+         //upload image of dice 1
+         dice1Buffer = ImageIO.read(new File(getClass().getResource("/resources/Dice1.png").toURI()));
+         dice1Img = dice1Buffer.getScaledInstance(100, 100, Image.SCALE_SMOOTH);
+ 
+          //upload image of dice 2
+          dice2Buffer = ImageIO.read(new File(getClass().getResource("/resources/Dice2.png").toURI()));
+          dice2Img = dice2Buffer.getScaledInstance(100, 100, Image.SCALE_SMOOTH);
 
         JPanel panel = new JPanel();
 
