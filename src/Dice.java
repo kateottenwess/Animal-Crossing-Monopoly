@@ -6,8 +6,6 @@
  **********************************************************************/
 public class Dice {
 
-    private int dice1;
-    private int dice2;
     private int numDouble = 0;
 
     
@@ -15,29 +13,19 @@ public class Dice {
      * Method to roll dice 1
      * @return int
      ******************************************************************/
-    public int rollDice1() {
+    public int rollDice() {
 
         return ((int) (Math.random() * 6 + 1));
         
     }
 
-
-    /*******************************************************************
-     * Method to roll dice 2
-     * @return int
-     ******************************************************************/
-    public int rollDice2() {
-
-        return ((int) (Math.random() * 6 + 1));
-
-    }
     
 
     /*******************************************************************
      * Method to determine if a double was rolled
      * @return boolean true if double was rolled
      ******************************************************************/
-    public boolean doubleRoll() {
+    public boolean doubleRoll(int dice1, int dice2) {
         if (dice1 == dice2) {
             numDouble++;
             return true;
@@ -45,14 +33,6 @@ public class Dice {
             numDouble = 0;
             return false;
         }
-    }
-
-    public int getDice1() {
-        return dice1;
-    }
-
-    public int getDice2() {
-        return dice2;
     }
 
 
