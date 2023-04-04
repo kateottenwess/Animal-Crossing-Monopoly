@@ -169,6 +169,7 @@ public class GameState implements MouseListener {
 
         Point code = e.getPoint();
 
+        //roll dice
         if (code.getY() >= 240 && code.getY() <= 278 && code.getX() >= 692 && code.getX() <= 830) {
 
             returnFrame = null;
@@ -204,7 +205,9 @@ public class GameState implements MouseListener {
             // null);
             // piece1.setLocation(newSpace.getX(), newSpace.getY());
 
-        } else if (code.getY() >= 280 && code.getY() <= 310 && code.getX() >= 692 && code.getX() <= 830) {
+        } 
+        //trade
+        else if (code.getY() >= 280 && code.getY() <= 310 && code.getX() >= 692 && code.getX() <= 830) {
 
             returnFrame = null;
             // TODO: trade
