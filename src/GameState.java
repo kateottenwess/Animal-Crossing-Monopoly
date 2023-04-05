@@ -174,8 +174,6 @@ public class GameState implements MouseListener {
 
             returnFrame = null;
             
-            // TODO: roll them dice
-
             int dice1 = dice.rollDice();
             int dice2 = dice.rollDice();
             int totalMove = dice1 + dice2;
@@ -187,14 +185,31 @@ public class GameState implements MouseListener {
             if (dice.doubleJail()) {
                 newBoardPos = 10;
                 newCoords = jailSpace;
-            } else {
+            } 
+            
+            //not going to jail slay girlie
+            else {
                 if (totalMove + currentPlayer.getBoardPos() > 39) {
                     newBoardPos = totalMove - (39 - currentPlayer.getBoardPos()) - 1;
                     newCoords = spacesArray[newBoardPos];
+
+                    //if the player can buy
+                    if (currentPlayer.tryBuy(newBoardPos) == 1) {
+                        //TODO: allow player to choose to buy or nah- display property
+                    } else {
+                        //cant buy lmao loser either pay rent OR its not a property and its community chest/chance/misc
+                    }
                 }
                 else {
                     newBoardPos = currentPlayer.getBoardPos() + totalMove;
                     newCoords = spacesArray[newBoardPos];
+
+                    //if the player can buy
+                    if (currentPlayer.tryBuy(newBoardPos) == 1) {
+                        //TODO: allow player to choose to buy or nah- display property
+                    } else {
+                        //cant buy lmao loser either pay rent OR its not a property and its community chest/chance/misc
+                    }
                 }
             }
 
@@ -489,5 +504,6 @@ public class GameState implements MouseListener {
 
         stateChanged = true;
     }
+
 
 }

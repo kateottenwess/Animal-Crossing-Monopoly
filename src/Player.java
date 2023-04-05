@@ -136,6 +136,7 @@ public class Player {
         }
     }
 
+
     public void buyHouse(int spaceIdentifier, int numHouses) throws Exception {
 
         // if the number of houses on a property doesnt exceed 4
@@ -162,6 +163,15 @@ public class Player {
             }
         } else {
             throw new Exception("EXCEEDING 4 PROPERTIES");
+        }
+    }
+
+    public int tryBuy(int spaceIdentifier) {
+        try {
+            this.buyProperty(spaceIdentifier);
+            return 1;
+        } catch (Exception e) {
+            return 0;
         }
     }
 }

@@ -75,7 +75,7 @@ public class GUI {
             if (gameState.getReturnFrame() == null) {
                 g.drawImage(p1Label, (int) gameState.getNewCoords().getX(), (int) gameState.getNewCoords().getY(), null);
 
-                
+
             } 
             else {
 
