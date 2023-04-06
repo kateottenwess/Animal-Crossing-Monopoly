@@ -192,6 +192,7 @@ public class GameState implements MouseListener {
                 if (totalMove + currentPlayer.getBoardPos() > 39) {
                     newBoardPos = totalMove - (39 - currentPlayer.getBoardPos()) - 1;
                     newCoords = spacesArray[newBoardPos];
+                    currentPlayer.setBoardPos(newBoardPos);
 
                     //if the player can buy
                     // if (currentPlayer.tryBuy(newBoardPos) == 1) {
@@ -203,6 +204,7 @@ public class GameState implements MouseListener {
                 else {
                     newBoardPos = currentPlayer.getBoardPos() + totalMove;
                     newCoords = spacesArray[newBoardPos];
+                    currentPlayer.setBoardPos(newBoardPos);
 
                     // //if the player can buy
                     // if (currentPlayer.tryBuy(newBoardPos) == 1) {

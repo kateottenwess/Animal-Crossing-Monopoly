@@ -28,6 +28,8 @@ public class GUI {
 
         JFrame frame = buildFrame();
         frame.setVisible(true);
+        
+        
 
         // Upload image of Monopoly board and resize to fit size of window
         BufferedImage board = ImageIO.read(new File(GUI.class.getResource("/resources/ACBoard.jpg").toURI()));
@@ -37,13 +39,7 @@ public class GUI {
         BufferedImage piece1 = ImageIO.read(new File(GUI.class.getResource("/resources/Piece1ACMon.png").toURI()));
         Image p1Label = piece1.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
 
-        // upload image of dice 1
-        BufferedImage dice1Buffer = ImageIO.read(new File(GUI.class.getResource("/resources/Dice1.png").toURI()));
-        Image dice1Img = dice1Buffer.getScaledInstance(100, 100, Image.SCALE_SMOOTH);
-
-        // upload image of dice 2
-        BufferedImage dice2Buffer = ImageIO.read(new File(GUI.class.getResource("/resources/Dice2.png").toURI()));
-        Image dice2Img = dice2Buffer.getScaledInstance(100, 100, Image.SCALE_SMOOTH);
+      
 
         JPanel panel = new JPanel();
 
