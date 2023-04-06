@@ -57,8 +57,7 @@ public class GUI {
         Graphics g = frame.getGraphics();
         g.drawImage(newBoard, 0, 30, null);
         g.drawImage(p1Label, 930, 740, null);
-        g.drawImage(dice1Img, 410, 550, null);
-        g.drawImage(dice2Img, 510, 550, null);
+        
 
         while (gameState.gameOver() == false) {
 
@@ -68,6 +67,8 @@ public class GUI {
             }
             // Clear changes
             gameState.clearChange();
+            g.drawImage(newBoard, 0, 30, null);
+
 
             // TODO: update gui
 

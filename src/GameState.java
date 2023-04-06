@@ -194,22 +194,22 @@ public class GameState implements MouseListener {
                     newCoords = spacesArray[newBoardPos];
 
                     //if the player can buy
-                    if (currentPlayer.tryBuy(newBoardPos) == 1) {
-                        //TODO: allow player to choose to buy or nah- display property
-                    } else {
-                        //cant buy lmao loser either pay rent OR its not a property and its community chest/chance/misc
-                    }
+                    // if (currentPlayer.tryBuy(newBoardPos) == 1) {
+                    //     //TODO: allow player to choose to buy or nah- display property
+                    // } else {
+                    //     //cant buy lmao loser either pay rent OR its not a property and its community chest/chance/misc
+                    // }
                 }
                 else {
                     newBoardPos = currentPlayer.getBoardPos() + totalMove;
                     newCoords = spacesArray[newBoardPos];
 
-                    //if the player can buy
-                    if (currentPlayer.tryBuy(newBoardPos) == 1) {
-                        //TODO: allow player to choose to buy or nah- display property
-                    } else {
-                        //cant buy lmao loser either pay rent OR its not a property and its community chest/chance/misc
-                    }
+                    // //if the player can buy
+                    // if (currentPlayer.tryBuy(newBoardPos) == 1) {
+                    //     //TODO: allow player to choose to buy or nah- display property
+                    // } else {
+                    //     //cant buy lmao loser either pay rent OR its not a property and its community chest/chance/misc
+                    // }
                 }
             }
 
