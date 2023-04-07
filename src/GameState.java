@@ -13,7 +13,7 @@ public class GameState implements MouseListener {
     private int numPlayers;
     private static ArrayList<Player> players;
     private Board board;
-    private static Dice dice;
+    private Dice dice;
     private Jail jail;
     private boolean stateChanged;
     private boolean gameOver;
@@ -23,6 +23,8 @@ public class GameState implements MouseListener {
     private Player currentPlayer;
     private int newBoardPos;
     private Point newCoords;
+    private int dice1;
+    private int dice2;
 
     // Bottom of board
     Point passGo1 = new Point(945, 768);
@@ -115,6 +117,14 @@ public class GameState implements MouseListener {
         return returnFrame;
     }
 
+    public int getDice1() {
+        return dice1;
+    }
+
+    public int getDice2() {
+        return dice2;
+    }
+
     public int getX() {
         return x;
     }
@@ -174,8 +184,8 @@ public class GameState implements MouseListener {
 
             returnFrame = null;
             
-            int dice1 = dice.rollDice();
-            int dice2 = dice.rollDice();
+            dice1 = dice.rollDice();
+            dice2 = dice.rollDice();
             int totalMove = dice1 + dice2;
 
             //check for doubles and rolling again

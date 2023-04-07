@@ -72,7 +72,13 @@ public class GUI {
             if (gameState.getReturnFrame() == null) {
                 g.drawImage(p1Label, (int) gameState.getNewCoords().getX(), (int) gameState.getNewCoords().getY(), null);
 
-
+                String dice1Val=String.valueOf(gameState.getDice1());
+                String dice2Val=String.valueOf(gameState.getDice2());
+                
+                g.setFont(new Font("TimesRoman", Font.BOLD, 30)); 
+                g.drawString(dice1Val, 425, 655);
+                g.drawString(dice2Val, 565, 655);
+                
             } 
             else {
 
