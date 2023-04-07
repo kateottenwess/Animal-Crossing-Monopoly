@@ -75,9 +75,9 @@ public class GUI {
                 String dice1Val=String.valueOf(gameState.getDice1());
                 String dice2Val=String.valueOf(gameState.getDice2());
                 
-                g.setFont(new Font("TimesRoman", Font.BOLD, 30)); 
-                g.drawString(dice1Val, 425, 655);
-                g.drawString(dice2Val, 565, 655);
+                g.setFont(new Font("TimesRoman", Font.BOLD, 40)); 
+                g.drawString(dice1Val, 445, 625);
+                g.drawString(dice2Val, 555, 625);
                 
             } 
             else {
