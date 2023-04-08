@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Properties;
+
 /**********************************************************************
  * Class stores all monopoly properties
  *
@@ -7,7 +10,9 @@
 public class Property extends BoardSpaceType {
 
     /* Array to store the properties for easier access */
-    private int[] properties;
+    //private int[] properties;
+    //private Property[] properties;
+    private static ArrayList<Property> properties = new ArrayList<Property>();
 
     /* Name of the property */
     private String propertyName;
@@ -85,59 +90,60 @@ public class Property extends BoardSpaceType {
 
     
     Property rodney = new Property("Rodney's House", 1, 60, 2, 30, "brown", 10);
+    //properties.add("Rodney's House", 1, 60, 2, 30, "brown", 10);
 
+    //properties.add(rodney);
 
     Property rocket = new Property("Rocket's House", 3, 60, 4, 30, "brown", 20);
-
+    //properties[1] = rocket;
     
     Property melba = new Property("Melba's House", 6, 100, 6, 50, "light blue", 30);
-
+    //properties[2] = melba;
 
     Property marina = new Property("Marina's House", 8, 100, 6, 50, "light blue", 30);
-
+    //properties[3] = marina;
 
     Property mitzi = new Property("Mitzi's House", 9, 120, 8, 60, "light blue", 40);
-
+    //properties[4] = mitzi;
     
-
     Property flora = new Property("Flora's House", 11, 140, 10, 70, "pink", 50);
-
+    //properties[5] = flora;
 
     Property rosie = new Property("Rosie's House", 13, 140, 10, 70, "pink", 50);
-
+    //properties[6] = rosie;
 
     Property chrissy = new Property("Chrissy's House", 14, 160, 12, 80, "pink", 60);
-
+    //properties[7] = chrissy;
     
     Property bones = new Property("Bones House", 16, 180, 14, 90, "orange", 70);
-
+    //properties[8] = bones;
 
     Property cephalobot = new Property("Cephalobot's House", 18, 180, 14, 90, "orange", 70);
-
+    //properties[9] = cephalobot;
 
     Property hopkins = new Property("Hopkin's House", 19, 200, 16, 100, "orange", 80);
-
+    //properties[10] = hopkins;
     
     Property octavin = new Property("Octavin's House", 21, 220, 18, 110, "red", 90);
-
+    //properties[11] = octavin;
 
     Property fang = new Property("Fang's House", 23, 220, 18, 110, "red", 90);
-
+    //properties[12] = fang;
 
     Property kabuki = new Property("Kabuki's House", 24, 240, 20, 120, "red", 100);
-
+    //properties[13] = kabuki;
     
     Property stitches = new Property("Stiches's House", 26, 260, 22, 130, "yellow", 110);
-
+    //properties[14] = stitches;
 
     Property shino = new Property("Shino's House", 27, 260, 22, 130, "yellow", 110);
-
+    //properties[15] = shino;
 
     Property bob = new Property("Bob's House", 29, 280, 24, 140, "yellow", 120);
-
+    //properties[16] = bob;
     
     Property francine = new Property("Francine's House", 31, 300, 26, 150, "green", 130);
-
+    //properties[17] = francine;
 
     Property judy = new Property("Judy's House", 32, 300, 26, 150, "green", 130);
 
@@ -263,7 +269,7 @@ public class Property extends BoardSpaceType {
      * Getter to return property space
      * @return int
      ******************************************************************/
-    public int getSpaceIndentifier() {
+    public int getSpaceIdentifier() {
         return this.spaceIdentifier;
     }
 

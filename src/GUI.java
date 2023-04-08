@@ -78,6 +78,10 @@ public class GUI {
                 g.setFont(new Font("TimesRoman", Font.BOLD, 40)); 
                 g.drawString(dice1Val, 445, 625);
                 g.drawString(dice2Val, 555, 625);
+
+                //obvi gonna have to make it so money value changes but here's this for now
+                String money = "1500";
+                g.drawString(money, 73, 70);
                 
             } 
             else {

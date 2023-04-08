@@ -12,6 +12,7 @@ import javax.swing.JButton;
 public class GameState implements MouseListener {
     private int numPlayers;
     private static ArrayList<Player> players;
+    private int money;
     private Board board;
     private Dice dice;
     private Jail jail;
@@ -25,6 +26,7 @@ public class GameState implements MouseListener {
     private Point newCoords;
     private int dice1;
     private int dice2;
+    private Property prop;
 
     // Bottom of board
     Point passGo1 = new Point(945, 768);
@@ -108,8 +110,10 @@ public class GameState implements MouseListener {
         dice = new Dice();
 
         Player player = new Player(1, "player1");
+        player.setBells(1500);
         
         currentPlayer = player;
+        
 
     }
 
@@ -201,15 +205,61 @@ public class GameState implements MouseListener {
             else {
                 if (totalMove + currentPlayer.getBoardPos() > 39) {
                     newBoardPos = totalMove - (39 - currentPlayer.getBoardPos()) - 1;
+                    /*for ( int i = 0; i < 40; i++){
+                        if ( newBoardPos == i){
+
+                        }
+                    }*/
                     newCoords = spacesArray[newBoardPos];
                     currentPlayer.setBoardPos(newBoardPos);
-
+                    
                     //if the player can buy
-                    // if (currentPlayer.tryBuy(newBoardPos) == 1) {
-                    //     //TODO: allow player to choose to buy or nah- display property
-                    // } else {
+                    //just need to figure out how to match to Property in property class
+                     /*if (currentPlayer.tryBuy(newBoardPos) == 1) {
+                        //property already owned
+                        if(prop.isOwned() == true){
+                            JFrame isOwnedFrame = new JFrame();
+                            isOwnedFrame.setSize(200,100);
+                            JLabel owned = new JLabel("Sorry, this property is already in ownership");
+                            owned.setBounds(200,10,100,10);
+                            isOwnedFrame.add(owned);
+                            returnFrame = isOwnedFrame;
+                        } else{
+
+                            JFrame propDisplay = new JFrame();
+
+                            /*propDisplay.setSize(700, 900);
+                            JLabel propLabel = new JLabel(prop.getPropertyName() + "\n" + prop.getPurchaseCost() + "\nRent:" + prop.getRentCost()
+                            + "\nWith One House: " + prop.getOneHouse() + "\nRent Increase: " + prop.getRentIncreaseRate() + "\nMortgage: " + prop.getMortgage());
+                            propLabel.setBounds(200, 10, 100, 10);
+                            propDisplay.add(propLabel);*/
+
+                            //Ask player on frame if they wanna buy
+                            /*JButton yes = new JButton();
+                            yes.setSize(50, 15);
+                            JLabel yesLabel = new JLabel("Yes");
+                            yesLabel.setBounds(10, 10, 10, 10);
+                            yes.add(yesLabel);
+
+                            JButton no = new JButton();
+                            no.setSize(50, 15);
+                            JLabel noLabel = new JLabel("No");
+                            noLabel.setBounds(10, 10, 10, 10);
+                            no.add(noLabel);
+
+                            propDisplay.add(yes);
+                            propDisplay.add(no);
+                            returnFrame = propDisplay;
+                            
+                            if(yes.isClicked()){
+                                prop.setOwned(true, 1);
+                            }
+                            
+                        }
+                    //     //TODO: allow player to choose to buy or nah- display property^^
+                     } else {
                     //     //cant buy lmao loser either pay rent OR its not a property and its community chest/chance/misc
-                    // }
+                     }*/
                 }
                 else {
                     newBoardPos = currentPlayer.getBoardPos() + totalMove;
