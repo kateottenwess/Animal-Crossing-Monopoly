@@ -12,7 +12,7 @@ public class Property extends BoardSpaceType {
     /* Array to store the properties for easier access */
     //private int[] properties;
     //private Property[] properties;
-    private static ArrayList<Property> properties = new ArrayList<Property>();
+   // public static ArrayList<Property> properties = new ArrayList<Property>();
 
     /* Name of the property */
     private String propertyName;
@@ -86,10 +86,11 @@ public class Property extends BoardSpaceType {
         this.owned = false;
         this.numHouses = 0;
         this.playerNumOwning = 0;
+        //properties.add(rodney);
     }
 
     
-    Property rodney = new Property("Rodney's House", 1, 60, 2, 30, "brown", 10);
+    /*Property rodney = new Property("Rodney's House", 1, 60, 2, 30, "brown", 10);
     //properties.add("Rodney's House", 1, 60, 2, 30, "brown", 10);
 
     //properties.add(rodney);
@@ -175,7 +176,7 @@ public class Property extends BoardSpaceType {
     Property rr3 = new Property("Railroad", 25, 200, 25, 100, "NA", -1);
 
     
-    Property rr4 = new Property("Railroad", 35, 200, 35, 100, "NA", -1);
+    Property rr4 = new Property("Railroad", 35, 200, 35, 100, "NA", -1);*/
 
     
     /********************************************************
