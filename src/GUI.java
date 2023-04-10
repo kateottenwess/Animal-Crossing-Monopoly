@@ -24,7 +24,7 @@ import java.awt.*;
 public class GUI {
 
     public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
-        GameState gameState = new GameState(1);
+        GameState gameState = new GameState(2);
 
         JFrame frame = buildFrame();
         frame.setVisible(true);
@@ -38,6 +38,10 @@ public class GUI {
         // Upload immage of piece 1
         BufferedImage piece1 = ImageIO.read(new File(GUI.class.getResource("/resources/Piece1ACMon.png").toURI()));
         Image p1Label = piece1.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+
+         // Upload immage of piece 2
+         BufferedImage piece2 = ImageIO.read(new File(GUI.class.getResource("/resources/Piece2ACMon.png").toURI()));
+         Image p2Label = piece2.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
 
       
 
@@ -53,6 +57,7 @@ public class GUI {
         Graphics g = frame.getGraphics();
         g.drawImage(newBoard, 0, 30, null);
         g.drawImage(p1Label, 930, 740, null);
+        g.drawImage(p2Label, 930, 690, null);
         
 
         while (gameState.gameOver() == false) {
