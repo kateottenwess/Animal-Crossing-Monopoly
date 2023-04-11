@@ -205,11 +205,10 @@ public class Property extends BoardSpaceType {
             if (GameState.props.indexOf(i) == space) {
                 propFound = GameState.props.get(i);
                 return propFound;
-            } else {
-                return null;
             }
             
         }
+        return null;
     }
 
 }
