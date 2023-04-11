@@ -199,7 +199,7 @@ public class Property extends BoardSpaceType {
         }
     }
     
-    public static Property getProperty(int space) {
+    public Property getProperty(int space) {
         Property propFound;
         for (int i = 0; i <= GameState.props.size(); i++) {
             if (GameState.props.indexOf(i) == space) {
@@ -210,5 +210,7 @@ public class Property extends BoardSpaceType {
         }
         return null;
     }
+
+    
 
 }

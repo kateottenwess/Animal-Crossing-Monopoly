@@ -25,6 +25,11 @@ public class Player {
         this.name = name;
         this.bells = 1500;
         this.boardPos = 0;
+
+        properties = new int[40];
+        for (int i = 0; i < properties.length; i++) {
+            properties[i] = 0;
+        }
     }
 
     /******************************************************************
@@ -120,21 +125,19 @@ public class Player {
      * @throws Exception
      * 
      ******************************************************************/
-    public void buyProperty(int spaceIdentifier) throws Exception {
+    // public void buyProperty(int spaceIdentifier) throws Exception {
 
-        if (properties[spaceIdentifier] == 0) {
-            // subtract bells
-            this.setBells(this.bells - p.getProperty(spaceIdentifier).getPurchaseCost());
+    //     if (properties[spaceIdentifier] == 0) {
 
-            // update properties owned array
-            properties[spaceIdentifier] = playerNum;
+    //         // update properties owned array
+    //         properties[spaceIdentifier] = 1;
 
-            // set property to owned
-            p.getProperty(spaceIdentifier).setOwned(true, this.playerNum);
-        } else {
-            throw new Exception("ALREADY OWNED");
-        }
-    }
+    //         // set property to owned
+    //         p.getProperty(spaceIdentifier).setOwned(true, this.playerNum);
+    //     } else {
+    //         throw new Exception("ALREADY OWNED");
+    //     }
+    // }
 
 
     public void buyHouse(int spaceIdentifier, int numHouses) throws Exception {
@@ -144,20 +147,20 @@ public class Player {
             // if player can afford to get properties
             if (this.bells - p.getProperty(spaceIdentifier).getOneHouse() * numHouses >= 0) {
                 // if player owns all of the properties of the same color
-                if (p.allOwned(p.getProperty(spaceIdentifier).getColor()) == this.playerNum) {
+                // if (p.allOwned(p.getProperty(spaceIdentifier).getColor()) == this.playerNum) {
 
-                    // increase number of houses on property
-                    p.getProperty(spaceIdentifier).increaseNumHouses(numHouses);
+                //     // increase number of houses on property
+                //     p.getProperty(spaceIdentifier).increaseNumHouses(numHouses);
 
-                    // subtract bells from player
-                    this.bells -= p.getProperty(spaceIdentifier).getOneHouse() * numHouses;
+                //     // subtract bells from player
+                //     this.bells -= p.getProperty(spaceIdentifier).getOneHouse() * numHouses;
 
-                    // increase property rent
-                    p.getProperty(spaceIdentifier).increaseRent(p.getProperty(spaceIdentifier).getNumHouses());
-                } 
-                else {
-                    throw new Exception("ALL COLORS NOT OWNED");
-                }
+                //     // increase property rent
+                //     p.getProperty(spaceIdentifier).increaseRent(p.getProperty(spaceIdentifier).getNumHouses());
+                // } 
+                // else {
+                //     throw new Exception("ALL COLORS NOT OWNED");
+                // }
             } else {
                 throw new Exception("CANNOT AFFORD");
             }
@@ -166,12 +169,13 @@ public class Player {
         }
     }
 
-    public int tryBuy(int spaceIdentifier) {
-        try {
-            this.buyProperty(spaceIdentifier);
+    public int tryBuy(int spaceIdentifier, Property p) {
+      
+        if (properties[spaceIdentifier] == 0) {
             return 1;
-        } catch (Exception e) {
+        } else {
             return 0;
         }
+            
     }
 }

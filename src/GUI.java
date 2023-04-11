@@ -28,8 +28,6 @@ public class GUI {
 
         JFrame frame = buildFrame();
         frame.setVisible(true);
-        
-        
 
         // Upload image of Monopoly board and resize to fit size of window
         BufferedImage board = ImageIO.read(new File(GUI.class.getResource("/resources/ACBoard.jpg").toURI()));
@@ -39,11 +37,9 @@ public class GUI {
         BufferedImage piece1 = ImageIO.read(new File(GUI.class.getResource("/resources/Piece1ACMon.png").toURI()));
         Image p1Label = piece1.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
 
-         // Upload immage of piece 2
-         BufferedImage piece2 = ImageIO.read(new File(GUI.class.getResource("/resources/Piece2ACMon.png").toURI()));
-         Image p2Label = piece2.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
-
-      
+        // Upload immage of piece 2
+        BufferedImage piece2 = ImageIO.read(new File(GUI.class.getResource("/resources/Piece2ACMon.png").toURI()));
+        Image p2Label = piece2.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
 
         JPanel panel = new JPanel();
 
@@ -58,7 +54,6 @@ public class GUI {
         g.drawImage(newBoard, 0, 30, null);
         g.drawImage(p1Label, 930, 740, null);
         g.drawImage(p2Label, 930, 690, null);
-        
 
         while (gameState.gameOver() == false) {
 
@@ -70,32 +65,31 @@ public class GUI {
             gameState.clearChange();
             g.drawImage(newBoard, 0, 30, null);
 
-
             // TODO: update gui
 
-            //this means a property wasn't clicked
+            // if there are no pop up winowaa
             if (gameState.getReturnFrame() == null) {
-                g.drawImage(p1Label, (int) gameState.getNewCoords().getX(), (int) gameState.getNewCoords().getY(), null);
 
-                String dice1Val=String.valueOf(gameState.getDice1());
-                String dice2Val=String.valueOf(gameState.getDice2());
-                
-                g.setFont(new Font("TimesRoman", Font.BOLD, 40)); 
+                g.drawImage(p1Label, (int) gameState.getNewCoords().getX(), (int) gameState.getNewCoords().getY(),
+                        null);
+
+                String dice1Val = String.valueOf(gameState.getDice1());
+                String dice2Val = String.valueOf(gameState.getDice2());
+
+                g.setFont(new Font("TimesRoman", Font.BOLD, 40));
                 g.drawString(dice1Val, 445, 625);
                 g.drawString(dice2Val, 555, 625);
 
-                //obvi gonna have to make it so money value changes but here's this for now
+                // obvi gonna have to make it so money value changes but here's this for now
                 String money = "1500";
                 g.drawString(money, 73, 70);
-                
-            } 
-            else {
 
-            JFrame returnFrame = gameState.getReturnFrame();
-            returnFrame.setVisible(true);
+            } else {
 
+                JFrame returnFrame = gameState.getReturnFrame();
+                returnFrame.setVisible(true);
             }
-            
+
             // graphics.fillRect(0, 0, frame.getWidth(), frame.getHeight());
             // graphics.drawImage(image, model.getX(), model.getY(), null);
 
