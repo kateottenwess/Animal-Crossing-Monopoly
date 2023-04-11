@@ -7,10 +7,10 @@
 public class BoardSpaceType {
     
     /* object p to represent type Property */
-    public Property p;
+    public Property propertySpace;
 
     /* object m to represent type MiscSpaces */
-    public MiscSpaces m;
+    public MiscSpaces miscSpace;
 
 
     /*******************************************************************
@@ -18,7 +18,7 @@ public class BoardSpaceType {
     * to signify their type
     ******************************************************************/
     public BoardSpaceType () {
-        p = null;
-        m = null;
+        propertySpace = null;
+        miscSpace = null;
     }
 }

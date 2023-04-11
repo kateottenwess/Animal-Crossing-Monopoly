@@ -81,7 +81,7 @@ public class GameState implements MouseListener {
 
     // misc buttons
     Point rollDice = new Point(770, 245);
-    Point properties = new Point(450, 20);
+    static Point properties = new Point(450, 20);
     Point cards = new Point(900, 20);
     Point trade = new Point(770, 287);
 
@@ -197,10 +197,14 @@ public class GameState implements MouseListener {
         this.y = 0;
         dice = new Dice();
 
-        Player player = new Player(1, "player1");
-        player.setBells(1500);
+        Player player1 = new Player(1, "player1");
+        Player player2 = new Player(2, "player2");
+
+        player1.setBells(1500);
+        player2.setBells(1500);
         
-        currentPlayer = player;
+        
+        currentPlayer = player1;
 
         //add all properties to props arrayList
         props.add(rodney);
@@ -319,7 +323,6 @@ public class GameState implements MouseListener {
                 newCoords = jailSpace;
             } 
             
-            //not going to jail slay girlie
             else {
                 if (totalMove + currentPlayer.getBoardPos() > 39) {
                     newBoardPos = totalMove - (39 - currentPlayer.getBoardPos()) - 1;

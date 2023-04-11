@@ -26,11 +26,11 @@ public class Board extends BoardSpaceType {
         int i = 0;
         while (i < spaces) {
             if (i == 0 || i ==2 || i == 4 || i == 7 || i == 10 || i == 17 || i == 20 || i == 22 || i == 30 || i == 33 || i ==  36 || i == 38) {
-                board[i] = b.m.getType(i);
+                board[i] = b.miscSpace.getType(i);
             }
             
             else {
-                board[i] = b.p.getProperty(i);
+                board[i] = b.propertySpace.getProperty(i);
             }
 
             i++;
@@ -71,11 +71,11 @@ public class Board extends BoardSpaceType {
      * @return BoardSpaceType
      ******************************************************************/
     public BoardSpaceType returnSpaceInfo(int spaceIdentifier) {
-        if (board[spaceIdentifier].p.getProperty(spaceIdentifier) != null) {
-            return board[spaceIdentifier].p.getProperty(spaceIdentifier);
+        if (board[spaceIdentifier].propertySpace.getProperty(spaceIdentifier) != null) {
+            return board[spaceIdentifier].propertySpace.getProperty(spaceIdentifier);
         }
         else {
-            return board[spaceIdentifier].m.getType(spaceIdentifier);
+            return board[spaceIdentifier].propertySpace.getType(spaceIdentifier);
         }
     }
 
