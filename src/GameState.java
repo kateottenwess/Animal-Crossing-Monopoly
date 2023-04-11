@@ -33,27 +33,27 @@ public class GameState implements MouseListener {
     Point passGo2 = new Point(945, 778);
     Point passGo3 = new Point(955, 768);
     Point passGo4 = new Point(955, 778);
-    Point rodneysHouse = new Point(808, 768);
-    Point cc1 = new Point(728, 768);
-    Point rocketsHouse = new Point(651, 768);
-    Point incomeTax = new Point(574, 768);
-    Point readingRailroad = new Point(493, 768);
-    Point melbasHouse = new Point(259, 768);
-    Point chance1 = new Point(336, 768);
-    Point marinasHouse = new Point(259, 768);
-    Point mitzisHouse = new Point(181, 768);
-    Point jailSpace = new Point(20, 768);
+    Point rodneysHouse = new Point(808, 766);
+    Point cc1 = new Point(728, 766);
+    Point rocketsHouse = new Point(652, 766);
+    Point incomeTax = new Point(573, 766);
+    Point readingRailroad = new Point(493, 766);
+    Point melbasHouse = new Point(259, 766);
+    Point chance1 = new Point(334, 766);
+    Point marinasHouse = new Point(257, 766);
+    Point mitzisHouse = new Point(179, 766);
+    Point jailSpace = new Point(20, 766);
 
     // Left side of board
-    Point chrissysHouse = new Point(60, 656);
-    Point electricCompany = new Point(60, 596);
+    Point chrissysHouse = new Point(60, 652);
+    Point electricCompany = new Point(60, 592);
     Point rosiesHouse = new Point(60, 544);
     Point florasHouse = new Point(60, 495);
-    Point pennsylvaniaRailroad = new Point(60, 444);
-    Point cephalobotsHouse = new Point(60, 388);
-    Point cc2 = new Point(60, 281);
-    Point hopkinsHouse = new Point(60, 281);
-    Point bonesHouse = new Point(60, 226);
+    Point pennsylvaniaRailroad = new Point(60, 438);
+    Point cephalobotsHouse = new Point(58, 386);
+    Point cc2 = new Point(60, 278);
+    Point hopkinsHouse = new Point(57, 280);
+    Point bonesHouse = new Point(56, 224);
     Point freeDocking = new Point(73, 138);
 
     // Top of board
@@ -69,15 +69,15 @@ public class GameState implements MouseListener {
 
     // Right side of board
     Point goToJail = new Point(945, 143);
-    Point judysHouse = new Point(945, 233);
-    Point dianasHouse = new Point(945, 287);
-    Point cc3 = new Point(945, 340);
-    Point francinesHouse = new Point(945, 394);
-    Point shortLine = new Point(945, 451);
-    Point chance3 = new Point(945, 506);
-    Point marshallsHouse = new Point(945, 559);
-    Point luxuryTax = new Point(945, 611);
-    Point raymondsHouse = new Point(945, 663);
+    Point judysHouse = new Point(945, 225);
+    Point dianasHouse = new Point(945, 279);
+    Point cc3 = new Point(945, 330);
+    Point francinesHouse = new Point(945, 386);
+    Point shortLine = new Point(945, 440);
+    Point chance3 = new Point(945, 500);
+    Point marshallsHouse = new Point(945, 552);
+    Point luxuryTax = new Point(945, 605);
+    Point raymondsHouse = new Point(945, 658);
 
     // misc buttons
     Point rollDice = new Point(770, 245);
@@ -321,10 +321,12 @@ public class GameState implements MouseListener {
             if (dice.doubleJail()) {
                 newBoardPos = 10;
                 newCoords = jailSpace;
-            } 
+            }
             
             else {
                 if (totalMove + currentPlayer.getBoardPos() > 39) {
+                    //means they'll pass go right? add 200 bells
+                    currentPlayer.setBells(currentPlayer.getBells() + 200);
                     newBoardPos = totalMove - (39 - currentPlayer.getBoardPos()) - 1;
                     for ( int i = 0; i < props.size(); i++){
                         Property tempProp = props.get(i);
@@ -334,7 +336,14 @@ public class GameState implements MouseListener {
                     }
                     newCoords = spacesArray[newBoardPos];
                     currentPlayer.setBoardPos(newBoardPos);
-                    
+
+                    //land on Go To Jail
+                    if(newBoardPos == 29){
+                        newCoords = spacesArray[13];
+                        currentPlayer.setBoardPos(13);
+                        //Jail.jailPlayer(currentPlayer);
+                    }
+
                     //if the player can buy
                     //just need to figure out how to match to Property in property class
                      if (currentPlayer.tryBuy(newBoardPos) == 1) {
@@ -345,7 +354,7 @@ public class GameState implements MouseListener {
                             JLabel owned = new JLabel("Sorry, this property is already in ownership");
                             owned.setBounds(200,10,100,10);
                             isOwnedFrame.add(owned);
-                            returnFrame = isOwnedFrame;
+                            //returnFrame = isOwnedFrame;
                         } else{
 
                             JFrame propDisplay = new JFrame();
@@ -371,7 +380,7 @@ public class GameState implements MouseListener {
 
                             propDisplay.add(yes);
                             propDisplay.add(no);
-                            returnFrame = propDisplay;
+                            //returnFrame = propDisplay;
                             
                             /*if(yes.isClicked()){
                                 prop.setOwned(true, 1);
@@ -433,6 +442,7 @@ public class GameState implements MouseListener {
             propertiesBtn.setSize(500, 200);
         
             JLabel propertiesLabel = new JLabel("Properties you own will show up here:");
+            //Jlabel propertiesList = new JLabel(currentPlayer.getProperties());
             propertiesLabel.setBounds(200, 10, 100, 10);
             propertiesBtn.add(propertiesLabel);
 
