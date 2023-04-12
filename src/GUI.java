@@ -85,8 +85,8 @@ public class GUI {
                 g.drawString(dice2Val, 555, 625);
 
                 //obvi gonna have to make it so money value changes but here's this for now
-                String moneyP1 = "1500";
-                String moneyP2 = "1500";
+                String moneyP1 = String.valueOf(gameState.getPlayerBells());
+                String moneyP2 = String.valueOf(gameState.getPlayerBells());
                 g.setFont(new Font("TimesRoman", Font.BOLD, 25));
                 g.drawString(moneyP1, 170, 50);
                 g.drawString(moneyP2, 175, 75);

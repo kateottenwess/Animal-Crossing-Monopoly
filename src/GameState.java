@@ -284,6 +284,10 @@ public class GameState implements MouseListener {
         return newCoords;
     }
 
+    public int getPlayerBells(){
+        return currentPlayer.getBells();
+    }
+
     @Override
     public void mousePressed(MouseEvent e) {
     }
