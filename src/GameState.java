@@ -461,11 +461,16 @@ public class GameState implements MouseListener, ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton chosen = (JButton) e.getSource();
-        if (chosen == yes) {
-            prop.setOwned(true, 1);
-            currentPlayer.setBells(currentPlayer.getBells() - prop.getPurchaseCost());
-        } else {
+        try {
+            if (chosen == yes) {
+                prop.setOwned(true, 1);
+                currentPlayer.setBells(currentPlayer.getBells() - prop.getPurchaseCost());
+            } 
+        }
+        catch (Exception no) {
+            
             //close
         }
     }
+    
 }
