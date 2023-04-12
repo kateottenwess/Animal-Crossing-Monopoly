@@ -45,7 +45,7 @@ public class GUI {
 
         // Make spaces clickable
         frame.addMouseListener(gameState);
-
+//ummmmmmm
         frame.add(panel);
         frame.repaint();
 
