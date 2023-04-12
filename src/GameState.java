@@ -47,8 +47,8 @@ public class GameState implements MouseListener {
     // Left side of board
     Point chrissysHouse = new Point(60, 652);
     Point electricCompany = new Point(60, 592);
-    Point rosiesHouse = new Point(60, 544);
-    Point florasHouse = new Point(50, 485);
+    Point rosiesHouse = new Point(60, 535);
+    Point florasHouse = new Point(40, 475);
     Point pennsylvaniaRailroad = new Point(60, 438);
     Point cephalobotsHouse = new Point(58, 380);
     Point cc2 = new Point(60, 278);
@@ -69,14 +69,14 @@ public class GameState implements MouseListener {
 
     // Right side of board
     Point goToJail = new Point(945, 143);
-    Point judysHouse = new Point(945, 225);
+    Point judysHouse = new Point(945, 215);
     Point dianasHouse = new Point(945, 279);
     Point cc3 = new Point(945, 330);
     Point francinesHouse = new Point(945, 380);
     Point shortLine = new Point(945, 435);
     Point chance3 = new Point(945, 490);
     Point marshallsHouse = new Point(945, 552);
-    Point luxuryTax = new Point(945, 605);
+    Point luxuryTax = new Point(945, 590);
     Point raymondsHouse = new Point(945, 640);
 
     // misc buttons
