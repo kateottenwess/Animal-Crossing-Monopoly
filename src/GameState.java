@@ -75,7 +75,7 @@ public class GameState implements MouseListener {
     Point francinesHouse = new Point(945, 380);
     Point shortLine = new Point(945, 435);
     Point chance3 = new Point(945, 490);
-    Point marshallsHouse = new Point(945, 552);
+    Point marshallsHouse = new Point(945, 540);
     Point luxuryTax = new Point(945, 590);
     Point raymondsHouse = new Point(945, 640);
 
