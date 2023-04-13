@@ -1,181 +1,309 @@
 import javax.swing.*;
-
-import java.awt.Dimension;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 
+/**********************************************************************
+ * GameState class that carries out game play logic.
+ *
+ * @author Kate Ottenwess, Kira B, Abby Svec
+ * @version Winter 2023
+ **********************************************************************/
 public class GameState implements MouseListener, ActionListener {
+
+    /* Array of the players in the game */
     private static ArrayList<Player> players;
-    private int money;
-    private Board board;
+
+    /* Dice object used to find dice values */
     private Dice dice;
-    private Jail jail;
+    
+    /* boolean to indicate if the state of the game has changed or not */
     private boolean stateChanged;
+
+    /* boolean to indicate if game is over or not */
     private boolean gameOver;
 
+    /* JFrame that is returned if roll results in a pop up window */
     private JFrame returnFrame;
+
+    /* Button for player to choose option yes */
     private JButton yes;
+
+    /* Button for player to choose option no */
     private JButton no;
 
+    /* int value of x coordinate */
     private int x;
+
+    /* int value of y coordinate */
     private int y;
+
+    /* Player object to hold the current player of turn */
     private static Player currentPlayer;
+
+    /* Player object to hold player 1's data */
     private Player player1;
+
+    /* Player object to hold player 2's data */
     private Player player2;
 
-    private int newBoardPos;
-    private Point newCoords;
+    /* value that holds value of dice one rolled */
     private int dice1;
+
+    /* value that holds value of dice two rolled */
     private int dice2;
+
+    /* Property object to hold property being used in turn */
     private static Property prop;
 
-    // Bottom of board
+    // Bottom of board spaces
+    /* Point object that holds coordinates of Pass go 1 */
     Point passGo1 = new Point(945, 768);
+
+    /* Point object that holds coordinates of Pass go 2 */
     Point passGo2 = new Point(945, 778);
+
+    /* Point object that holds coordinates of Pass go 3 */
     Point passGo3 = new Point(955, 768);
+
+    /* Point object that holds coordinates of Pass go 4 */
     Point passGo4 = new Point(955, 778);
+
+    /* Point object that holds coordinates of Rodneys House */
     Point rodneysHouse = new Point(808, 766);
+
+    /* Point object that holds coordinates of community chest space 1 */
     Point cc1 = new Point(728, 766);
+
+    /* Point object that holds coordinates of Rockets House */
     Point rocketsHouse = new Point(652, 766);
+
+    /* Point object that holds coordinates of income tax space */
     Point incomeTax = new Point(573, 766);
+
+    /* Point object that holds coordinates of Reading Railroad */
     Point readingRailroad = new Point(493, 766);
+
+    /* Point object that holds coordinates of Melbas House */
     Point melbasHouse = new Point(259, 766);
+
+    /* Point object that holds coordinates of chance card space 1 */
     Point chance1 = new Point(334, 766);
+
+    /* Point object that holds coordinates of Marinas House */
     Point marinasHouse = new Point(257, 766);
+
+    /* Point object that holds coordinates of Mitzis House */
     Point mitzisHouse = new Point(179, 766);
+
+    /* Point object that holds coordinates of the Jail space */
     Point jailSpace = new Point(20, 766);
 
-    // Left side of board
+    // Left side of board spaces
+    /* Point object that holds coordinates of Chrissys House */
     Point chrissysHouse = new Point(60, 652);
+
+    /* Point object that holds coordinates of the Electric Company */
     Point electricCompany = new Point(60, 592);
+
+    /* Point object that holds coordinates of Rosies House */
     Point rosiesHouse = new Point(60, 535);
+
+    /* Point object that holds coordinates of Floras House */
     Point florasHouse = new Point(40, 475);
+
+    /* Point object that holds coordinates of Pennsylvania Railroad */
     Point pennsylvaniaRailroad = new Point(60, 438);
+
+    /* Point object that holds coordinates of Cephalobots House */
     Point cephalobotsHouse = new Point(58, 380);
+
+    /* Point object that holds coordinates of Community Chest space 2 */
     Point cc2 = new Point(60, 278);
+
+    /* Point object that holds coordinates of Hopkins House */
     Point hopkinsHouse = new Point(57, 275);
+
+    /* Point object that holds coordinates of Bones House */
     Point bonesHouse = new Point(56, 218);
+
+    /* Point object that holds coordinates of free docking space */
     Point freeDocking = new Point(73, 138);
 
-    // Top of board
+    // Top of board spaces
+    /* Point object that holds coordinates of Octavins House */
     Point octaviansHouse = new Point(181, 120);
+
+    /* Point object that holds coordinates of chance 2 space */
     Point chance2 = new Point(257, 120);
+
+    /* Point object that holds coordinates of Fangs House */
     Point fangsHouse = new Point(336, 120);
+
+    /* Point object that holds coordinates of Kabukis House */
     Point kabukisHouse = new Point(413, 120);
+
+    /* Point object that holds coordinates of B.O. Railroad */
     Point boRailroad = new Point(493, 120);
+
+    /* Point object that holds coordinates of Stitches House */
     Point stitchesHouse = new Point(574, 120);
+
+    /* Point object that holds coordinates of Shinos House */
     Point shinosHouse = new Point(651, 120);
+
+    /* Point object that holds coordinates of Water Works */
     Point waterWorks = new Point(728, 120);
+
+    /* Point object that holds coordinates of Bobs House */
     Point bobsHouse = new Point(808, 120);
 
-    // Right side of board
+    // Right side of board spaces
+    /* Point object that holds coordinates of go to jail space */
     Point goToJail = new Point(945, 143);
+
+    /* Point object that holds coordinates of Judys House */
     Point judysHouse = new Point(945, 215);
+
+    /* Point object that holds coordinates of Dianas House */
     Point dianasHouse = new Point(945, 279);
+
+    /* Point object that holds coordinates of Comunity Chest space 3 */
     Point cc3 = new Point(945, 330);
+
+    /* Point object that holds coordinates of Francines House */
     Point francinesHouse = new Point(945, 380);
+
+    /* Point object that holds coordinates of Short Line Railroad */
     Point shortLine = new Point(945, 435);
+
+    /* Point object that holds coordinates of chance space 3 */
     Point chance3 = new Point(945, 490);
+
+    /* Point object that holds coordinates of Marshalls House */
     Point marshallsHouse = new Point(945, 540);
+
+    /* Point object that holds coordinates of luxury tax space */
     Point luxuryTax = new Point(945, 590);
+
+    /* Point object that holds coordinates of Raymonds House */
     Point raymondsHouse = new Point(945, 640);
 
     // misc buttons
+    /* Point object that holds coordinates of roll dice button */
     Point rollDice = new Point(770, 245);
-    static Point properties = new Point(450, 20);
-    Point cards = new Point(900, 20);
-    Point trade = new Point(770, 287);
 
+    /* Point object that holds coordinates of the properties button */
+    Point properties = new Point(450, 20);
+
+    /* Point object that holds coordinates of the cards button */
+    Point cards = new Point(900, 20);
+
+    /* Point array that holds the point values of all of the buttons */
     Point[] spacesArray = { passGo1, rodneysHouse, cc1, rocketsHouse, incomeTax, readingRailroad, melbasHouse,
             chance1, marinasHouse, mitzisHouse, jailSpace, chrissysHouse, electricCompany, rosiesHouse, florasHouse,
             pennsylvaniaRailroad, cephalobotsHouse, cc2, hopkinsHouse, bonesHouse, freeDocking, octaviansHouse, chance2,
             fangsHouse, kabukisHouse, boRailroad, stitchesHouse, shinosHouse, waterWorks, bobsHouse, goToJail,
             judysHouse,
-            dianasHouse, cc3, francinesHouse, shortLine, chance3, marshallsHouse, luxuryTax, raymondsHouse };
+            dianasHouse, cc3, francinesHouse, shortLine, chance3, marshallsHouse, luxuryTax, raymondsHouse 
+    };
 
+    /* Property array that holds all of the properties */
     public static ArrayList<Property> props = new ArrayList<Property>();
 
+    /* Property object for Rodney */
     Property rodney = new Property("Rodney's House", 1, 60, 2, 30, "brown", 10);
 
+    /* Property object for Rocket */
     Property rocket = new Property("Rocket's House", 3, 60, 4, 30, "brown", 20);
 
+    /* Property object for Melba */
     Property melba = new Property("Melba's House", 6, 100, 6, 50, "light blue", 30);
 
+    /* Property object for Marina */
     Property marina = new Property("Marina's House", 8, 100, 6, 50, "light blue", 30);
-    // properties[3] = marina;
 
+    /* Property object for Mitzi */
     Property mitzi = new Property("Mitzi's House", 9, 120, 8, 60, "light blue", 40);
-    // properties[4] = mitzi;
-
+    
+    /* Property object for Flora */
     Property flora = new Property("Flora's House", 11, 140, 10, 70, "pink", 50);
-    // properties[5] = flora;
-
+    
+    /* Property object for Rosie */
     Property rosie = new Property("Rosie's House", 13, 140, 10, 70, "pink", 50);
-    // properties[6] = rosie;
-
+   
+    /* Property object for Chrissy */
     Property chrissy = new Property("Chrissy's House", 14, 160, 12, 80, "pink", 60);
-    // properties[7] = chrissy;
-
+    
+    /* Property object for Bones */
     Property bones = new Property("Bones House", 16, 180, 14, 90, "orange", 70);
-    // properties[8] = bones;
-
+    
+    /* Property object for Cephalobot */
     Property cephalobot = new Property("Cephalobot's House", 18, 180, 14, 90, "orange", 70);
-    // properties[9] = cephalobot;
-
+    
+    /* Property object for Hopkins */
     Property hopkins = new Property("Hopkin's House", 19, 200, 16, 100, "orange", 80);
-    // properties[10] = hopkins;
-
+    
+    /* Property object for Octavin */
     Property octavin = new Property("Octavin's House", 21, 220, 18, 110, "red", 90);
-    // properties[11] = octavin;
-
+    
+    /* Property object for Fang */
     Property fang = new Property("Fang's House", 23, 220, 18, 110, "red", 90);
-    // properties[12] = fang;
-
+    
+    /* Property object for Kabuki */
     Property kabuki = new Property("Kabuki's House", 24, 240, 20, 120, "red", 100);
-    // properties[13] = kabuki;
-
+    
+    /* Property object for Stitches */
     Property stitches = new Property("Stiches's House", 26, 260, 22, 130, "yellow", 110);
-    // properties[14] = stitches;
-
+    
+    /* Property object for Shino */
     Property shino = new Property("Shino's House", 27, 260, 22, 130, "yellow", 110);
-    // properties[15] = shino;
-
+    
+    /* Property object for Bob */
     Property bob = new Property("Bob's House", 29, 280, 24, 140, "yellow", 120);
-    // properties[16] = bob;
-
+    
+    /* Property object for Francine */
     Property francine = new Property("Francine's House", 31, 300, 26, 150, "green", 130);
-    // properties[17] = francine;
-
+    
+    /* Property object for Judy */
     Property judy = new Property("Judy's House", 32, 300, 26, 150, "green", 130);
 
+    /* Property object for Diana */
     Property diana = new Property("Diana's House", 34, 320, 28, 160, "green", 150);
 
+    /* Property object for Marshall */
     Property marshall = new Property("Marshall's House", 37, 350, 35, 175, "dark blue", 175);
 
+    /* Property object for Raymond */
     Property raymond = new Property("Raymond's House", 39, 400, 50, 200, "dark blue", 200);
 
     // -1 or NA means it is not applicible for this specific property type
-    // waterworks
+    /* Property object for AbleSisters (water works) */
     Property ableSis = new Property("Able Sisters", 28, 150, -1, 75, "NA", -1);
 
-    // electrical
+    /* Property object for Nooks Cranny (electrical) */
     Property nooksCranny = new Property("Nooks Cranny", 12, 150, -1, 75, "NA", -1);
 
     // railroads
+    /* Property object for Reading Railroad*/
     Property rr1 = new Property("Reading Railroad", 5, 200, 25, 100, "NA", -1);
 
+    /* Property object for Pennslyvania Railroad */
     Property rr2 = new Property("Pennsylvania Railroad", 15, 200, 25, 100, "NA", -1);
 
+    /* Property object for B. & O. Railroad */
     Property rr3 = new Property("B. & O. Railroad", 25, 200, 25, 100, "NA", -1);
 
+    /* Property object for Short Line Railroad*/
     Property rr4 = new Property("Short Line", 35, 200, 35, 100, "NA", -1);
 
+
+    /*******************************************************************
+    * Constructor that sets the initial Game State
+    ******************************************************************/
     public GameState() {
 
         // create dice
@@ -232,59 +360,110 @@ public class GameState implements MouseListener, ActionListener {
         props.add(rr4);
     }
 
+
+    /******************************************************************
+     * Getter to return the return frame
+     * @return JFrame of pop up window
+     ******************************************************************/
     public JFrame getReturnFrame() {
         return returnFrame;
     }
 
+
+    /******************************************************************
+     * Getter to return int value of dice 1
+     * @return int value of dice 1
+     ******************************************************************/
     public int getDice1() {
         return dice1;
     }
 
+
+    /******************************************************************
+     * Getter to return int value of dice 2
+     * @return int value of dice 2
+     ******************************************************************/
     public int getDice2() {
         return dice2;
     }
 
+
+    /******************************************************************
+     * Getter to return x coordinate of point
+     * @return int value of x-coordinate
+     ******************************************************************/
     public int getX() {
         return x;
     }
 
+
+    /******************************************************************
+     * Getter to return y coordinate of point
+     * @return int value of y-coordinate
+     ******************************************************************/
     public int getY() {
         return y;
     }
 
+
+    /******************************************************************
+     * Getter to return if game is over or not
+     * @return boolean true if over false if not
+     ******************************************************************/
     public boolean gameOver() {
         return gameOver;
     }
 
+
+    /******************************************************************
+     * Getter to return if state of game has changed or not
+     * @return boolean true if state has changed false if not
+     ******************************************************************/
     public boolean stateChanged() {
         return stateChanged;
     }
 
+
+    /******************************************************************
+     * Setter to set state changed to false
+     ******************************************************************/
     public void clearChange() {
         stateChanged = false;
 
     }
 
-    public int getNewBoardPos() {
-        return newBoardPos;
-    }
 
+    /******************************************************************
+     * Getter to return the current player
+     * @return Player current player
+     ******************************************************************/
     public Player getCurrentPlayer() {
         return currentPlayer;
     }
 
+
+    /******************************************************************
+     * Getter to return player 1
+     * @return Player player1
+     ******************************************************************/
     public Player getPlayer1() {
         return player1;
     }
 
+
+    /******************************************************************
+     * Getter to return player 2
+     * @return Player player2
+     ******************************************************************/
     public Player getPlayer2() {
         return player2;
     }
 
-    public Point getNewCoords() {
-        return newCoords;
-    }
 
+    /******************************************************************
+     * Getter to return the current players bells
+     * @return int bells of current player
+     ******************************************************************/
     public int getPlayerBells(){
         return currentPlayer.getBells();
     }
@@ -305,20 +484,27 @@ public class GameState implements MouseListener, ActionListener {
     public void mouseExited(MouseEvent e) {
     }
 
+
+    /******************************************************************
+     * Method to handle a mouse event of mouse clicked
+     * @param MouseEvent e
+     ******************************************************************/
     @Override
     public void mouseClicked(MouseEvent e) {
 
+        //get coordinates of mouse event
         Point code = e.getPoint();
 
-        // roll dice
+        // if mouse events coordinates were the roll dice button
         if (code.getY() >= 240 && code.getY() <= 278 && code.getX() >= 692 && code.getX() <= 830) {
 
+            //initialize return frame to null
             returnFrame = null;
 
+            //roll dice and get total move
             dice1 = dice.rollDice();
             dice2 = dice.rollDice();
             int totalMove = dice1 + dice2;
-
 
             // set to boolean- true if player rolled double, stay same player
             boolean samePlayer = dice.doubleRoll(dice1, dice2);
@@ -488,6 +674,11 @@ public class GameState implements MouseListener, ActionListener {
         stateChanged = true;
     }
 
+
+    /******************************************************************
+     * Method to handle if there is an action performed
+     * @param ActionEvent e
+     ******************************************************************/
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton chosen = (JButton) e.getSource();
