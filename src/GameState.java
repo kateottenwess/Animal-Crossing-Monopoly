@@ -9,7 +9,6 @@ import java.awt.event.MouseListener;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
-import javax.swing.JButton;
 
 public class GameState implements MouseListener, ActionListener {
     private static ArrayList<Player> players;
@@ -169,13 +168,13 @@ public class GameState implements MouseListener, ActionListener {
     Property nooksCranny = new Property("Nooks Cranny", 12, 150, -1, 75, "NA", -1);
 
     // railroads
-    Property rr1 = new Property("Railroad", 5, 200, 25, 100, "NA", -1);
+    Property rr1 = new Property("Reading Railroad", 5, 200, 25, 100, "NA", -1);
 
-    Property rr2 = new Property("Railroad", 15, 200, 25, 100, "NA", -1);
+    Property rr2 = new Property("Pennsylvania Railroad", 15, 200, 25, 100, "NA", -1);
 
-    Property rr3 = new Property("Railroad", 25, 200, 25, 100, "NA", -1);
+    Property rr3 = new Property("B. & O. Railroad", 25, 200, 25, 100, "NA", -1);
 
-    Property rr4 = new Property("Railroad", 35, 200, 35, 100, "NA", -1);
+    Property rr4 = new Property("Short Line", 35, 200, 35, 100, "NA", -1);
 
     public GameState() {
 
@@ -390,25 +389,42 @@ public class GameState implements MouseListener, ActionListener {
                             
                             JFrame propDisplay = new JFrame();
 
-                            propDisplay.setSize(500, 200);
-                            JLabel propLabel = new JLabel(prop.getPropertyName() + "\n" + prop.getPurchaseCost()
+                            propDisplay.setSize(600, 500);
+                            JLabel propLabel = new JLabel(prop.getPropertyName() /*+ "\n" + prop.getPurchaseCost()
                                     + "\nRent:" + prop.getRentCost()
                                     + "\nWith One House: " + prop.getOneHouse() + "\nRent Increase: "
-                                    + prop.getRentIncreaseRate() + "\nMortgage: " + prop.getMortgage());
+                                    + prop.getRentIncreaseRate() + "\nMortgage: " + prop.getMortgage()*/);
+                            JLabel propPrice = new JLabel("Cost:" + String.valueOf(prop.getPurchaseCost()) + " bells");
+                            JLabel propRent = new JLabel("Rent: " + String.valueOf(prop.getRentCost()) + " bells");
+                            JLabel propHouse = new JLabel("With one house: " + String.valueOf(prop.getOneHouse()) + " bells");
+                            JLabel propRentInc = new JLabel("Rent Increase: " + String.valueOf(prop.getRentIncreaseRate()) + " bells");
+                            JLabel propMort = new JLabel("Mortgage Price: " + String.valueOf(prop.getMortgage()) + " bells");
                             
                             propLabel.setBounds(200, 10, 100, 10);
+                            propPrice.setBounds(200, 30, 100, 10);
+                            propRent.setBounds(200, 50, 100, 10);
+                            propHouse.setBounds(200, 70, 300, 10);
+                            propRentInc.setBounds(200, 90, 300, 10);
+                            propMort.setBounds(200, 110, 300, 20);
                             propDisplay.add(propLabel);
+                            propDisplay.add(propPrice);
+                            propDisplay.add(propRent);
+                            propDisplay.add(propHouse);
+                            propDisplay.add(propRentInc);
+                            propDisplay.add(propMort);
 
                             // Ask player on frame if they wanna buy
-                            yes.setSize(50, 15);
-                            JLabel yesLabel = new JLabel("yes");
-                            yesLabel.setBounds(10, 10, 10, 10);
-                            yes.add(yesLabel);
+                            JButton yes = new JButton("yes");
+                            yes.setBounds(80, 200, 95, 30);
+                            //JLabel yesLabel = new JLabel("yes");
+                            //yesLabel.setBounds(100, 200, 50, 20);
+                            //yes.add(yesLabel);
 
-                            no.setSize(50, 15);
-                            JLabel noLabel = new JLabel("No");
-                            noLabel.setBounds(10, 10, 10, 10);
-                            no.add(noLabel);
+                            JButton no = new JButton("no");
+                            no.setBounds(80,100,95,30);
+                            //JLabel noLabel = new JLabel("No");
+                            //noLabel.setBounds(300, 200, 50, 20);
+                            //no.add(noLabel);
 
                             //add buttons
                             propDisplay.add(yes);
@@ -418,6 +434,10 @@ public class GameState implements MouseListener, ActionListener {
                             propDisplay.repaint();
                             
                             returnFrame = propDisplay;
+
+                    
+
+
 
                         }
 
