@@ -16,30 +16,38 @@ public class Board extends BoardSpaceType {
     private int[] ownedProperties = new int[spaces];
 
 
-
-
     /*******************************************************************
     * Constructor that sets the board array with the boardSpaceType     * that goes to that specific space type
     ******************************************************************/
     public Board() {
+
+        //creation of a BoardSpaceType
         BoardSpaceType b = new BoardSpaceType();
+
+        //iteration variable
         int i = 0;
+
+        //loop through spaces array and set the types of the spaces
         while (i < spaces) {
+
+            //these spaces are misc spaces
             if (i == 0 || i ==2 || i == 4 || i == 7 || i == 10 || i == 17 || i == 20 || i == 22 || i == 30 || i == 33 || i ==  36 || i == 38) {
                 board[i] = b.miscSpace.getType(i);
             }
             
+            //the rest are property spaces
             else {
                 board[i] = b.propertySpace.getProperty(i);
             }
 
+            //continue loop
             i++;
         }
 
+        //set owned property array values to 0 because no one owns properties initially
         for(int j = 0; j < spaces; j++) {
             ownedProperties[i] = 0;
         }
-
     }
 
     
@@ -51,34 +59,24 @@ public class Board extends BoardSpaceType {
      * @return BoardSpaceType
      ******************************************************************/
     public BoardSpaceType getSpaceType(int spaceIdentifier) {
+
+        //iteration variable
         int i = 0;
+
+        //temporary BoardSpaceType variable to be returned
         BoardSpaceType type = board[0];
+
+        //loop throuh board spaces
         while (i != spaceIdentifier) {
+
+            //if i is not the space desired, continue
             type = board[i];
             i++;
         }
 
+        //return BoardSpaceType of int spaceIdentifier
         return type;
     } 
-
-    
-    /****************************************************************** 
-     * Method to return the space information of the space located at  
-     * spaceIdentifier. It will return the property or the misc space-
-     * which are BoardSpaceTypes
-     * 
-     * @param spaceIdentifier int representation of space
-     * @return BoardSpaceType
-     ******************************************************************/
-    public BoardSpaceType returnSpaceInfo(int spaceIdentifier) {
-        if (board[spaceIdentifier].propertySpace.getProperty(spaceIdentifier) != null) {
-            return board[spaceIdentifier].propertySpace.getProperty(spaceIdentifier);
-        }
-        else {
-            return board[spaceIdentifier].propertySpace.getType(spaceIdentifier);
-        }
-    }
-
 }
 
 

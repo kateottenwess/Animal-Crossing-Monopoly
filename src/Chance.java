@@ -6,10 +6,16 @@
  **********************************************************************/
 public class Chance extends MiscSpaces {
 
+    /* String array that holds all of the chance cards */
     String[] chanceCards = {"GO BACK THREE SPACES","ADVANCE TO GO (COLLECT 200 BELLS)","BANK PAYS YOU DIVIDEND OF 50 BELLS","ADVANCE TO FRANCINE'S HOUSE","GET OUT OF JAIL FREE",
     "ADVANCE TO RAYMOND'S HOUSE","PAY POOR TAX OF 15 BELLS","GO TO JAIL","ADVANCE TOKEN TO CHRISSY'S HOUSE","YOUR BUSINESS MATURES: COLLECT 150 BELLS"};
 
 
+    /****************************************************************** 
+     * Method to return a random chance card
+     * 
+     * @return String chance card
+     ******************************************************************/
     public String pickChanceCards(){
         int randInt = (int) (Math.random() * 9);
         return chanceCards[randInt];

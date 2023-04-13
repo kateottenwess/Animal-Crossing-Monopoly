@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.Properties;
-
 /**********************************************************************
  * Class stores all monopoly properties
  *
@@ -24,13 +21,16 @@ public class Property extends BoardSpaceType {
     /* Cost to rent the property */
     private int rentCost;
 
+    /* Cost to mortgage property */
     private int mortgage;
 
     /* Cost of rent with one house */
     private int oneHouse;
 
+    /* Number of houses on property */
     private int numHouses;
 
+    /* which player owns specific property */
     private int playerNumOwning;
 
     /* Rent increase rate when more than one home is placed */
@@ -42,15 +42,23 @@ public class Property extends BoardSpaceType {
     /* Percent multiplied by mortgage price- this is price to unmortgage */
     final double UNMORTAGE_PERC = 1.1;
 
-
+    /* Initial cost of railroad purchase */
     final double RR_INITIAL_COST = 25;
+
+    /* Rate of increase of railroad rent */
     final double RR_INCREASE = 2;
+
+    /* Rate purchase cost is multiplied by to get mortgage cost */
+    final double MORTGAGE_PERC_OF_PURCHASE = 0.5;
 
     /* Rate * value of dice roll is the amount of rent if one is owned */
     final int UTILITIES_ONE_OWNED = 4;
 
     /* Rate * value of dice roll is the amount of rent if both are owned by the same player */
     final int UTILITIES_TWO_OWNED = 10;
+
+    /* Max amount of homes allowed on property */
+    final int MAX_AMOUNT_HOUSES = 4;
 
 
     /*******************************************************************
@@ -76,7 +84,7 @@ public class Property extends BoardSpaceType {
         this.spaceIdentifier = space;
         this.purchaseCost = purchase;
         this.rentCost = rent;
-        this.mortgage = (int) 0.5 * purchase;
+        this.mortgage = (int) MORTGAGE_PERC_OF_PURCHASE * purchase;
         this.rentIncreaseRate = rentIncreaseRate;
         this.color = color;
         this.oneHouse = oneHouse;
@@ -172,15 +180,28 @@ public class Property extends BoardSpaceType {
      * @param owned boolean
      ******************************************************************/
     public void setOwned(boolean owned, int playerNum) {
+
+        //set owned to owned boolean
         this.owned = owned;
+
+        //set who owns the property
         this.playerNumOwning = playerNum;
     }
 
 
+    /******************************************************************
+     * Getter to return number of house on property
+     * @return bint number of houses
+     ******************************************************************/
     public int getNumHouses() {
         return this.numHouses;
     }
 
+
+    /******************************************************************
+     * Setter that increases number of houses on property
+     * @param numHouses int number of houses purchased
+     ******************************************************************/
     public void increaseNumHouses(int numHouses) {
         this.numHouses += numHouses;
     }
@@ -188,29 +209,50 @@ public class Property extends BoardSpaceType {
     
     /******************************************************************
      * Method to increase the rent of a property if houses are purchased
-     * If 1 is return, the rent cost could be increased, else it can't  * be increased
+     * If 1 is return, the rent cost could be increased, else it can't  * be increased.
+     * 
      * @param houseNum number of houses purchased
      ******************************************************************/
     public void increaseRent(int houseNum) {
+
+        //if there is one house on the property
         if (houseNum == 1) {
+
+            //increase rent to price with one house
             this.rentCost = this.oneHouse;
-        } else if (houseNum < 5) {
+        } 
+        
+        //if there are more than one house and less than the max amount of houses permitted on the property, increase rent by num houses * one house
+        else if (houseNum <= MAX_AMOUNT_HOUSES) {
             this.rentCost = (int) (this.rentIncreaseRate * this.oneHouse) * houseNum;
         }
     }
+
     
+    /******************************************************************
+     * Method that returns the property that correlates to integer     * space. Returns null if no property is associated to said space
+     * 
+     * @param space int value of space on board
+     * @return property on space, null if no property
+     ******************************************************************/
     public Property getProperty(int space) {
+
+        //temporary Property for property that is potentially found
         Property propFound;
+
+        //loop through properties to find if a property is found
         for (int i = 0; i <= GameState.props.size(); i++) {
+
+            //
             if (GameState.props.indexOf(i) == space) {
+
+                //if there is a property on space, return property
                 propFound = GameState.props.get(i);
                 return propFound;
             }
-            
         }
+
+        //if no property is on space, return null
         return null;
     }
-
-    
-
 }

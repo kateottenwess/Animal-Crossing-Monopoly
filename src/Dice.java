@@ -6,7 +6,14 @@
  **********************************************************************/
 public class Dice {
 
+    /* int values that keeps track of how many doubles are rolled in a row */
     private int numDouble = 0;
+
+    /* int of how many values are on dice */
+    final int VALUES_ON_DICE = 6;
+
+    /* Value of how many doubles need to be rolled in a row in order to be sent to jail */
+    final int NUM_DOUBLES_TO_JAIL = 3;
 
     
     /*******************************************************************
@@ -15,22 +22,34 @@ public class Dice {
      ******************************************************************/
     public int rollDice() {
 
-        return ((int) (Math.random() * 6 + 1));
+        return ((int) (Math.random() * VALUES_ON_DICE + 1));
         
     }
 
-    
 
     /*******************************************************************
      * Method to determine if a double was rolled
      * @return boolean true if double was rolled
      ******************************************************************/
     public boolean doubleRoll(int dice1, int dice2) {
+
+        //if dice values are the same
         if (dice1 == dice2) {
+
+            //increase number of doubles rolled in a row
             numDouble++;
+
+            //return true as doubles were rolled
             return true;
-        } else {
+        } 
+        
+        //if dice values are not the same
+        else {
+
+            //reset number of doubles rolled in a row to 0
             numDouble = 0;
+
+            //returns false as a double was not rolled
             return false;
         }
     }
@@ -41,6 +60,6 @@ public class Dice {
      * @return boolean true if 3 doubles were rolled
      ******************************************************************/
     public boolean doubleJail() {
-        return numDouble == 3;
+        return numDouble == NUM_DOUBLES_TO_JAIL;
     }
 }
