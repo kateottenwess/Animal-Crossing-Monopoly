@@ -300,6 +300,8 @@ public class GameState implements MouseListener, ActionListener {
     /* Property object for Short Line Railroad*/
     Property rr4 = new Property("Short Line", 35, 200, 35, 100, "NA", -1);
 
+    private ActionListener ActionListener;
+
 
     /*******************************************************************
     * Constructor that sets the initial Game State
@@ -573,6 +575,7 @@ public class GameState implements MouseListener, ActionListener {
                         } 
                         else {
                             
+                            JPanel p = new JPanel();
                             JFrame propDisplay = new JFrame();
 
                             propDisplay.setSize(600, 500);
@@ -586,12 +589,12 @@ public class GameState implements MouseListener, ActionListener {
                             JLabel propRentInc = new JLabel("Rent Increase: " + String.valueOf(prop.getRentIncreaseRate()) + " bells");
                             JLabel propMort = new JLabel("Mortgage Price: " + String.valueOf(prop.getMortgage()) + " bells");
                             
-                            propLabel.setBounds(200, 10, 100, 10);
-                            propPrice.setBounds(200, 30, 100, 10);
-                            propRent.setBounds(200, 50, 100, 10);
-                            propHouse.setBounds(200, 70, 300, 10);
-                            propRentInc.setBounds(200, 90, 300, 10);
-                            propMort.setBounds(200, 110, 300, 20);
+                            propLabel.setBounds(200, 50, 100, 10);
+                            propPrice.setBounds(200, 70, 100, 10);
+                            propRent.setBounds(200, 90, 100, 10);
+                            propHouse.setBounds(200, 110, 300, 10);
+                            propRentInc.setBounds(200, 130, 300, 10);
+                            propMort.setBounds(200, 150, 300, 20);
                             propDisplay.add(propLabel);
                             propDisplay.add(propPrice);
                             propDisplay.add(propRent);
@@ -601,27 +604,44 @@ public class GameState implements MouseListener, ActionListener {
 
                             // Ask player on frame if they wanna buy
                             JButton yes = new JButton("yes");
-                            yes.setBounds(80, 200, 95, 30);
+                            yes.setBounds(60, 400, 95, 30);
                             //JLabel yesLabel = new JLabel("yes");
                             //yesLabel.setBounds(100, 200, 50, 20);
                             //yes.add(yesLabel);
+                            yes.addActionListener(new ActionListener(){
+                                public void actionPerformed(ActionEvent e){
+                                    currentPlayer.setBells(currentPlayer.getBells() - prop.getPurchaseCost());
+                                    //TODO : set ownership
+                                    propDisplay.dispose();
+                                }
+                            } );
 
                             JButton no = new JButton("no");
-                            no.setBounds(80,100,95,30);
+                            no.setBounds(80,400,95,30);
                             //JLabel noLabel = new JLabel("No");
                             //noLabel.setBounds(300, 200, 50, 20);
                             //no.add(noLabel);
+                            no.addActionListener(new ActionListener(){
+                                public void actionPerformed(ActionEvent e){
+                                    propDisplay.dispose();
+                                }
+                            });
+
 
                             //add buttons
-                            propDisplay.add(yes);
-                            propDisplay.add(no);
+                            p.add(yes);
+                            p.add(no);
+
+                            propDisplay.add(p);
                             
                             propDisplay.invalidate();
                             propDisplay.repaint();
                             
                             returnFrame = propDisplay;
 
-                    
+                            
+
+                            
 
 
 
