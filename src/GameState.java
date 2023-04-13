@@ -55,13 +55,13 @@ public class GameState implements MouseListener, ActionListener {
     // Left side of board
     Point chrissysHouse = new Point(60, 652);
     Point electricCompany = new Point(60, 592);
-    Point rosiesHouse = new Point(60, 544);
-    Point florasHouse = new Point(60, 495);
+    Point rosiesHouse = new Point(60, 535);
+    Point florasHouse = new Point(40, 475);
     Point pennsylvaniaRailroad = new Point(60, 438);
-    Point cephalobotsHouse = new Point(58, 386);
+    Point cephalobotsHouse = new Point(58, 380);
     Point cc2 = new Point(60, 278);
-    Point hopkinsHouse = new Point(57, 280);
-    Point bonesHouse = new Point(56, 224);
+    Point hopkinsHouse = new Point(57, 275);
+    Point bonesHouse = new Point(56, 218);
     Point freeDocking = new Point(73, 138);
 
     // Top of board
@@ -77,15 +77,15 @@ public class GameState implements MouseListener, ActionListener {
 
     // Right side of board
     Point goToJail = new Point(945, 143);
-    Point judysHouse = new Point(945, 225);
+    Point judysHouse = new Point(945, 215);
     Point dianasHouse = new Point(945, 279);
     Point cc3 = new Point(945, 330);
-    Point francinesHouse = new Point(945, 386);
-    Point shortLine = new Point(945, 440);
-    Point chance3 = new Point(945, 500);
-    Point marshallsHouse = new Point(945, 552);
-    Point luxuryTax = new Point(945, 605);
-    Point raymondsHouse = new Point(945, 658);
+    Point francinesHouse = new Point(945, 380);
+    Point shortLine = new Point(945, 435);
+    Point chance3 = new Point(945, 490);
+    Point marshallsHouse = new Point(945, 540);
+    Point luxuryTax = new Point(945, 590);
+    Point raymondsHouse = new Point(945, 640);
 
     // misc buttons
     Point rollDice = new Point(770, 245);
@@ -284,6 +284,10 @@ public class GameState implements MouseListener, ActionListener {
 
     public Point getNewCoords() {
         return newCoords;
+    }
+
+    public int getPlayerBells(){
+        return currentPlayer.getBells();
     }
 
     @Override
