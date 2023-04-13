@@ -177,11 +177,7 @@ public class GameState implements MouseListener, ActionListener {
 
     Property rr4 = new Property("Railroad", 35, 200, 35, 100, "NA", -1);
 
-    public GameState(int numPlayers) {
-
-        // TODO: i dont think these do anything
-        // this.x = 0;
-        // this.y = 0;
+    public GameState() {
 
         // create dice
         dice = new Dice();
@@ -192,12 +188,11 @@ public class GameState implements MouseListener, ActionListener {
 
         // set up players
         players = new ArrayList<>();
-        String name = JOptionPane.showInputDialog("Enter name for Player 1");
+        player1 = new Player(1, "player1");
+        player2 = new Player(2, "player2");
 
-        player1 = new Player(1, name);
-
-        name = JOptionPane.showInputDialog("Enter name for Player 2");
-        player2 = new Player(2, name);
+        player1.setCoordinates(passGo1);
+        player2.setCoordinates(passGo2);
 
         players.add(player1);
         players.add(player2);
@@ -279,6 +274,14 @@ public class GameState implements MouseListener, ActionListener {
         return currentPlayer;
     }
 
+    public Player getPlayer1() {
+        return player1;
+    }
+
+    public Player getPlayer2() {
+        return player2;
+    }
+
     public Point getNewCoords() {
         return newCoords;
     }
@@ -313,39 +316,43 @@ public class GameState implements MouseListener, ActionListener {
             dice2 = dice.rollDice();
             int totalMove = dice1 + dice2;
 
-            // check for doubles and rolling again
 
             // set to boolean- true if player rolled double, stay same player
             boolean samePlayer = dice.doubleRoll(dice1, dice2);
 
+            //if 3 doubles are rolled in a row go to jail
             if (dice.doubleJail()) {
-                newBoardPos = 10;
-                newCoords = jailSpace;
+                currentPlayer.setBoardPos(10);
+                currentPlayer.setCoordinates(jailSpace);
             }
-
+            //if 3 doubles are not rolled in a row
             else {
+
+                //if passing go, get new position
                 if (totalMove + currentPlayer.getBoardPos() > 39) {
 
                     // pass go add 200 bells
                     currentPlayer.setBells(currentPlayer.getBells() + 200);
 
-                    newBoardPos = totalMove - (39 - currentPlayer.getBoardPos()) - 1;
+                    //set board position of player
+                    currentPlayer.setBoardPos(totalMove - (39 - currentPlayer.getBoardPos()) - 1);
 
-                    newCoords = spacesArray[newBoardPos];
-                    currentPlayer.setBoardPos(newBoardPos);
+
+                    currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
 
                 }
 
+                //if not passing go, get new position
                 else {
-                    newBoardPos = currentPlayer.getBoardPos() + totalMove;
-                    newCoords = spacesArray[newBoardPos];
-                    currentPlayer.setBoardPos(newBoardPos);
+                    currentPlayer.setBoardPos(currentPlayer.getBoardPos() + totalMove);
+
+                    currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
                 }
 
                 // land on Go To Jail
-                if (newBoardPos == 29) {
-                    newCoords = spacesArray[13];
+                if (currentPlayer.getBoardPos() == 29) {
                     currentPlayer.setBoardPos(10);
+                    currentPlayer.setCoordinates(jailSpace);
                     samePlayer = false;
 
                     // Jail.jailPlayer(currentPlayer);
@@ -356,7 +363,7 @@ public class GameState implements MouseListener, ActionListener {
 
                     for (int i = 0; i < props.size(); i++) {
                         Property tempProp = props.get(i);
-                        if (newBoardPos == tempProp.getSpaceIdentifier()) {
+                        if (currentPlayer.getBoardPos() == tempProp.getSpaceIdentifier()) {
                             prop = props.get(i);
                             break;
                         }
@@ -364,7 +371,7 @@ public class GameState implements MouseListener, ActionListener {
 
                     // if the player can buy
                     //TODO: this is currently say if not owned- need to fix
-                    if (currentPlayer.tryBuy(newBoardPos, prop) == 1) {
+                    if (currentPlayer.tryBuy(currentPlayer.getBoardPos(), prop) == 1) {
 
                         // property already owned
                         if (prop.isOwned()) {
@@ -399,9 +406,8 @@ public class GameState implements MouseListener, ActionListener {
                             noLabel.setBounds(10, 10, 10, 10);
                             no.add(noLabel);
 
+                            //add buttons
                             propDisplay.add(yes);
-                            
-
                             propDisplay.add(no);
                             
                             propDisplay.invalidate();

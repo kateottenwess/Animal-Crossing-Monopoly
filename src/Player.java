@@ -1,3 +1,5 @@
+import java.awt.Point;
+
 /**********************************************************************
  * Class contains player information and actions
  *
@@ -6,6 +8,7 @@
  **********************************************************************/
 public class Player {
     private String name;
+    private Point coordinates;
     private int playerNum;
     private int boardPos;
     private int bells;
@@ -116,6 +119,15 @@ public class Player {
         } else {
             this.setBoardPos(this.getBoardPos() + totalmove);
         }
+    }
+
+
+    public void setCoordinates(Point p) {
+        coordinates = p;
+    }
+
+    public Point getCoordinates() {
+        return coordinates;
     }
 
     /******************************************************************

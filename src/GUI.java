@@ -24,7 +24,7 @@ import java.awt.*;
 public class GUI {
 
     public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
-        GameState gameState = new GameState(2);
+        GameState gameState = new GameState();
 
         JFrame frame = buildFrame();
         frame.setVisible(true);
@@ -45,15 +45,17 @@ public class GUI {
 
         // Make spaces clickable
         frame.addMouseListener(gameState);
-//ummmmmmm
+
         frame.add(panel);
         frame.repaint();
 
         // Make the image show up on the window
         Graphics g = frame.getGraphics();
         g.drawImage(newBoard, 0, 30, null);
-        g.drawImage(p1Label, 930, 740, null);
-        g.drawImage(p2Label, 930, 690, null);
+
+        g.drawImage(p1Label, (int) gameState.getPlayer1().getCoordinates().getX(), (int) gameState.getPlayer1().getCoordinates().getY(), null);
+
+        g.drawImage(p2Label, (int) gameState.getPlayer2().getCoordinates().getX(), (int) gameState.getPlayer2().getCoordinates().getY(), null);
 
         while (gameState.gameOver() == false) {
 
@@ -61,17 +63,19 @@ public class GUI {
             while (gameState.stateChanged() == false) {
                 Thread.sleep(30);
             }
+
             // Clear changes
             gameState.clearChange();
             g.drawImage(newBoard, 0, 30, null);
 
             // TODO: update gui
 
-            // if there are no pop up winowaa
-            if (gameState.getReturnFrame() == null) {
+            // if there are no pop up windows
+            // if (gameState.getReturnFrame() == null) {
 
-                g.drawImage(p1Label, (int) gameState.getNewCoords().getX(), (int) gameState.getNewCoords().getY(),
-                        null);
+                g.drawImage(p1Label, (int) gameState.getPlayer1().getCoordinates().getX(), (int) gameState.getPlayer1().getCoordinates().getY(), null);
+                
+                g.drawImage(p2Label, (int) gameState.getPlayer2().getCoordinates().getX(), (int) gameState.getPlayer2().getCoordinates().getY(), null);
 
                 String dice1Val = String.valueOf(gameState.getDice1());
                 String dice2Val = String.valueOf(gameState.getDice2());
@@ -84,11 +88,21 @@ public class GUI {
                 String money = "1500";
                 g.drawString(money, 73, 70);
 
-            } else {
+            // } 
+            // //if there is a pop up window
+            // else {
 
                 JFrame returnFrame = gameState.getReturnFrame();
+
+                
+                // g.drawImage(p1Label, (int) gameState.getPlayer1().getCoordinates().getX(), (int) gameState.getPlayer1().getCoordinates().getY(), null);
+                
+                // g.drawImage(p2Label, (int) gameState.getPlayer2().getCoordinates().getX(), (int) gameState.getPlayer2().getCoordinates().getY(), null);
+                // obvi gonna have to make it so money value changes but here's this for now
+                
+                
                 returnFrame.setVisible(true);
-            }
+            // }
 
             // graphics.fillRect(0, 0, frame.getWidth(), frame.getHeight());
             // graphics.drawImage(image, model.getX(), model.getY(), null);
