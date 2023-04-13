@@ -70,8 +70,6 @@ public class GUI {
 
             // TODO: update gui
 
-            // if there are no pop up windows
-            // if (gameState.getReturnFrame() == null) {
 
                 g.drawImage(p1Label, (int) gameState.getPlayer1().getCoordinates().getX(), (int) gameState.getPlayer1().getCoordinates().getY(), null);
                 
@@ -91,25 +89,12 @@ public class GUI {
                 g.drawString(moneyP1, 170, 50);
                 g.drawString(moneyP2, 175, 75);
                 
-            } 
-            else {
+          
 
                 JFrame returnFrame = gameState.getReturnFrame();
-
-                
-                // g.drawImage(p1Label, (int) gameState.getPlayer1().getCoordinates().getX(), (int) gameState.getPlayer1().getCoordinates().getY(), null);
-                
-                // g.drawImage(p2Label, (int) gameState.getPlayer2().getCoordinates().getX(), (int) gameState.getPlayer2().getCoordinates().getY(), null);
-                // obvi gonna have to make it so money value changes but here's this for now
-                
                 
                 returnFrame.setVisible(true);
-            // }
-
-            // graphics.fillRect(0, 0, frame.getWidth(), frame.getHeight());
-            // graphics.drawImage(image, model.getX(), model.getY(), null);
-
-            // Limit FPS
+          
             // Thread.sleep(30);
         }
 
