@@ -31,7 +31,7 @@ public class Property extends BoardSpaceType {
     private int numHouses;
 
     /* which player owns specific property */
-    private int playerNumOwning;
+    private Player playerOwning;
 
     /* Rent increase rate when more than one home is placed */
     private double rentIncreaseRate;
@@ -90,7 +90,7 @@ public class Property extends BoardSpaceType {
         this.oneHouse = oneHouse;
         this.owned = false;
         this.numHouses = 0;
-        this.playerNumOwning = 0;
+        this.playerOwning = null;
     }
 
 
@@ -179,13 +179,13 @@ public class Property extends BoardSpaceType {
      * Setter to set if property is owned or not
      * @param owned boolean
      ******************************************************************/
-    public void setOwned(boolean owned, int playerNum) {
+    public void setOwned(boolean owned, Player player) {
 
         //set owned to owned boolean
         this.owned = owned;
 
         //set who owns the property
-        this.playerNumOwning = playerNum;
+        this.playerOwning = player;
     }
 
 

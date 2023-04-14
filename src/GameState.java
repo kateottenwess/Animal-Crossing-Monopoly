@@ -300,6 +300,13 @@ public class GameState implements MouseListener, ActionListener {
     /* Property object for Short Line Railroad*/
     Property rr4 = new Property("Short Line", 35, 200, 35, 100, "NA", -1);
 
+
+    //List to hold each players properties
+    private static ArrayList<String> P1props;
+
+    private static ArrayList<String> P2props;
+
+
     /*******************************************************************
     * Constructor that sets the initial Game State
     ******************************************************************/
@@ -566,9 +573,14 @@ public class GameState implements MouseListener, ActionListener {
                             JFrame isOwnedFrame = new JFrame();
                             isOwnedFrame.setSize(200, 100);
                             JLabel owned = new JLabel("Sorry, this property is already in ownership- you owe rent!");
-                            owned.setBounds(200, 10, 100, 10);
+                            JLabel rentOwe = new JLabel("You owe:" + prop.getRentCost());
+                            owned.setBounds(200, 10, 300, 10);
+                            rentOwe.setBounds(200, 30, 200, 10);
                             isOwnedFrame.add(owned);
+                            isOwnedFrame.add(rentOwe);
                             returnFrame = isOwnedFrame;
+
+                            currentPlayer.setBells(currentPlayer.getBells() - prop.getRentCost());
                         } 
                         else {
                             
@@ -608,7 +620,13 @@ public class GameState implements MouseListener, ActionListener {
                             yes.addActionListener(new ActionListener(){
                                 public void actionPerformed(ActionEvent e){
                                     currentPlayer.setBells(currentPlayer.getBells() - prop.getPurchaseCost());
-                                    //TODO : set ownership
+                                    prop.setOwned(true, currentPlayer);
+                                    /*if (currentPlayer == players.get(0)){
+                                        P1props.add(prop.getPropertyName());
+                                    } else{
+                                        P2props.add(prop.getPropertyName());
+                                    }
+                                    //TODO : set ownership*/
                                     propDisplay.dispose();
                                 }
                             } );
@@ -673,6 +691,24 @@ public class GameState implements MouseListener, ActionListener {
             propertiesBtn.setSize(500, 200);
 
             JLabel propertiesLabel = new JLabel("Properties you own will show up here:");
+            JLabel properties;
+            if(currentPlayer == players.get(1)){
+                for(int i = 0; i < P1props.size(); i++){
+                    properties = new JLabel(P1props.get(i));
+                    for(int j = 30; j < 200; j += 20){
+                        properties.setBounds(200, j, 100, 10);
+                    }
+                    propertiesBtn.add(properties);
+                }
+            } else{
+                for(int i = 0; i < P2props.size(); i++){
+                    properties = new JLabel(P2props.get(i));
+                    for(int j = 30; j < 200; j += 20){
+                        properties.setBounds(200, j, 100, 10);
+                    }
+                    propertiesBtn.add(properties);
+                }
+            }
             // Jlabel propertiesList = new JLabel(currentPlayer.getProperties());
             propertiesLabel.setBounds(200, 10, 100, 10);
             propertiesBtn.add(propertiesLabel);
