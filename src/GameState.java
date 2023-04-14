@@ -641,16 +641,7 @@ public class GameState implements MouseListener, ActionListener {
 
                             
 
-                            
-
-
-
                         }
-
-                        // } else {
-                        // //cant buy lmao loser either pay rent OR its not a property and its community
-                        // chest/chance/misc
-                        // }
                     }
                 }
             }
@@ -663,7 +654,7 @@ public class GameState implements MouseListener, ActionListener {
                     currentPlayer = player1;
                 }
             }
-
+            stateChanged = true;
         }
 
         // CARD BUTTON
@@ -676,6 +667,7 @@ public class GameState implements MouseListener, ActionListener {
             cardsBtn.add(cardsLabel);
 
             returnFrame = cardsBtn;
+            stateChanged = true;
         }
 
         // PROPERTIES BUTTON
@@ -689,9 +681,11 @@ public class GameState implements MouseListener, ActionListener {
             propertiesBtn.add(propertiesLabel);
 
             returnFrame = propertiesBtn;
+            stateChanged = true;
         }
-
-        stateChanged = true;
+        else {
+            stateChanged = false;
+        }
     }
 
 
@@ -704,14 +698,19 @@ public class GameState implements MouseListener, ActionListener {
         JButton chosen = (JButton) e.getSource();
         try {
             if (chosen == yes) {
-                prop.setOwned(true, 1);
-                currentPlayer.setBells(currentPlayer.getBells() - prop.getPurchaseCost());
+                if (currentPlayer.equals(player2)) {
+                    player2.setBells(player2.getBells() - prop.getPurchaseCost());
+                    prop.setOwned(true, 2);
+                } else {
+                    player1.setBells(player1.getBells() - prop.getPurchaseCost());
+                    prop.setOwned(true, 1);
+                }
             } 
+            stateChanged = true;
         }
         catch (Exception no) {
-            
-            //close
+            //close the window
+            SwingUtilities.getWindowAncestor((JFrame)e.getSource()).dispose();
         }
     }
-    
 }

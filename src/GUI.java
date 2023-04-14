@@ -61,6 +61,12 @@ public class GUI {
         //draw player 2's piece
         g.drawImage(p2Label, (int) gameState.getPlayer2().getCoordinates().getX(), (int) gameState.getPlayer2().getCoordinates().getY(), null);
 
+        //set initial money vals
+        //post the money value of each player onto board
+        g.setFont(new Font("TimesRoman", Font.BOLD, 25));
+        g.drawString("1500", 170, 50);
+        g.drawString("1500", 175, 75);
+
         //loop through to run game while the game is not over
         while (gameState.gameOver() == false) {
 
@@ -73,33 +79,34 @@ public class GUI {
             gameState.clearChange();
             g.drawImage(newBoard, 0, 30, null);
 
-                //redraw player 1, either in same place or at new coords
-                g.drawImage(p1Label, (int) gameState.getPlayer1().getCoordinates().getX(), (int) gameState.getPlayer1().getCoordinates().getY(), null);
+            //redraw player 1, either in same place or at new coords
+            g.drawImage(p1Label, (int) gameState.getPlayer1().getCoordinates().getX(), (int) gameState.getPlayer1().getCoordinates().getY(), null);
                 
-                //redraw player 2, either in same place or at new coords
-                g.drawImage(p2Label, (int) gameState.getPlayer2().getCoordinates().getX(), (int) gameState.getPlayer2().getCoordinates().getY(), null);
+            //redraw player 2, either in same place or at new coords
+            g.drawImage(p2Label, (int) gameState.getPlayer2().getCoordinates().getX(), (int) gameState.getPlayer2().getCoordinates().getY(), null);
 
-                //get the values of each dice and turn to string
-                String dice1Val = String.valueOf(gameState.getDice1());
-                String dice2Val = String.valueOf(gameState.getDice2());
+            //get the values of each dice and turn to string
+            String dice1Val = String.valueOf(gameState.getDice1());
+            String dice2Val = String.valueOf(gameState.getDice2());
 
-                //put dice values rolled onto board
-                g.setFont(new Font("TimesRoman", Font.BOLD, 40));
-                g.drawString(dice1Val, 445, 625);
-                g.drawString(dice2Val, 555, 625);
+            //put dice values rolled onto board
+            g.setFont(new Font("TimesRoman", Font.BOLD, 40));
+            g.drawString(dice1Val, 445, 625);
+            g.drawString(dice2Val, 555, 625);
 
-                //post the money value of each player onto board
-                String moneyP1 = String.valueOf(gameState.getPlayer1().getBells());
-                String moneyP2 = String.valueOf(gameState.getPlayer2().getBells());
-                g.setFont(new Font("TimesRoman", Font.BOLD, 25));
-                g.drawString(moneyP1, 170, 50);
-                g.drawString(moneyP2, 175, 75);
+            //if there is a pop up frame, make it appear
+            JFrame returnFrame = gameState.getReturnFrame();
+            returnFrame.setVisible(true);
+
+            //post the money value of each player onto board
+            String moneyP1 = String.valueOf(gameState.getPlayer1().getBells());
+            String moneyP2 = String.valueOf(gameState.getPlayer2().getBells());
+            g.setFont(new Font("TimesRoman", Font.BOLD, 25));
+            g.drawString(moneyP1, 170, 50);
+            g.drawString(moneyP2, 175, 75);
                 
-                //if there is a pop up frame, make it appear
-                JFrame returnFrame = gameState.getReturnFrame();
-                returnFrame.setVisible(true);
-          
-            Thread.sleep(60);
+                
+            Thread.sleep(30);
         }
 
         //dispose frame when game is done
