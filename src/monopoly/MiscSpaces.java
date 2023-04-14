@@ -1,3 +1,4 @@
+package monopoly;
 /**********************************************************************
  * Class stores non-property spaces in the board
  *

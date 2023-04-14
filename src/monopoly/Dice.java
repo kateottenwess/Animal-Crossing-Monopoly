@@ -1,3 +1,4 @@
+package monopoly;
 /**********************************************************************.
  * Class stores the dice functionailty for the game
  *
@@ -10,10 +11,10 @@ public class Dice {
     private int numDouble = 0;
 
     /* int of how many values are on dice */
-    final int VALUES_ON_DICE = 6;
+    static final int VALUES_ON_DICE = 6;
 
     /* Value of how many doubles need to be rolled in a row in order to be sent to jail */
-    final int NUM_DOUBLES_TO_JAIL = 3;
+    static int NUM_DOUBLES_TO_JAIL = 3;
 
     
     /*******************************************************************
@@ -22,7 +23,7 @@ public class Dice {
      ******************************************************************/
     public int rollDice() {
 
-        return ((int) (Math.random() * VALUES_ON_DICE + 1));
+        return (int) (Math.random() * VALUES_ON_DICE + 1);
         
     }
 

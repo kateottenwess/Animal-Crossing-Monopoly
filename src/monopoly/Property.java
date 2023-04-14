@@ -1,3 +1,4 @@
+package monopoly;
 /**********************************************************************
  * Class stores all monopoly properties
  *
