@@ -302,9 +302,6 @@ public class GameState implements MouseListener, ActionListener {
     /* Property object for Short Line Railroad*/
     Property rr4 = new Property("Short Line", 35, 200, 35, 100, "NA", -1);
 
-    private ActionListener ActionListener;
-
-
     /*******************************************************************
     * Constructor that sets the initial Game State
     ******************************************************************/

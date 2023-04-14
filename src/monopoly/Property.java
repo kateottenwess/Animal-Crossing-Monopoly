@@ -41,25 +41,25 @@ public class Property extends BoardSpaceType {
     private boolean owned;
 
     /* Percent multiplied by mortgage price- this is price to unmortgage */
-    final double UNMORTAGE_PERC = 1.1;
+    final static double UNMORTAGE_PERC = 1.1;
 
     /* Initial cost of railroad purchase */
-    final double RR_INITIAL_COST = 25;
+    final static double RR_INITIAL_COST = 25;
 
     /* Rate of increase of railroad rent */
-    final double RR_INCREASE = 2;
+    final static double RR_INCREASE = 2;
 
     /* Rate purchase cost is multiplied by to get mortgage cost */
-    final double MORTGAGE_PERC_OF_PURCHASE = 0.5;
+    final static double MORTGAGE_PERC_OF_PURCHASE = 0.5;
 
     /* Rate * value of dice roll is the amount of rent if one is owned */
-    final int UTILITIES_ONE_OWNED = 4;
+    final static int UTILITIES_ONE_OWNED = 4;
 
     /* Rate * value of dice roll is the amount of rent if both are owned by the same player */
-    final int UTILITIES_TWO_OWNED = 10;
+    final static int UTILITIES_TWO_OWNED = 10;
 
     /* Max amount of homes allowed on property */
-    final int MAX_AMOUNT_HOUSES = 4;
+    final static int MAX_AMOUNT_HOUSES = 4;
 
 
     /*******************************************************************
@@ -210,8 +210,8 @@ public class Property extends BoardSpaceType {
     
     /******************************************************************
      * Method to increase the rent of a property if houses are purchased
-     * If 1 is return, the rent cost could be increased, else it can't  * be increased.
-     * 
+     * If 1 is return, the rent cost could be increased, else it can't  
+     * be increased.
      * @param houseNum number of houses purchased
      ******************************************************************/
     public void increaseRent(int houseNum) {
@@ -231,8 +231,8 @@ public class Property extends BoardSpaceType {
 
     
     /******************************************************************
-     * Method that returns the property that correlates to integer     * space. Returns null if no property is associated to said space
-     * 
+     * Method that returns the property that correlates to integer     
+     * space. Returns null if no property is associated to said space
      * @param space int value of space on board
      * @return property on space, null if no property
      ******************************************************************/

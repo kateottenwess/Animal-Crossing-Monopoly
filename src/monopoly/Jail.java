@@ -25,7 +25,7 @@ public class Jail extends MiscSpaces {
      * @param jailed Player
      ******************************************************************/
     public void jailPlayer(final Player jailed) {
-        
+        //jail player
     }
     
 }
