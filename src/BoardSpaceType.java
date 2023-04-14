@@ -1,5 +1,3 @@
-package monopoly;
-
 /**********************************************************************
  * Class stores monopoly board space types 
  *

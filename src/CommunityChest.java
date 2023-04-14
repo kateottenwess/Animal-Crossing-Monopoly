@@ -1,4 +1,3 @@
-package monopoly;
 /**********************************************************************
  * Class stores mcommunity chest cards for the game
  *

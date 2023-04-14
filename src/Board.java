@@ -1,4 +1,3 @@
-package monopoly;
 /**********************************************************************
  * Class stores monopoly board and runs game logic
  *

@@ -1,5 +1,3 @@
-package monopoly;
-
 /**********************************************************************
  * Class stores jail capabilities and actions
  *

@@ -1,4 +1,3 @@
-package monopoly;
 /**********************************************************************
  * Class stores chance cards for the game
  *
