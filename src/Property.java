@@ -121,6 +121,15 @@ public class Property extends BoardSpaceType {
     }
 
 
+     /******************************************************************
+     * Getter to return if property is owned or not
+     * @return boolean
+     ******************************************************************/
+    public boolean getOwned() {
+        return this.owned;
+    }
+
+
     /******************************************************************
      * Getter to return property purchase cost
      * @return int
@@ -254,5 +263,17 @@ public class Property extends BoardSpaceType {
 
         //if no property is on space, return null
         return null;
+    }
+
+
+    public boolean canBuy(int bells, Property p) {
+        boolean answer = false;
+
+        if (p.getPurchaseCost() < bells) {
+            if (!p.getOwned()) {
+                answer = true;
+            }
+        }
+        return answer;
     }
 }
