@@ -732,7 +732,7 @@ public class GameState implements MouseListener, ActionListener {
             JFrame isOwnedFrame = new JFrame();
                 isOwnedFrame.setSize(200, 100);
                 JLabel owned = new JLabel("Sorry, this property is already in ownership- you owe rent!");
-                JLabel rentOwe = new JLabel("You owe:" + prop.getRentCost());
+                JLabel rentOwe = new JLabel("You owe: " + prop.getRentCost() + " bells.");
                 owned.setBounds(200, 10, 300, 10);
                 rentOwe.setBounds(200, 30, 200, 10);
                 isOwnedFrame.add(owned);
@@ -740,6 +740,11 @@ public class GameState implements MouseListener, ActionListener {
                 returnFrame = isOwnedFrame;
 
                 currentPlayer.setBells(currentPlayer.getBells() - prop.getRentCost());
+                if (currentPlayer == player1) {
+                    player2.setBells(player2.getBells() + prop.getRentCost());
+                } else {
+                    player1.setBells(player1.getBells() + prop.getRentCost());
+                }
         }
         //if it is not owned, you are poor and need to mortgage
         else {
