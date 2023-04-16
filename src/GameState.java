@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
+import java.util.spi.CurrencyNameProvider;
 
 /**********************************************************************
  * GameState class that carries out game play logic.
@@ -300,6 +301,14 @@ public class GameState implements MouseListener, ActionListener {
     /* Property object for Short Line Railroad */
     Property rr4 = new Property("Short Line", 35, 200, 35, 100, "NA", -1);
 
+    /* String array that holds all of the community cards */
+    String[] ccCards = {"GRAND MUSEUM OPENING: COLLECT 50 BELLS","YOU DUG UP A SACK OF BELLS! COLLECT 100 BELLS","GO TO JAIL \n DO NOT PASS GO, DO NOT COLLECT 200 BELLS","GET OUT OF JAIL, FREE!","ADVANCE TO GO: COLLECT 200 BELLS",
+    "RECEIVE 25 BELLS FOR YOUR SERVICES TO THE VILLAGE","INCOME TAX REFUND: COLLECT 20 BELLS","YOU INHERITED 100 BELLS","PAY VILLAGE TAX OF 150 BELLS","BANK ERROR IN YOUR FAVOR: COLLECT 200 BELLS"};
+
+    /* String array that holds all of the chance cards */
+    String[] chanceCards = {"GO BACK THREE SPACES","ADVANCE TO GO (COLLECT 200 BELLS)","BANK PAYS YOU DIVIDEND OF 50 BELLS","ADVANCE TO FRANCINE'S HOUSE","GET OUT OF JAIL FREE",
+    "ADVANCE TO RAYMOND'S HOUSE","PAY POOR TAX OF 15 BELLS","GO TO JAIL","ADVANCE TOKEN TO CHRISSY'S HOUSE","YOUR BUSINESS MATURES: COLLECT 150 BELLS"};
+
     // List to hold each players properties
     private static ArrayList<String> P1props;
 
@@ -462,6 +471,95 @@ public class GameState implements MouseListener, ActionListener {
         return player2;
     }
 
+
+     /***************************************************************** 
+     * Method to return a random community chest card
+     * 
+     * @return String chance card
+     ******************************************************************/
+    public String pickCCCard(){
+        int randInt = (int) (Math.random() * 9);
+
+        if (ccCards[randInt] == ccCards[0]){
+            currentPlayer.setBells(currentPlayer.getBells() + 50);
+        }
+        if (ccCards[randInt] == ccCards[1]){
+            currentPlayer.setBells(currentPlayer.getBells() + 100);
+        }
+        if (ccCards[randInt] == ccCards[2]){
+            //go to jail
+        }
+        if (ccCards[randInt] == ccCards[3]){
+            //get out of jail
+        }
+        if (ccCards[randInt] == ccCards[4]){
+            currentPlayer.setBells(currentPlayer.getBells() + 200);
+            currentPlayer.setBoardPos(10);
+        }
+        if (ccCards[randInt] == ccCards[5]){
+            currentPlayer.setBells(currentPlayer.getBells() + 25);
+        }
+        if (ccCards[randInt] == ccCards[6]){
+            currentPlayer.setBells(currentPlayer.getBells() + 20);
+        }
+        if (ccCards[randInt] == ccCards[7]){
+            currentPlayer.setBells(currentPlayer.getBells() + 100);
+        }
+        if (ccCards[randInt] == ccCards[8]){
+            currentPlayer.setBells(currentPlayer.getBells() + 150);
+        }
+        if (ccCards[randInt] == ccCards[1]){
+            currentPlayer.setBells(currentPlayer.getBells() + 200);
+        }
+
+        return ccCards[randInt];
+    }
+
+
+    /****************************************************************** 
+     * Method to return a random chance card
+     * 
+     * @return String chance card
+     ******************************************************************/
+    public String pickChanceCards(){
+        int randInt = (int) (Math.random() * 9);
+
+        if (chanceCards[randInt] == chanceCards[0]) {
+            currentPlayer.setBoardPos(currentPlayer.getBoardPos() - 3);
+        }
+        else if (chanceCards[randInt] == chanceCards[1]){
+            currentPlayer.setBoardPos(0);
+            currentPlayer.setBells(currentPlayer.getBells() + 200);
+        }
+        else if(chanceCards[randInt] == chanceCards[2]){
+            currentPlayer.setBells(currentPlayer.getBells() + 50);
+        }
+        else if(chanceCards[randInt] == chanceCards[3]){
+            currentPlayer.setBoardPos(34);
+        }
+        else if(chanceCards[randInt] == chanceCards[4]){
+            //get out of jail
+        }
+        else if(chanceCards[randInt] == chanceCards[5]){
+            currentPlayer.setBoardPos(34);
+        }
+        else if(chanceCards[randInt] == chanceCards[6]){
+            currentPlayer.setBells(currentPlayer.getBells() - 15);
+        }
+        else if(chanceCards[randInt] == chanceCards[7]){
+            //Go to jail
+        }
+        else if(chanceCards[randInt] == chanceCards[8]){
+            currentPlayer.setBoardPos(11);
+        }
+        else if(chanceCards[randInt] == chanceCards[9]){
+            currentPlayer.setBells(currentPlayer.getBells() + 150);
+        }
+
+        return chanceCards[randInt];
+    }
+
+
     /******************************************************************
      * Getter to return the current players bells
      * 
@@ -564,7 +662,69 @@ public class GameState implements MouseListener, ActionListener {
 
                     // it is a misc space
                     if (prop == null) {
+                        //if wcurrent player is on income tax
+                        if (currentPlayer.getBoardPos() == 4) {
+                            JFrame incomeTax = new JFrame();
+                            incomeTax.setSize(200, 100);
+                           
+                            JLabel tax = new JLabel("You owe income tax.");
+            
+                            tax.setBounds(200, 30, 200, 10);
+                            incomeTax.add(tax);
+                            
+                            if (currentPlayer.getBells() < 200) {
+                                gameOver = true;
+                            }
+                            else {
+                                currentPlayer.setBells(currentPlayer.getBells() - 200);
+                            }
+                         
+                            returnFrame = incomeTax;
+                        }
+                        
+                        else if (currentPlayer.getBoardPos() == 38) {
+                            JFrame luxuryTax = new JFrame();
+                            luxuryTax.setSize(200, 100);
+                           
+                            JLabel tax = new JLabel("You owe luxury tax.");
+            
+                            tax.setBounds(200, 30, 200, 10);
+                            luxuryTax.add(tax);
+                            
+                            if (currentPlayer.getBells() < 100) {
+                                gameOver = true;
+                            } else {
+                                currentPlayer.setBells(currentPlayer.getBells() - 100);
+                            }
+                         
+                            returnFrame = luxuryTax;
+                        } 
+                        else if (currentPlayer.getBoardPos() == 2 || currentPlayer.getBoardPos() == 17 || currentPlayer.getBoardPos() == 33) {
 
+                            JFrame cc = new JFrame();
+                            cc.setSize(500, 100);
+
+                            String chosen = pickCCCard();
+                           
+                            JLabel card = new JLabel("Community Chest\n" + chosen);
+            
+                            card.setBounds(200, 30, 200, 10);
+                            cc.add(card);
+                            
+                            returnFrame = cc;
+                        } else if (currentPlayer.getBoardPos() == 7 || currentPlayer.getBoardPos() == 22 || currentPlayer.getBoardPos() == 36) {
+                            JFrame chance = new JFrame();
+                            chance.setSize(500, 100);
+
+                            String chosen = pickCCCard();
+                           
+                            JLabel card = new JLabel("Chance\n" + chosen);
+            
+                            card.setBounds(200, 30, 200, 10);
+                            chance.add(card);
+                            
+                            returnFrame = chance;
+                        }
                     } else {
                         propertySpace();
                     }
@@ -640,12 +800,12 @@ public class GameState implements MouseListener, ActionListener {
         JButton chosen = (JButton) e.getSource();
         try {
             if (chosen == yes) {
-                if (currentPlayer.equals(player2)) {
-                    player2.setBells(player2.getBells() - prop.getPurchaseCost());
-                    prop.setOwned(true, player2);
-                } else {
+                if (currentPlayer == player2) {
                     player1.setBells(player1.getBells() - prop.getPurchaseCost());
                     prop.setOwned(true, player1);
+                } else {
+                    player2.setBells(player2.getBells() - prop.getPurchaseCost());
+                    prop.setOwned(true, player2);
                 }
             }
             stateChanged = true;
@@ -750,6 +910,7 @@ public class GameState implements MouseListener, ActionListener {
         else {
             //TODO: mortage
             //if cant mortgage anything, you lose, game ends
+            gameOver = true;
         } 
     }
 }

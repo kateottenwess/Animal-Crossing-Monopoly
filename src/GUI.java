@@ -102,8 +102,8 @@ public class GUI {
 
             //post the money value of each player onto board
             //TODO: this is where the money issue thing is tripping up, if not figure out why it is being silly
-            String moneyP1 = String.valueOf(gameState.getPlayer2().getBells());
-            String moneyP2 = String.valueOf(gameState.getPlayer1().getBells());
+            String moneyP1 = String.valueOf(gameState.getPlayer1().getBells());
+            String moneyP2 = String.valueOf(gameState.getPlayer2().getBells());
             g.setFont(new Font("TimesRoman", Font.BOLD, 25));
             g.drawString(moneyP1, 170, 50);
             g.drawString(moneyP2, 175, 75);
