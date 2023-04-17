@@ -100,9 +100,8 @@ public class GUI {
                 returnFrame.setVisible(true);
             }
 
-            if (gameState.getIsYes()) {
-                frame.repaint();
-            }
+
+            
 
             //post the money value of each player onto board
             //TODO: this is where the money issue thing is tripping up, if not figure out why it is being silly
@@ -111,6 +110,10 @@ public class GUI {
             g.setFont(new Font("TimesRoman", Font.BOLD, 25));
             g.drawString(moneyP1, 170, 50);
             g.drawString(moneyP2, 175, 75);
+
+            if (gameState.getIsYes()==true) {
+                frame.repaint();
+            }
             }
                 
             Thread.sleep(30);
