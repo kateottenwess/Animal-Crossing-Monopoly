@@ -741,22 +741,10 @@ public class GameState implements MouseListener, ActionListener {
             }
             stateChanged = true;
         }
-
-        // CARD BUTTON
-        else if (code.getY() >= 10 && code.getY() <= 60 && code.getX() >= 803 && code.getX() <= 932) {
-            JFrame cardsBtn = new JFrame();
-            cardsBtn.setSize(500, 200);
-
-            JLabel cardsLabel = new JLabel("If you have a Get Out Of Jail Free card it will show up here:");
-            cardsLabel.setBounds(200, 10, 100, 10);
-            cardsBtn.add(cardsLabel);
-
-            returnFrame = cardsBtn;
-            stateChanged = true;
-        }
+        
 
         // PROPERTIES BUTTON
-        else if (code.getY() >= 10 && code.getY() <= 60 && code.getX() >= 365 && code.getX() <= 530) {
+        else if (code.getY() >= 10 && code.getY() <= 60 && code.getX() >= 803 && code.getX() <= 932) {
             JFrame propertiesBtn = new JFrame();
             propertiesBtn.setSize(500, 200);
 
