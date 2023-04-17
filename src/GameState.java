@@ -231,22 +231,22 @@ public class GameState implements MouseListener, ActionListener {
     Property mitzi = new Property("Mitzi's House", 9, 120, 8, 60, "light blue", 40);
 
     /* Property object for Flora */
-    Property flora = new Property("Flora's House", 11, 140, 10, 70, "pink", 50);
+    Property flora = new Property("Flora's House", 14, 140, 10, 70, "pink", 50);
 
     /* Property object for Rosie */
     Property rosie = new Property("Rosie's House", 13, 140, 10, 70, "pink", 50);
 
     /* Property object for Chrissy */
-    Property chrissy = new Property("Chrissy's House", 14, 160, 12, 80, "pink", 60);
+    Property chrissy = new Property("Chrissy's House", 11, 160, 12, 80, "pink", 60);
 
     /* Property object for Bones */
-    Property bones = new Property("Bones House", 16, 180, 14, 90, "orange", 70);
+    Property bones = new Property("Bones House", 19, 180, 14, 90, "orange", 70);
 
     /* Property object for Cephalobot */
-    Property cephalobot = new Property("Cephalobot's House", 18, 180, 14, 90, "orange", 70);
+    Property cephalobot = new Property("Cephalobot's House", 16, 180, 14, 90, "orange", 70);
 
     /* Property object for Hopkins */
-    Property hopkins = new Property("Hopkin's House", 19, 200, 16, 100, "orange", 80);
+    Property hopkins = new Property("Hopkin's House", 18, 200, 16, 100, "orange", 80);
 
     /* Property object for Octavin */
     Property octavin = new Property("Octavin's House", 21, 220, 18, 110, "red", 90);
@@ -348,21 +348,21 @@ public class GameState implements MouseListener, ActionListener {
         props.add(melba);
         props.add(marina);
         props.add(mitzi);
-        props.add(flora);
-        props.add(rosie);
         props.add(chrissy);
-        props.add(bones);
+        props.add(rosie);
+        props.add(flora);
         props.add(cephalobot);
         props.add(hopkins);
+        props.add(bones);
         props.add(octavin);
         props.add(fang);
         props.add(kabuki);
         props.add(stitches);
         props.add(shino);
         props.add(bob);
-        props.add(francine);
         props.add(judy);
         props.add(diana);
+        props.add(francine);
         props.add(marshall);
         props.add(raymond);
         props.add(ableSis);
