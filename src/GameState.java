@@ -595,7 +595,7 @@ public class GameState implements MouseListener, ActionListener {
 
         // get coordinates of mouse event
         Point code = e.getPoint();
-        System.out.println(code.getX() + ", " + code.getY());
+        System.out.println("x: " + code.getX() + " y: " + code.getY());
 
         // ROLL DICE BUTTON
         if (code.getY() >= 240 && code.getY() <= 278 && code.getX() >= 692 && code.getX() <= 830) {
