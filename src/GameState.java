@@ -927,7 +927,7 @@ public class GameState implements MouseListener, ActionListener {
             //TODO: mortage
             //if cant mortgage anything, you lose, game ends
 
-            if (currentPlayer.getBells() == 0) {
+            if (currentPlayer.getBells() <= 0) {
                 gameOver = true;
             }
             gameOver = true;
@@ -940,7 +940,7 @@ public class GameState implements MouseListener, ActionListener {
             gameOverMessage.setBounds(200, 50, 200, 10);
             gameover.add(gameOverMessage);
             returnFrame = gameover;
-            
+            System.exit(0);
         }
     }
 }
