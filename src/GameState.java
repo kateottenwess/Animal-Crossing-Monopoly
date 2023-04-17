@@ -909,7 +909,7 @@ public class GameState implements MouseListener, ActionListener {
                 isOwnedFrame.setSize(200, 100);
                 JLabel owned = new JLabel("Sorry, this property is already in ownership- you owe rent!");
                 JLabel rentOwe = new JLabel("You owe: " + prop.getRentCost() + " bells.");
-                owned.setBounds(200, 10, 300, 10);
+                owned.setBounds(200, 10, 400, 20);
                 rentOwe.setBounds(200, 30, 200, 10);
                 isOwnedFrame.add(owned);
                 isOwnedFrame.add(rentOwe);
@@ -927,7 +927,7 @@ public class GameState implements MouseListener, ActionListener {
             //TODO: mortage
             //if cant mortgage anything, you lose, game ends
 
-            if (currentPlayer.getBells() == 0) {
+            if (currentPlayer.getBells() <= 0) {
                 gameOver = true;
             }
             gameOver = true;
@@ -935,7 +935,12 @@ public class GameState implements MouseListener, ActionListener {
         
         if (gameOver == true) {
             //make jframe for this
-            
+            JFrame gameover = new JFrame();
+            JLabel gameOverMessage = new JLabel("Game over!");
+            gameOverMessage.setBounds(200, 50, 200, 10);
+            gameover.add(gameOverMessage);
+            returnFrame = gameover;
+            System.exit(0);
         }
     }
 }
