@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.image.SampleModel;
 import java.util.ArrayList;
 import java.util.spi.CurrencyNameProvider;
 
@@ -59,6 +60,12 @@ public class GameState implements MouseListener, ActionListener {
 
     /* Property object to hold property being used in turn */
     private static Property prop;
+
+    /* boolean to hold if it is the same players turn or not */
+    public static boolean samePlayer;
+
+    /* int value of money in free parking */
+    public static int freeParking;
 
     // Bottom of board spaces
     /* Point object that holds coordinates of Pass go 1 */
@@ -314,14 +321,13 @@ public class GameState implements MouseListener, ActionListener {
 
     private static ArrayList<String> P2props;
 
-    private boolean purchased;
 
     /*******************************************************************
      * Constructor that sets the initial Game State
      ******************************************************************/
     public GameState() {
 
-        purchased = false;
+        samePlayer = true;
 
         // create dice
         dice = new Dice();
@@ -375,6 +381,8 @@ public class GameState implements MouseListener, ActionListener {
         props.add(rr2);
         props.add(rr3);
         props.add(rr4);
+
+        freeParking = 0;
     }
 
     /******************************************************************
@@ -385,21 +393,6 @@ public class GameState implements MouseListener, ActionListener {
     public JFrame getReturnFrame() {
         return returnFrame;
     }
-
-
-    /******************************************************************
-     * Getter to return if a property was purchased
-     * 
-     * @return boolean
-     ******************************************************************/
-    /*public boolean getPurchased() {
-        return purchased;
-    }
-
-
-    public void setPurchased(boolean b) {
-        purchased = b;
-    }*/
 
 
     /******************************************************************
@@ -507,14 +500,17 @@ public class GameState implements MouseListener, ActionListener {
             currentPlayer.setBells(currentPlayer.getBells() + 100);
         }
         if (ccCards[randInt] == ccCards[2]){
-            //go to jail
+            currentPlayer.setBoardPos(10);
+            currentPlayer.setCoordinates(jailSpace);
+            samePlayer = false;
         }
         if (ccCards[randInt] == ccCards[3]){
-            //get out of jail
+            //TODO: get out of jail
         }
         if (ccCards[randInt] == ccCards[4]){
             currentPlayer.setBells(currentPlayer.getBells() + 200);
             currentPlayer.setBoardPos(10);
+            currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
         }
         if (ccCards[randInt] == ccCards[5]){
             currentPlayer.setBells(currentPlayer.getBells() + 25);
@@ -546,9 +542,11 @@ public class GameState implements MouseListener, ActionListener {
 
         if (chanceCards[randInt] == chanceCards[0]) {
             currentPlayer.setBoardPos(currentPlayer.getBoardPos() - 3);
+            currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
         }
         else if (chanceCards[randInt] == chanceCards[1]){
             currentPlayer.setBoardPos(0);
+            currentPlayer.setCoordinates(passGo1);
             currentPlayer.setBells(currentPlayer.getBells() + 200);
         }
         else if(chanceCards[randInt] == chanceCards[2]){
@@ -556,18 +554,22 @@ public class GameState implements MouseListener, ActionListener {
         }
         else if(chanceCards[randInt] == chanceCards[3]){
             currentPlayer.setBoardPos(34);
+            currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
         }
         else if(chanceCards[randInt] == chanceCards[4]){
-            //get out of jail
+            //TODO: get out of jail
         }
         else if(chanceCards[randInt] == chanceCards[5]){
-            currentPlayer.setBoardPos(34);
+            currentPlayer.setBoardPos(39);
+            currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
         }
         else if(chanceCards[randInt] == chanceCards[6]){
             currentPlayer.setBells(currentPlayer.getBells() - 15);
         }
         else if(chanceCards[randInt] == chanceCards[7]){
-            //Go to jail
+            currentPlayer.setBoardPos(10);
+            currentPlayer.setCoordinates(jailSpace);
+            samePlayer = false;
         }
         else if(chanceCards[randInt] == chanceCards[8]){
             currentPlayer.setBoardPos(11);
@@ -620,6 +622,8 @@ public class GameState implements MouseListener, ActionListener {
         // ROLL DICE BUTTON
         if (code.getY() >= 240 && code.getY() <= 278 && code.getX() >= 692 && code.getX() <= 830) {
 
+            changePlayer();
+
             // initialize return frame to null
             returnFrame = null;
 
@@ -629,12 +633,13 @@ public class GameState implements MouseListener, ActionListener {
             int totalMove = dice1 + dice2;
 
             // set to boolean- true if player rolled double, stay same player
-            boolean samePlayer = dice.doubleRoll(dice1, dice2);
+            samePlayer = dice.doubleRoll(dice1, dice2);
 
             // if 3 doubles are rolled in a row go to jail
             if (dice.doubleJail()) {
                 currentPlayer.setBoardPos(10);
                 currentPlayer.setCoordinates(jailSpace);
+                samePlayer = false;
             }
             // if 3 doubles are not rolled in a row
             else {
@@ -666,6 +671,7 @@ public class GameState implements MouseListener, ActionListener {
                     samePlayer = false;
 
                     // Jail.jailPlayer(currentPlayer);
+                    
                 }
 
                 // if we arent going to jail
@@ -683,8 +689,7 @@ public class GameState implements MouseListener, ActionListener {
 
                     // it is a misc space
                     if (prop == null) {
-                        //if wcurrent player is on income tax
-                        //TODO: all taxes and cards subtract immediately and from the right player
+                        //if current player is on income tax
                         if (currentPlayer.getBoardPos() == 4) {
                             JFrame incomeTax = new JFrame();
                             incomeTax.setSize(200, 100);
@@ -701,6 +706,7 @@ public class GameState implements MouseListener, ActionListener {
                                 currentPlayer.setBells(currentPlayer.getBells() - 200);
                             }
                          
+                            freeParking += 200;
                             returnFrame = incomeTax;
                         }
                         
@@ -719,6 +725,7 @@ public class GameState implements MouseListener, ActionListener {
                                 currentPlayer.setBells(currentPlayer.getBells() - 100);
                             }
                          
+                            freeParking += 100;
                             returnFrame = luxuryTax;
                         } 
                         else if (currentPlayer.getBoardPos() == 2 || currentPlayer.getBoardPos() == 17 || currentPlayer.getBoardPos() == 33) {
@@ -728,24 +735,39 @@ public class GameState implements MouseListener, ActionListener {
 
                             String chosen = pickCCCard();
                            
-                            JLabel card = new JLabel("Community Chest\n" + chosen);
+                            JLabel card = new JLabel("<html>Community Chest<br/>" + chosen + "</html>");
             
                             card.setBounds(200, 30, 200, 10);
                             cc.add(card);
                             
                             returnFrame = cc;
+
+
                         } else if (currentPlayer.getBoardPos() == 7 || currentPlayer.getBoardPos() == 22 || currentPlayer.getBoardPos() == 36) {
                             JFrame chance = new JFrame();
                             chance.setSize(500, 100);
 
-                            String chosen = pickCCCard();
+                            String chosen = pickChanceCards();
                            
-                            JLabel card = new JLabel("Chance\n" + chosen);
+                            JLabel card = new JLabel("<html>Chance<br/>" + chosen + "</html>");
             
                             card.setBounds(200, 30, 200, 10);
                             chance.add(card);
                             
                             returnFrame = chance;
+
+                        } else if (currentPlayer.getBoardPos() == 20) {
+                            JFrame free = new JFrame();
+                            free.setSize(500, 100);
+                           
+                            JLabel card = new JLabel("Free Docking! You get " + freeParking + " bells");
+            
+                            card.setBounds(200, 30, 200, 10);
+                            free.add(card);
+                            
+                            currentPlayer.setBells(currentPlayer.getBells() + freeParking);
+
+                            returnFrame = free;
                         }
                     } else {
                         propertySpace();
@@ -753,14 +775,6 @@ public class GameState implements MouseListener, ActionListener {
                 }
             }
 
-            // if the player did not roll a double, it is no longer their turn after this
-            if (!samePlayer) {
-                if (currentPlayer == player1) {
-                    currentPlayer = player2;
-                } else {
-                    currentPlayer = player1;
-                }
-            }
             stateChanged = true;
         }
         
@@ -807,25 +821,8 @@ public class GameState implements MouseListener, ActionListener {
      ******************************************************************/
     @Override
     public void actionPerformed(ActionEvent e) {
-        //TODO: why
-        JButton chosen = (JButton) e.getSource();
-        try {
-            if (chosen == yes) {
-                //TODO: is it here?
-                if (currentPlayer.getName().equalsIgnoreCase(player1.getName())) {
-                    player1.setBells(player1.getBells() - prop.getPurchaseCost());
-                    prop.setOwned(true, player1);
-                } else {
-                    player2.setBells(player2.getBells() - prop.getPurchaseCost());
-                    prop.setOwned(true, player2);
-                }
-            }
-            stateChanged = true;
-        } catch (Exception no) {
-            // close the window
-            SwingUtilities.getWindowAncestor((JFrame) e.getSource()).dispose();
-        }
     }
+
 
     private void propertySpace() {
         if (prop.canBuy(currentPlayer.getBells(), prop)) {
@@ -857,24 +854,13 @@ public class GameState implements MouseListener, ActionListener {
             // Ask player on frame if they wanna buy
             JButton yes = new JButton("yes");
             yes.setBounds(60, 400, 95, 30);
-            // JLabel yesLabel = new JLabel("yes");
-            // yesLabel.setBounds(100, 200, 50, 20);
-            // yes.add(yesLabel);
             
-            //TODO: huh
             yes.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     currentPlayer.setBells(currentPlayer.getBells() - prop.getPurchaseCost());
                     prop.setOwned(true, currentPlayer);
                     System.out.println("CurrentPlayer: " + currentPlayer.getName());
-                    /*
-                     * if (currentPlayer == players.get(0)){
-                     * P1props.add(prop.getPropertyName());
-                     * } else{
-                     * P2props.add(prop.getPropertyName());
-                     * }
-                     * //TODO : set ownership
-                     */
+
                     propDisplay.dispose();
                     returnFrame = propDisplay;
                 }
@@ -882,9 +868,6 @@ public class GameState implements MouseListener, ActionListener {
 
             JButton no = new JButton("no");
             no.setBounds(80, 400, 95, 30);
-            // JLabel noLabel = new JLabel("No");
-            // noLabel.setBounds(300, 200, 50, 20);
-            // no.add(noLabel);
             no.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     propDisplay.dispose();
@@ -901,7 +884,6 @@ public class GameState implements MouseListener, ActionListener {
             propDisplay.repaint();
 
             returnFrame = propDisplay;
-
         }
         //if it can't be purchased, check if its owned
         else if (prop.isOwned()) {
@@ -941,6 +923,18 @@ public class GameState implements MouseListener, ActionListener {
             gameover.add(gameOverMessage);
             returnFrame = gameover;
             System.exit(0);
+        }
+    }
+
+
+    private void changePlayer() {
+        // if the player did not roll a double, it is no longer their turn after this
+        if (!samePlayer) {
+            if (currentPlayer.getName().equalsIgnoreCase(player1.getName())) {
+                currentPlayer = player2;
+            } else {
+                currentPlayer = player1;
+            }
         }
     }
 }
