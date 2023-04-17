@@ -62,136 +62,136 @@ public class GameState implements MouseListener, ActionListener {
 
     // Bottom of board spaces
     /* Point object that holds coordinates of Pass go 1 */
-    Point passGo1 = new Point(945, 768);
+    Point passGo1 = new Point(945, 748);
 
     /* Point object that holds coordinates of Pass go 2 */
-    Point passGo2 = new Point(945, 778);
+    Point passGo2 = new Point(945, 758);
 
     /* Point object that holds coordinates of Pass go 3 */
-    Point passGo3 = new Point(955, 768);
+    Point passGo3 = new Point(955, 748);
 
     /* Point object that holds coordinates of Pass go 4 */
-    Point passGo4 = new Point(955, 778);
+    Point passGo4 = new Point(955, 758);
 
     /* Point object that holds coordinates of Rodneys House */
-    Point rodneysHouse = new Point(808, 766);
+    Point rodneysHouse = new Point(779, 740);
 
     /* Point object that holds coordinates of community chest space 1 */
-    Point cc1 = new Point(728, 766);
+    Point cc1 = new Point(723, 721);
 
     /* Point object that holds coordinates of Rockets House */
-    Point rocketsHouse = new Point(652, 766);
+    Point rocketsHouse = new Point(621, 740);
 
     /* Point object that holds coordinates of income tax space */
-    Point incomeTax = new Point(573, 766);
+    Point incomeTax = new Point(547, 740);
 
     /* Point object that holds coordinates of Reading Railroad */
-    Point readingRailroad = new Point(493, 766);
+    Point readingRailroad = new Point(462, 740);
 
     /* Point object that holds coordinates of Melbas House */
-    Point melbasHouse = new Point(259, 766);
+    Point melbasHouse = new Point(389, 740);
 
     /* Point object that holds coordinates of chance card space 1 */
-    Point chance1 = new Point(334, 766);
+    Point chance1 = new Point(308, 740);
 
     /* Point object that holds coordinates of Marinas House */
-    Point marinasHouse = new Point(257, 766);
+    Point marinasHouse = new Point(229, 740);
 
     /* Point object that holds coordinates of Mitzis House */
-    Point mitzisHouse = new Point(179, 766);
+    Point mitzisHouse = new Point(149, 740);
 
     /* Point object that holds coordinates of the Jail space */
-    Point jailSpace = new Point(20, 766);
+    Point jailSpace = new Point(20, 740);
 
     // Left side of board spaces
     /* Point object that holds coordinates of Chrissys House */
-    Point chrissysHouse = new Point(60, 652);
+    Point chrissysHouse = new Point(25, 632);
 
     /* Point object that holds coordinates of the Electric Company */
-    Point electricCompany = new Point(60, 592);
+    Point electricCompany = new Point(25, 575);
 
     /* Point object that holds coordinates of Rosies House */
-    Point rosiesHouse = new Point(60, 535);
+    Point rosiesHouse = new Point(25, 523);
 
     /* Point object that holds coordinates of Floras House */
-    Point florasHouse = new Point(40, 475);
+    Point florasHouse = new Point(25, 473);
 
     /* Point object that holds coordinates of Pennsylvania Railroad */
-    Point pennsylvaniaRailroad = new Point(60, 438);
+    Point pennsylvaniaRailroad = new Point(25, 426);
 
     /* Point object that holds coordinates of Cephalobots House */
-    Point cephalobotsHouse = new Point(58, 380);
+    Point cephalobotsHouse = new Point(25, 370);
 
     /* Point object that holds coordinates of Community Chest space 2 */
-    Point cc2 = new Point(60, 278);
+    Point cc2 = new Point(25, 315);
 
     /* Point object that holds coordinates of Hopkins House */
-    Point hopkinsHouse = new Point(57, 275);
+    Point hopkinsHouse = new Point(25, 262);
 
     /* Point object that holds coordinates of Bones House */
-    Point bonesHouse = new Point(56, 218);
+    Point bonesHouse = new Point(25, 208);
 
     /* Point object that holds coordinates of free docking space */
     Point freeDocking = new Point(73, 138);
 
     // Top of board spaces
     /* Point object that holds coordinates of Octavins House */
-    Point octaviansHouse = new Point(181, 120);
+    Point octaviansHouse = new Point(160, 95);
 
     /* Point object that holds coordinates of chance 2 space */
-    Point chance2 = new Point(257, 120);
+    Point chance2 = new Point(232, 95);
 
     /* Point object that holds coordinates of Fangs House */
-    Point fangsHouse = new Point(336, 120);
+    Point fangsHouse = new Point(305, 95);
 
     /* Point object that holds coordinates of Kabukis House */
-    Point kabukisHouse = new Point(413, 120);
+    Point kabukisHouse = new Point(390, 95);
 
     /* Point object that holds coordinates of B.O. Railroad */
-    Point boRailroad = new Point(493, 120);
+    Point boRailroad = new Point(470, 95);
 
     /* Point object that holds coordinates of Stitches House */
-    Point stitchesHouse = new Point(574, 120);
+    Point stitchesHouse = new Point(550, 95);
 
     /* Point object that holds coordinates of Shinos House */
-    Point shinosHouse = new Point(651, 120);
+    Point shinosHouse = new Point(626, 95);
 
     /* Point object that holds coordinates of Water Works */
-    Point waterWorks = new Point(728, 120);
+    Point waterWorks = new Point(706, 95);
 
     /* Point object that holds coordinates of Bobs House */
-    Point bobsHouse = new Point(808, 120);
+    Point bobsHouse = new Point(781, 95);
 
     // Right side of board spaces
     /* Point object that holds coordinates of go to jail space */
-    Point goToJail = new Point(945, 143);
+    Point goToJail = new Point(920, 143);
 
     /* Point object that holds coordinates of Judys House */
-    Point judysHouse = new Point(945, 215);
+    Point judysHouse = new Point(927, 212);
 
     /* Point object that holds coordinates of Dianas House */
-    Point dianasHouse = new Point(945, 279);
+    Point dianasHouse = new Point(927, 264);
 
     /* Point object that holds coordinates of Comunity Chest space 3 */
-    Point cc3 = new Point(945, 330);
+    Point cc3 = new Point(927, 316);
 
     /* Point object that holds coordinates of Francines House */
-    Point francinesHouse = new Point(945, 380);
+    Point francinesHouse = new Point(927, 369);
 
     /* Point object that holds coordinates of Short Line Railroad */
-    Point shortLine = new Point(945, 435);
+    Point shortLine = new Point(927, 428);
 
     /* Point object that holds coordinates of chance space 3 */
-    Point chance3 = new Point(945, 490);
+    Point chance3 = new Point(927, 481);
 
     /* Point object that holds coordinates of Marshalls House */
-    Point marshallsHouse = new Point(945, 540);
+    Point marshallsHouse = new Point(927, 536);
 
     /* Point object that holds coordinates of luxury tax space */
-    Point luxuryTax = new Point(945, 590);
+    Point luxuryTax = new Point(927, 588);
 
     /* Point object that holds coordinates of Raymonds House */
-    Point raymondsHouse = new Point(945, 640);
+    Point raymondsHouse = new Point(927, 638);
 
     // misc buttons
     /* Point object that holds coordinates of roll dice button */
@@ -595,6 +595,7 @@ public class GameState implements MouseListener, ActionListener {
 
         // get coordinates of mouse event
         Point code = e.getPoint();
+        System.out.println(code.getX() + ", " + code.getY());
 
         // ROLL DICE BUTTON
         if (code.getY() >= 240 && code.getY() <= 278 && code.getX() >= 692 && code.getX() <= 830) {
@@ -788,7 +789,7 @@ public class GameState implements MouseListener, ActionListener {
         JButton chosen = (JButton) e.getSource();
         try {
             if (chosen == yes) {
-                if (currentPlayer == player2) {
+                if (currentPlayer == player1) {
                     player1.setBells(player1.getBells() - prop.getPurchaseCost());
                     prop.setOwned(true, player1);
                 } else {
@@ -898,7 +899,16 @@ public class GameState implements MouseListener, ActionListener {
         else {
             //TODO: mortage
             //if cant mortgage anything, you lose, game ends
+
+            if (currentPlayer.getBells() == 0) {
+                gameOver = true;
+            }
             gameOver = true;
-        } 
+        }
+        
+        if (gameOver == true) {
+            //make jframe for this
+            
+        }
     }
 }
