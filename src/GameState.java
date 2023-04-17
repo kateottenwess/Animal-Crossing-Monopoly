@@ -68,6 +68,8 @@ public class GameState implements MouseListener, ActionListener {
     /* int value of money in free parking */
     public static int freeParking;
 
+    public GUI gui;
+
     // Bottom of board spaces
     /* Point object that holds coordinates of Pass go 1 */
     Point passGo1 = new Point(945, 748);
@@ -332,6 +334,7 @@ public class GameState implements MouseListener, ActionListener {
 
         // create dice
         dice = new Dice();
+        gui = new GUI();
 
         // create buttons for buying properties
         yes = new JButton();
@@ -393,20 +396,6 @@ public class GameState implements MouseListener, ActionListener {
      ******************************************************************/
     public JFrame getReturnFrame() {
         return returnFrame;
-    }
-
-
-    /******************************************************************
-     * Getter to return if a property was purchased
-     * 
-     * @return boolean
-     ******************************************************************/
-    public boolean getIsYes() {
-        return this.isYes;
-    }
-
-    public void setIsYes(boolean isYes) {
-        this.isYes = isYes;
     }
 
     /******************************************************************
@@ -844,11 +833,12 @@ public class GameState implements MouseListener, ActionListener {
                 if (currentPlayer.getName().equalsIgnoreCase(player1.getName())) {
                     player1.setBells(player1.getBells() - prop.getPurchaseCost());
                     prop.setOwned(true, player1);
-                    setIsYes(true);
+                    gui.repaintTool();
+                    
                 } else {
                     player2.setBells(player2.getBells() - prop.getPurchaseCost());
                     prop.setOwned(true, player2);
-                    setIsYes(true);
+                    gui.repaintTool();
                 }
             }
             stateChanged = true;

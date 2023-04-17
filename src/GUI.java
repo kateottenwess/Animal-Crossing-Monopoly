@@ -16,13 +16,14 @@ import java.awt.*;
  **********************************************************************/
 public class GUI {
 
+    public static JFrame frame;
     public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
 
         //create gameState instance
         GameState gameState = new GameState();
 
         //create main frame
-        JFrame frame = buildFrame();
+        frame = buildFrame();
 
         //make frame visible
         frame.setVisible(true);
@@ -56,10 +57,12 @@ public class GUI {
         g.drawImage(newBoard, 0, 30, null);
 
         //draw player 1's piece
-        g.drawImage(p1Label, (int) gameState.getPlayer1().getCoordinates().getX(), (int) gameState.getPlayer1().getCoordinates().getY(), null);
+        g.drawImage(p1Label, (int) gameState.getPlayer1().getCoordinates().getX(),
+                (int) gameState.getPlayer1().getCoordinates().getY(), null);
 
         //draw player 2's piece
-        g.drawImage(p2Label, (int) gameState.getPlayer2().getCoordinates().getX(), (int) gameState.getPlayer2().getCoordinates().getY(), null);
+        g.drawImage(p2Label, (int) gameState.getPlayer2().getCoordinates().getX(),
+                (int) gameState.getPlayer2().getCoordinates().getY(), null);
 
         //set initial money vals
         //post the money value of each player onto board
@@ -80,10 +83,12 @@ public class GUI {
             g.drawImage(newBoard, 0, 30, null);
 
             //redraw player 1, either in same place or at new coords
-            g.drawImage(p1Label, (int) gameState.getPlayer1().getCoordinates().getX(), (int) gameState.getPlayer1().getCoordinates().getY(), null);
-                
+            g.drawImage(p1Label, (int) gameState.getPlayer1().getCoordinates().getX(),
+                    (int) gameState.getPlayer1().getCoordinates().getY(), null);
+
             //redraw player 2, either in same place or at new coords
-            g.drawImage(p2Label, (int) gameState.getPlayer2().getCoordinates().getX(), (int) gameState.getPlayer2().getCoordinates().getY(), null);
+            g.drawImage(p2Label, (int) gameState.getPlayer2().getCoordinates().getX(),
+                    (int) gameState.getPlayer2().getCoordinates().getY(), null);
 
             //get the values of each dice and turn to string
             String dice1Val = String.valueOf(gameState.getDice1());
@@ -100,9 +105,6 @@ public class GUI {
                 returnFrame.setVisible(true);
             }
 
-
-            
-
             //post the money value of each player onto board
             //TODO: this is where the money issue thing is tripping up, if not figure out why it is being silly
             String moneyP1 = String.valueOf(gameState.getPlayer1().getBells());
@@ -111,13 +113,14 @@ public class GUI {
             g.drawString(moneyP1, 170, 50);
             g.drawString(moneyP2, 175, 75);
 
-            if (gameState.getIsYes()==true) {
-                frame.repaint();
-            }
-            }
-                
-            Thread.sleep(30);
         }
+
+        Thread.sleep(30);
+    }
+        
+    public void repaintTool() {
+        frame.repaint();
+    }
 
 
 
