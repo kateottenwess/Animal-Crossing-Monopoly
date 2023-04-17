@@ -314,10 +314,14 @@ public class GameState implements MouseListener, ActionListener {
 
     private static ArrayList<String> P2props;
 
+    private boolean purchased;
+
     /*******************************************************************
      * Constructor that sets the initial Game State
      ******************************************************************/
     public GameState() {
+
+        purchased = false;
 
         // create dice
         dice = new Dice();
@@ -381,6 +385,22 @@ public class GameState implements MouseListener, ActionListener {
     public JFrame getReturnFrame() {
         return returnFrame;
     }
+
+
+    /******************************************************************
+     * Getter to return if a property was purchased
+     * 
+     * @return boolean
+     ******************************************************************/
+    public boolean getPurchased() {
+        return purchased;
+    }
+
+
+    public void setPurchased(boolean b) {
+        purchased = b;
+    }
+
 
     /******************************************************************
      * Getter to return int value of dice 1
@@ -664,6 +684,7 @@ public class GameState implements MouseListener, ActionListener {
                     // it is a misc space
                     if (prop == null) {
                         //if wcurrent player is on income tax
+                        //TODO: all taxes and cards subtract immediately and from the right player
                         if (currentPlayer.getBoardPos() == 4) {
                             JFrame incomeTax = new JFrame();
                             incomeTax.setSize(200, 100);
@@ -728,6 +749,8 @@ public class GameState implements MouseListener, ActionListener {
                         }
                     } else {
                         propertySpace();
+                        //samePlayer = true;
+                        purchased = true;
                     }
                 }
             }
@@ -786,9 +809,11 @@ public class GameState implements MouseListener, ActionListener {
      ******************************************************************/
     @Override
     public void actionPerformed(ActionEvent e) {
+        //TODO: why
         JButton chosen = (JButton) e.getSource();
         try {
             if (chosen == yes) {
+                //TODO: is it here?
                 if (currentPlayer == player1) {
                     player1.setBells(player1.getBells() - prop.getPurchaseCost());
                     prop.setOwned(true, player1);
@@ -837,6 +862,8 @@ public class GameState implements MouseListener, ActionListener {
             // JLabel yesLabel = new JLabel("yes");
             // yesLabel.setBounds(100, 200, 50, 20);
             // yes.add(yesLabel);
+            
+            //TODO: huh
             yes.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     currentPlayer.setBells(currentPlayer.getBells() - prop.getPurchaseCost());

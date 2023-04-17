@@ -100,6 +100,12 @@ public class GUI {
                 returnFrame.setVisible(true);
             }
 
+            //TODO: what
+            if (gameState.getPurchased()) {
+                //if a property has been purchased, then dont make changes until user decides whether or not to buy the propty, once button is selected show money and do the stuff, if not nothing changes
+                gameState.setPurchased(false);
+            } else {
+
             //post the money value of each player onto board
             //TODO: this is where the money issue thing is tripping up, if not figure out why it is being silly
             String moneyP1 = String.valueOf(gameState.getPlayer1().getBells());
@@ -107,7 +113,7 @@ public class GUI {
             g.setFont(new Font("TimesRoman", Font.BOLD, 25));
             g.drawString(moneyP1, 170, 50);
             g.drawString(moneyP2, 175, 75);
-                
+            }
                 
             Thread.sleep(30);
         }
