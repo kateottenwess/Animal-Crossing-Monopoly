@@ -392,14 +392,14 @@ public class GameState implements MouseListener, ActionListener {
      * 
      * @return boolean
      ******************************************************************/
-    public boolean getPurchased() {
+    /*public boolean getPurchased() {
         return purchased;
     }
 
 
     public void setPurchased(boolean b) {
         purchased = b;
-    }
+    }*/
 
 
     /******************************************************************
@@ -749,8 +749,6 @@ public class GameState implements MouseListener, ActionListener {
                         }
                     } else {
                         propertySpace();
-                        //samePlayer = true;
-                        purchased = true;
                     }
                 }
             }
@@ -814,7 +812,7 @@ public class GameState implements MouseListener, ActionListener {
         try {
             if (chosen == yes) {
                 //TODO: is it here?
-                if (currentPlayer == player1) {
+                if (currentPlayer.getName().equalsIgnoreCase(player1.getName())) {
                     player1.setBells(player1.getBells() - prop.getPurchaseCost());
                     prop.setOwned(true, player1);
                 } else {
@@ -868,6 +866,7 @@ public class GameState implements MouseListener, ActionListener {
                 public void actionPerformed(ActionEvent e) {
                     currentPlayer.setBells(currentPlayer.getBells() - prop.getPurchaseCost());
                     prop.setOwned(true, currentPlayer);
+                    System.out.println("CurrentPlayer: " + currentPlayer.getName());
                     /*
                      * if (currentPlayer == players.get(0)){
                      * P1props.add(prop.getPropertyName());
@@ -877,6 +876,7 @@ public class GameState implements MouseListener, ActionListener {
                      * //TODO : set ownership
                      */
                     propDisplay.dispose();
+                    returnFrame = propDisplay;
                 }
             });
 
