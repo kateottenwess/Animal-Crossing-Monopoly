@@ -810,7 +810,7 @@ public class GameState implements MouseListener, ActionListener {
             JPanel p = new JPanel();
             JFrame propDisplay = new JFrame();
 
-            propDisplay.setSize(600, 500);
+            propDisplay.setSize(400, 300);
             JLabel propLabel = new JLabel(prop.getPropertyName() );
             JLabel propPrice = new JLabel("Cost:" + String.valueOf(prop.getPurchaseCost()) + " bells");
             JLabel propRent = new JLabel("Rent: " + String.valueOf(prop.getRentCost()) + " bells");
@@ -818,12 +818,12 @@ public class GameState implements MouseListener, ActionListener {
             JLabel propRentInc = new JLabel("Rent Increase: " + String.valueOf(prop.getRentIncreaseRate()) + " bells");
             JLabel propMort = new JLabel("Mortgage Price: " + String.valueOf(prop.getMortgage()) + " bells");
 
-            propLabel.setBounds(200, 50, 100, 10);
-            propPrice.setBounds(200, 70, 100, 10);
-            propRent.setBounds(200, 90, 100, 10);
-            propHouse.setBounds(200, 110, 300, 10);
-            propRentInc.setBounds(200, 130, 300, 10);
-            propMort.setBounds(200, 150, 300, 20);
+            propLabel.setBounds(100, 50, 100, 10);
+            propPrice.setBounds(100, 70, 100, 10);
+            propRent.setBounds(100, 90, 100, 10);
+            propHouse.setBounds(100, 110, 300, 10);
+            propRentInc.setBounds(100, 130, 300, 10);
+            propMort.setBounds(100, 150, 300, 20);
             propDisplay.add(propLabel);
             propDisplay.add(propPrice);
             propDisplay.add(propRent);
