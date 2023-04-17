@@ -60,6 +60,8 @@ public class GameState implements MouseListener, ActionListener {
     /* Property object to hold property being used in turn */
     private static Property prop;
 
+    private boolean isYes;
+
     // Bottom of board spaces
     /* Point object that holds coordinates of Pass go 1 */
     Point passGo1 = new Point(945, 748);
@@ -392,15 +394,13 @@ public class GameState implements MouseListener, ActionListener {
      * 
      * @return boolean
      ******************************************************************/
-    /*public boolean getPurchased() {
-        return purchased;
+    public boolean getIsYes() {
+        return this.isYes;
     }
 
-
-    public void setPurchased(boolean b) {
-        purchased = b;
-    }*/
-
+    public void setIsYes(boolean isYes) {
+        this.isYes = isYes;
+    }
 
     /******************************************************************
      * Getter to return int value of dice 1
@@ -463,6 +463,7 @@ public class GameState implements MouseListener, ActionListener {
         stateChanged = false;
 
     }
+
 
     /******************************************************************
      * Getter to return the current player
@@ -815,9 +816,11 @@ public class GameState implements MouseListener, ActionListener {
                 if (currentPlayer.getName().equalsIgnoreCase(player1.getName())) {
                     player1.setBells(player1.getBells() - prop.getPurchaseCost());
                     prop.setOwned(true, player1);
+                    setIsYes(true);
                 } else {
                     player2.setBells(player2.getBells() - prop.getPurchaseCost());
                     prop.setOwned(true, player2);
+                    setIsYes(true);
                 }
             }
             stateChanged = true;
@@ -916,6 +919,7 @@ public class GameState implements MouseListener, ActionListener {
                 returnFrame = isOwnedFrame;
 
                 currentPlayer.setBells(currentPlayer.getBells() - prop.getRentCost());
+                
                 if (currentPlayer == player1) {
                     player2.setBells(player2.getBells() + prop.getRentCost());
                 } else {
@@ -930,7 +934,7 @@ public class GameState implements MouseListener, ActionListener {
             if (currentPlayer.getBells() <= 0) {
                 gameOver = true;
             }
-            gameOver = true;
+            gameOver = false;
         }
         
         if (gameOver == true) {
@@ -943,4 +947,5 @@ public class GameState implements MouseListener, ActionListener {
             System.exit(0);
         }
     }
+
 }

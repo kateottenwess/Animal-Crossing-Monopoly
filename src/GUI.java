@@ -100,6 +100,10 @@ public class GUI {
                 returnFrame.setVisible(true);
             }
 
+            if (gameState.getIsYes()) {
+                frame.repaint();
+            }
+
             //post the money value of each player onto board
             //TODO: this is where the money issue thing is tripping up, if not figure out why it is being silly
             String moneyP1 = String.valueOf(gameState.getPlayer1().getBells());
