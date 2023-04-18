@@ -1,5 +1,5 @@
 /**********************************************************************
- * Class stores all monopoly properties
+ * Class stores all monopoly properties.
  *
  * @author Kate Ottenwess, Kira B, Abby Svec
  * @version Winter 2023
@@ -78,8 +78,8 @@ public class Property extends BoardSpaceType {
      * @param owned boolean representing if owned or not
      * @param numHouses number of houses on property
      ******************************************************************/
-    public Property(String name, int space, int purchase, int rent, double rentIncreaseRate, String color,
-            int oneHouse) {
+    public Property(String name, int space, int purchase, int rent,
+            double rentIncreaseRate, String color, int oneHouse) {
         this.propertyName = name;
         this.spaceIdentifier = space;
         this.purchaseCost = purchase;
@@ -95,7 +95,7 @@ public class Property extends BoardSpaceType {
 
 
     /******************************************************************
-     * Getter to return property name
+     * Getter to return property name.
      * @return String
      ******************************************************************/
     public String getPropertyName() {
@@ -104,7 +104,7 @@ public class Property extends BoardSpaceType {
 
 
     /******************************************************************
-     * Getter to return property color
+     * Getter to return property color.
      * @return String
      ******************************************************************/
     public String getColor() {
@@ -113,7 +113,7 @@ public class Property extends BoardSpaceType {
 
 
     /******************************************************************
-     * Getter to return property space
+     * Getter to return property space.
      * @return int
      ******************************************************************/
     public int getSpaceIdentifier() {
@@ -122,7 +122,7 @@ public class Property extends BoardSpaceType {
 
 
      /******************************************************************
-     * Getter to return if property is owned or not
+     * Getter to return if property is owned or not.
      * @return boolean
      ******************************************************************/
     public boolean getOwned() {
@@ -131,7 +131,7 @@ public class Property extends BoardSpaceType {
 
 
     /******************************************************************
-     * Getter to return property purchase cost
+     * Getter to return property purchase cost.
      * @return int
      ******************************************************************/
     public int getPurchaseCost() {
@@ -140,7 +140,7 @@ public class Property extends BoardSpaceType {
 
 
     /******************************************************************
-     * Getter to return property rent cost
+     * Getter to return property rent cost.
      * @return int
      ******************************************************************/
     public int getRentCost() {
@@ -149,7 +149,7 @@ public class Property extends BoardSpaceType {
 
 
     /******************************************************************
-     * Getter to return property mortgage
+     * Getter to return property mortgage.
      * @return int
      ******************************************************************/
     public int getMortgage() {
@@ -158,7 +158,7 @@ public class Property extends BoardSpaceType {
 
 
     /******************************************************************
-     * Getter to return price of one house for the property
+     * Getter to return price of one house for the property.
      * @return int
      ******************************************************************/
     public int getOneHouse() {
@@ -167,7 +167,7 @@ public class Property extends BoardSpaceType {
 
 
     /******************************************************************
-     * Getter to return property rent increase rate
+     * Getter to return property rent increase rate.
      * @return double
      ******************************************************************/
     public double getRentIncreaseRate() {
@@ -176,7 +176,7 @@ public class Property extends BoardSpaceType {
 
 
     /******************************************************************
-     * Getter to return if property is owned
+     * Getter to return if property is owned.
      * @return boolean
      ******************************************************************/
     public boolean isOwned() {
@@ -185,7 +185,7 @@ public class Property extends BoardSpaceType {
 
 
     /******************************************************************
-     * Setter to set if property is owned or not
+     * Setter to set if property is owned or not.
      * @param owned boolean
      ******************************************************************/
     public void setOwned(boolean owned, Player player) {
@@ -199,7 +199,7 @@ public class Property extends BoardSpaceType {
 
 
     /******************************************************************
-     * Getter to return number of house on property
+     * Getter to return number of house on property.
      * @return bint number of houses
      ******************************************************************/
     public int getNumHouses() {
@@ -208,7 +208,7 @@ public class Property extends BoardSpaceType {
 
 
     /******************************************************************
-     * Setter that increases number of houses on property
+     * Setter that increases number of houses on property.
      * @param numHouses int number of houses purchased
      ******************************************************************/
     public void increaseNumHouses(int numHouses) {
@@ -231,7 +231,8 @@ public class Property extends BoardSpaceType {
             this.rentCost = this.oneHouse;
         } 
         
-        //if there are more than one house and less than the max amount of houses permitted on the property, increase rent by num houses * one house
+        //if there are more than one house and less than the max amount of 
+        //houses permitted on the property, increase rent by num houses * one house
         else if (houseNum <= MAX_AMOUNT_HOUSES) {
             this.rentCost = (int) (this.rentIncreaseRate * this.oneHouse) * houseNum;
         }
@@ -239,8 +240,8 @@ public class Property extends BoardSpaceType {
 
     
     /******************************************************************
-     * Method that returns the property that correlates to integer     
-     * space. Returns null if no property is associated to said space
+     * Method that returns the property that correlates to integer    
+     * space. Returns null if no property is associated to said space.
      * @param space int value of space on board
      * @return property on space, null if no property
      ******************************************************************/

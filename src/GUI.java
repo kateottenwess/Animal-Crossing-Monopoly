@@ -9,7 +9,7 @@ import java.net.URISyntaxException;
 import java.awt.*;
 
 /**********************************************************************
- * GUI for the monopoly board
+ * GUI for the monopoly board.
  *
  * @author Kate Ottenwess, Kira B, Abby Svec
  * @version Winter 2023
@@ -106,7 +106,6 @@ public class GUI {
             }
 
             //post the money value of each player onto board
-            //TODO: this is where the money issue thing is tripping up, if not figure out why it is being silly
             String moneyP1 = String.valueOf(gameState.getPlayer1().getBells());
             String moneyP2 = String.valueOf(gameState.getPlayer2().getBells());
             g.setFont(new Font("TimesRoman", Font.BOLD, 25));
@@ -125,7 +124,7 @@ public class GUI {
 
 
     /*************************************************
-     * Constructor to create a frame
+     * Constructor to create a frame.
      *************************************************/
     static private JFrame buildFrame() {
         JFrame frame = new JFrame();

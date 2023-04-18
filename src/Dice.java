@@ -10,10 +10,10 @@ public class Dice {
     private int numDouble = 0;
 
     /* int of how many values are on dice */
-    final int VALUES_ON_DICE = 6;
+    static final int VALUES_ON_DICE = 6;
 
     /* Value of how many doubles need to be rolled in a row in order to be sent to jail */
-    final int NUM_DOUBLES_TO_JAIL = 3;
+    static final int NUM_DOUBLES_TO_JAIL = 3;
 
     
     /*******************************************************************

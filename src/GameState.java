@@ -4,9 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.awt.image.SampleModel;
 import java.util.ArrayList;
-import java.util.spi.CurrencyNameProvider;
 
 /**********************************************************************
  * GameState class that carries out game play logic.
@@ -61,7 +59,6 @@ public class GameState implements MouseListener, ActionListener {
     /* Property object to hold property being used in turn */
     private static Property prop;
 
-    private boolean isYes;
     /* boolean to hold if it is the same players turn or not */
     public static boolean samePlayer;
 
@@ -326,7 +323,7 @@ public class GameState implements MouseListener, ActionListener {
 
 
     /*******************************************************************
-     * Constructor that sets the initial Game State
+     * Constructor that sets the initial Game State.
      ******************************************************************/
     public GameState() {
 
@@ -390,7 +387,7 @@ public class GameState implements MouseListener, ActionListener {
     }
 
     /******************************************************************
-     * Getter to return the return frame
+     * Getter to return the return frame.
      * 
      * @return JFrame of pop up window
      ******************************************************************/
@@ -399,7 +396,7 @@ public class GameState implements MouseListener, ActionListener {
     }
 
     /******************************************************************
-     * Getter to return int value of dice 1
+     * Getter to return int value of dice 1.
      * 
      * @return int value of dice 1
      ******************************************************************/
@@ -408,7 +405,7 @@ public class GameState implements MouseListener, ActionListener {
     }
 
     /******************************************************************
-     * Getter to return int value of dice 2
+     * Getter to return int value of dice 2.
      * 
      * @return int value of dice 2
      ******************************************************************/
@@ -417,7 +414,7 @@ public class GameState implements MouseListener, ActionListener {
     }
 
     /******************************************************************
-     * Getter to return x coordinate of point
+     * Getter to return x coordinate of point.
      * 
      * @return int value of x-coordinate
      ******************************************************************/
@@ -426,7 +423,7 @@ public class GameState implements MouseListener, ActionListener {
     }
 
     /******************************************************************
-     * Getter to return y coordinate of point
+     * Getter to return y coordinate of point.
      * 
      * @return int value of y-coordinate
      ******************************************************************/
@@ -435,7 +432,7 @@ public class GameState implements MouseListener, ActionListener {
     }
 
     /******************************************************************
-     * Getter to return if game is over or not
+     * Getter to return if game is over or not.
      * 
      * @return boolean true if over false if not
      ******************************************************************/
@@ -444,7 +441,7 @@ public class GameState implements MouseListener, ActionListener {
     }
 
     /******************************************************************
-     * Getter to return if state of game has changed or not
+     * Getter to return if state of game has changed or not.
      * 
      * @return boolean true if state has changed false if not
      ******************************************************************/
@@ -453,7 +450,7 @@ public class GameState implements MouseListener, ActionListener {
     }
 
     /******************************************************************
-     * Setter to set state changed to false
+     * Setter to set state changed to false.
      ******************************************************************/
     public void clearChange() {
         stateChanged = false;
@@ -461,7 +458,7 @@ public class GameState implements MouseListener, ActionListener {
     }
 
     /******************************************************************
-     * Getter to return the current player
+     * Getter to return the current player.
      * 
      * @return Player current player
      ******************************************************************/
@@ -470,7 +467,7 @@ public class GameState implements MouseListener, ActionListener {
     }
 
     /******************************************************************
-     * Getter to return player 1
+     * Getter to return player 1.
      * 
      * @return Player player1
      ******************************************************************/
@@ -479,7 +476,7 @@ public class GameState implements MouseListener, ActionListener {
     }
 
     /******************************************************************
-     * Getter to return player 2
+     * Getter to return player 2.
      * 
      * @return Player player2
      ******************************************************************/
@@ -489,7 +486,7 @@ public class GameState implements MouseListener, ActionListener {
 
 
      /***************************************************************** 
-     * Method to return a random community chest card
+     * Method to return a random community chest card.
      * 
      * @return String chance card
      ******************************************************************/
@@ -536,7 +533,7 @@ public class GameState implements MouseListener, ActionListener {
 
 
     /****************************************************************** 
-     * Method to return a random chance card
+     * Method to return a random chance card.
      * 
      * @return String chance card
      ******************************************************************/
@@ -586,7 +583,7 @@ public class GameState implements MouseListener, ActionListener {
 
 
     /******************************************************************
-     * Getter to return the current players bells
+     * Getter to return the current players bells.
      * 
      * @return int bells of current player
      ******************************************************************/
@@ -611,7 +608,7 @@ public class GameState implements MouseListener, ActionListener {
     }
 
     /******************************************************************
-     * Method to handle a mouse event of mouse clicked
+     * Method to handle a mouse event of mouse clicked.
      * 
      * @param MouseEvent e
      ******************************************************************/
@@ -819,17 +816,15 @@ public class GameState implements MouseListener, ActionListener {
     }
 
     /******************************************************************
-     * Method to handle if there is an action performed
+     * Method to handle if there is an action performed.
      * 
      * @param ActionEvent e
      ******************************************************************/
     @Override
     public void actionPerformed(ActionEvent e) {
-        //TODO: why
         JButton chosen = (JButton) e.getSource();
         try {
             if (chosen == yes) {
-                //TODO: is it here?
                 if (currentPlayer.getName().equalsIgnoreCase(player1.getName())) {
                     player1.setBells(player1.getBells() - prop.getPurchaseCost());
                     prop.setOwned(true, player1);
@@ -935,11 +930,7 @@ public class GameState implements MouseListener, ActionListener {
                     player1.setBells(player1.getBells() + prop.getRentCost());
                 }
         }
-        //if it is not owned, you are poor and need to mortgage
         else {
-            //TODO: mortage
-            //if cant mortgage anything, you lose, game ends
-
             if (currentPlayer.getBells() <= 0) {
                 gameOver = true;
             }
