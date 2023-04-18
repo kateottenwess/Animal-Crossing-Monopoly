@@ -211,7 +211,7 @@ public class GameState implements MouseListener, ActionListener {
     Point cards = new Point(900, 20);
 
     /* Point array that holds the point values of all of the buttons */
-    Point[] spacesArray = { passGo1, rodneysHouse, cc1, rocketsHouse, incomeTax, readingRailroad, melbasHouse,
+    Point[] spacesArray = {passGo1, rodneysHouse, cc1, rocketsHouse, incomeTax, readingRailroad, melbasHouse,
             chance1, marinasHouse, mitzisHouse, jailSpace, chrissysHouse, electricCompany, rosiesHouse, florasHouse,
             pennsylvaniaRailroad, cephalobotsHouse, cc2, hopkinsHouse, bonesHouse, freeDocking, octaviansHouse, chance2,
             fangsHouse, kabukisHouse, boRailroad, stitchesHouse, shinosHouse, waterWorks, bobsHouse, goToJail,
@@ -309,12 +309,12 @@ public class GameState implements MouseListener, ActionListener {
     Property rr4 = new Property("Short Line", 35, 200, 35, 100, "NA", -1);
 
     /* String array that holds all of the community cards */
-    String[] ccCards = {"GRAND MUSEUM OPENING: COLLECT 50 BELLS","YOU DUG UP A SACK OF BELLS! COLLECT 100 BELLS","GO TO JAIL \n DO NOT PASS GO, DO NOT COLLECT 200 BELLS","GET OUT OF JAIL, FREE!","ADVANCE TO GO: COLLECT 200 BELLS",
-    "RECEIVE 25 BELLS FOR YOUR SERVICES TO THE VILLAGE","INCOME TAX REFUND: COLLECT 20 BELLS","YOU INHERITED 100 BELLS","PAY VILLAGE TAX OF 150 BELLS","BANK ERROR IN YOUR FAVOR: COLLECT 200 BELLS"};
+    String[] ccCards = {"GRAND MUSEUM OPENING: COLLECT 50 BELLS", "YOU DUG UP A SACK OF BELLS! COLLECT 100 BELLS", "GO TO JAIL \n DO NOT PASS GO, DO NOT COLLECT 200 BELLS", "GET OUT OF JAIL, FREE!", "ADVANCE TO GO: COLLECT 200 BELLS",
+    "RECEIVE 25 BELLS FOR YOUR SERVICES TO THE VILLAGE", "INCOME TAX REFUND: COLLECT 20 BELLS", "YOU INHERITED 100 BELLS", "PAY VILLAGE TAX OF 150 BELLS", "BANK ERROR IN YOUR FAVOR: COLLECT 200 BELLS"};
 
     /* String array that holds all of the chance cards */
-    String[] chanceCards = {"GO BACK THREE SPACES","ADVANCE TO GO (COLLECT 200 BELLS)","BANK PAYS YOU DIVIDEND OF 50 BELLS","ADVANCE TO FRANCINE'S HOUSE","GET OUT OF JAIL FREE",
-    "ADVANCE TO RAYMOND'S HOUSE","PAY POOR TAX OF 15 BELLS","GO TO JAIL","ADVANCE TOKEN TO CHRISSY'S HOUSE","YOUR BUSINESS MATURES: COLLECT 150 BELLS"};
+    String[] chanceCards = {"GO BACK THREE SPACES", "ADVANCE TO GO (COLLECT 200 BELLS)", "BANK PAYS YOU DIVIDEND OF 50 BELLS", "ADVANCE TO FRANCINE'S HOUSE", "GET OUT OF JAIL FREE",
+    "ADVANCE TO RAYMOND'S HOUSE", "PAY POOR TAX OF 15 BELLS", "GO TO JAIL", "ADVANCE TOKEN TO CHRISSY'S HOUSE", "YOUR BUSINESS MATURES: COLLECT 150 BELLS"};
 
     // List to hold each players properties
     private static ArrayList<String> P1props = new ArrayList<String>();
@@ -388,7 +388,6 @@ public class GameState implements MouseListener, ActionListener {
 
     /******************************************************************
      * Getter to return the return frame.
-     * 
      * @return JFrame of pop up window
      ******************************************************************/
     public JFrame getReturnFrame() {
@@ -397,7 +396,6 @@ public class GameState implements MouseListener, ActionListener {
 
     /******************************************************************
      * Getter to return int value of dice 1.
-     * 
      * @return int value of dice 1
      ******************************************************************/
     public int getDice1() {
@@ -406,7 +404,6 @@ public class GameState implements MouseListener, ActionListener {
 
     /******************************************************************
      * Getter to return int value of dice 2.
-     * 
      * @return int value of dice 2
      ******************************************************************/
     public int getDice2() {
@@ -415,7 +412,6 @@ public class GameState implements MouseListener, ActionListener {
 
     /******************************************************************
      * Getter to return x coordinate of point.
-     * 
      * @return int value of x-coordinate
      ******************************************************************/
     public int getX() {
@@ -424,7 +420,6 @@ public class GameState implements MouseListener, ActionListener {
 
     /******************************************************************
      * Getter to return y coordinate of point.
-     * 
      * @return int value of y-coordinate
      ******************************************************************/
     public int getY() {
@@ -433,7 +428,6 @@ public class GameState implements MouseListener, ActionListener {
 
     /******************************************************************
      * Getter to return if game is over or not.
-     * 
      * @return boolean true if over false if not
      ******************************************************************/
     public boolean gameOver() {
@@ -442,7 +436,6 @@ public class GameState implements MouseListener, ActionListener {
 
     /******************************************************************
      * Getter to return if state of game has changed or not.
-     * 
      * @return boolean true if state has changed false if not
      ******************************************************************/
     public boolean stateChanged() {
@@ -459,7 +452,6 @@ public class GameState implements MouseListener, ActionListener {
 
     /******************************************************************
      * Getter to return the current player.
-     * 
      * @return Player current player
      ******************************************************************/
     public Player getCurrentPlayer() {
@@ -468,7 +460,6 @@ public class GameState implements MouseListener, ActionListener {
 
     /******************************************************************
      * Getter to return player 1.
-     * 
      * @return Player player1
      ******************************************************************/
     public Player getPlayer1() {
@@ -477,7 +468,6 @@ public class GameState implements MouseListener, ActionListener {
 
     /******************************************************************
      * Getter to return player 2.
-     * 
      * @return Player player2
      ******************************************************************/
     public Player getPlayer2() {
@@ -485,46 +475,45 @@ public class GameState implements MouseListener, ActionListener {
     }
 
 
-     /***************************************************************** 
+     /*****************************************************************
      * Method to return a random community chest card.
-     * 
      * @return String chance card
      ******************************************************************/
-    public String pickCCCard(){
+    public String pickCCCard() {
         int randInt = (int) (Math.random() * 9);
 
-        if (ccCards[randInt].equals(ccCards[0])){
+        if (ccCards[randInt].equals(ccCards[0])) {
             currentPlayer.setBells(currentPlayer.getBells() + 50);
         }
-        if (ccCards[randInt].equals(ccCards[1])){
+        if (ccCards[randInt].equals(ccCards[1])) {
             currentPlayer.setBells(currentPlayer.getBells() + 100);
         }
-        if (ccCards[randInt].equals(ccCards[2])){
+        if (ccCards[randInt].equals(ccCards[2])) {
             currentPlayer.setBoardPos(10);
             currentPlayer.setCoordinates(jailSpace);
             samePlayer = false;
         }
-        if (ccCards[randInt].equals(ccCards[3])){
+        if (ccCards[randInt].equals(ccCards[3])) {
             //TODO: get out of jail
         }
-        if (ccCards[randInt].equals(ccCards[4])){
+        if (ccCards[randInt].equals(ccCards[4])) {
             currentPlayer.setBells(currentPlayer.getBells() + 200);
             currentPlayer.setBoardPos(10);
             currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
         }
-        if (ccCards[randInt].equals(ccCards[5])){
+        if (ccCards[randInt].equals(ccCards[5])) {
             currentPlayer.setBells(currentPlayer.getBells() + 25);
         }
-        if (ccCards[randInt].equals(ccCards[6])){
+        if (ccCards[randInt].equals(ccCards[6])) {
             currentPlayer.setBells(currentPlayer.getBells() + 20);
         }
-        if (ccCards[randInt].equals(ccCards[7])){
+        if (ccCards[randInt].equals(ccCards[7])) {
             currentPlayer.setBells(currentPlayer.getBells() + 100);
         }
-        if (ccCards[randInt].equals(ccCards[8])){
+        if (ccCards[randInt].equals(ccCards[8])) {
             currentPlayer.setBells(currentPlayer.getBells() + 150);
         }
-        if (ccCards[randInt].equals(ccCards[1])){
+        if (ccCards[randInt].equals(ccCards[1])) {
             currentPlayer.setBells(currentPlayer.getBells() + 200);
         }
 
@@ -532,49 +521,39 @@ public class GameState implements MouseListener, ActionListener {
     }
 
 
-    /****************************************************************** 
+    /******************************************************************
      * Method to return a random chance card.
-     * 
      * @return String chance card
      ******************************************************************/
-    public String pickChanceCards(){
+    public String pickChanceCards() {
         int randInt = (int) (Math.random() * 9);
 
         if (chanceCards[randInt].equals(chanceCards[0])) {
             currentPlayer.setBoardPos(currentPlayer.getBoardPos() - 3);
             currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
-        }
-        else if (chanceCards[randInt].equals(chanceCards[1])){
+        } else if (chanceCards[randInt].equals(chanceCards[1])) {
             currentPlayer.setBoardPos(0);
             currentPlayer.setCoordinates(passGo1);
             currentPlayer.setBells(currentPlayer.getBells() + 200);
-        }
-        else if(chanceCards[randInt].equals(chanceCards[2])){
+        } else if (chanceCards[randInt].equals(chanceCards[2])) {
             currentPlayer.setBells(currentPlayer.getBells() + 50);
-        }
-        else if(chanceCards[randInt].equals(chanceCards[3])){
+        } else if (chanceCards[randInt].equals(chanceCards[3])) {
             currentPlayer.setBoardPos(34);
             currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
-        }
-        else if(chanceCards[randInt].equals(chanceCards[4])){
+        } else if (chanceCards[randInt].equals(chanceCards[4])) {
             //TODO: get out of jail
-        }
-        else if(chanceCards[randInt].equals(chanceCards[5])){
+        } else if (chanceCards[randInt].equals(chanceCards[5])) {
             currentPlayer.setBoardPos(39);
             currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
-        }
-        else if(chanceCards[randInt].equals(chanceCards[6])){
+        } else if (chanceCards[randInt].equals(chanceCards[6])) {
             currentPlayer.setBells(currentPlayer.getBells() - 15);
-        }
-        else if(chanceCards[randInt].equals(chanceCards[7])){
+        } else if (chanceCards[randInt].equals(chanceCards[7])) {
             currentPlayer.setBoardPos(10);
             currentPlayer.setCoordinates(jailSpace);
             samePlayer = false;
-        }
-        else if(chanceCards[randInt].equals(chanceCards[8])){
+        } else if (chanceCards[randInt].equals(chanceCards[8])) {
             currentPlayer.setBoardPos(11);
-        }
-        else if(chanceCards[randInt].equals(chanceCards[9])){
+        } else if (chanceCards[randInt].equals(chanceCards[9])) {
             currentPlayer.setBells(currentPlayer.getBells() + 150);
         }
 
@@ -584,7 +563,6 @@ public class GameState implements MouseListener, ActionListener {
 
     /******************************************************************
      * Getter to return the current players bells.
-     * 
      * @return int bells of current player
      ******************************************************************/
     public int getPlayerBells() {
@@ -609,7 +587,6 @@ public class GameState implements MouseListener, ActionListener {
 
     /******************************************************************
      * Method to handle a mouse event of mouse clicked.
-     * 
      * @param MouseEvent e
      ******************************************************************/
     @Override
@@ -640,9 +617,8 @@ public class GameState implements MouseListener, ActionListener {
                 currentPlayer.setBoardPos(10);
                 currentPlayer.setCoordinates(jailSpace);
                 samePlayer = false;
-            }
-            // if 3 doubles are not rolled in a row
-            else {
+                // if 3 doubles are not rolled in a row
+            } else {
 
                 // if passing go, get new position
                 if (totalMove + currentPlayer.getBoardPos() > 39) {
@@ -654,11 +630,8 @@ public class GameState implements MouseListener, ActionListener {
                     currentPlayer.setBoardPos(totalMove - (39 - currentPlayer.getBoardPos()) - 1);
 
                     currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
-
-                }
-
-                // if not passing go, get new position
-                else {
+                    // if not passing go, get new position
+                } else {
                     currentPlayer.setBoardPos(currentPlayer.getBoardPos() + totalMove);
 
                     currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
@@ -672,10 +645,7 @@ public class GameState implements MouseListener, ActionListener {
 
                     // Jail.jailPlayer(currentPlayer);
 
-                }
-
-                // if we arent going to jail
-                else {
+                } else {
 
                     for (int i = 0; i < props.size(); i++) {
                         Property tempProp = props.get(i);
@@ -707,9 +677,7 @@ public class GameState implements MouseListener, ActionListener {
 
                             freeParking += 200;
                             returnFrame = incomeTax;
-                        }
-
-                        else if (currentPlayer.getBoardPos() == 38) {
+                        } else if (currentPlayer.getBoardPos() == 38) {
                             JFrame luxuryTax = new JFrame();
                             luxuryTax.setSize(200, 100);
 
@@ -775,10 +743,8 @@ public class GameState implements MouseListener, ActionListener {
             }
 
             stateChanged = true;
-        }
-
-        // PROPERTIES BUTTON
-        else if (code.getY() >= 10 && code.getY() <= 60 && code.getX() >= 803 && code.getX() <= 932) {
+            // PROPERTIES BUTTON
+        } else if (code.getY() >= 10 && code.getY() <= 60 && code.getX() >= 803 && code.getX() <= 932) {
             JPanel p = new JPanel();
             JFrame propertiesBtn = new JFrame();
             propertiesBtn.setSize(500, 200);
@@ -815,7 +781,6 @@ public class GameState implements MouseListener, ActionListener {
 
     /******************************************************************
      * Method to handle if there is an action performed.
-     * 
      * @param ActionEvent e
      ******************************************************************/
     @Override
@@ -906,9 +871,8 @@ public class GameState implements MouseListener, ActionListener {
             propDisplay.repaint();
 
             returnFrame = propDisplay;
-        }
-        //if it can't be purchased, check if its owned
-        else if (prop.isOwned()) {
+            //if it can't be purchased, check if its owned
+        } else if (prop.isOwned()) {
             JFrame isOwnedFrame = new JFrame();
                 isOwnedFrame.setSize(200, 100);
                 JLabel owned = new JLabel("Sorry, this property is already in ownership- you owe rent!");
@@ -926,8 +890,7 @@ public class GameState implements MouseListener, ActionListener {
                 } else {
                     player1.setBells(player1.getBells() + prop.getRentCost());
                 }
-        }
-        else {
+        } else {
             if (currentPlayer.getBells() <= 0) {
                 gameOver = true;
             }
