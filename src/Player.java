@@ -1,7 +1,7 @@
 import java.awt.Point;
 
 /**********************************************************************
- * Class contains player information and actions
+ * Class contains player information and actions.
  *
  * @author Kate Ottenwess, Kira B, Abby Svec
  * @version Winter 2023

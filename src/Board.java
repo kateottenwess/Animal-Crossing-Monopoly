@@ -6,18 +6,18 @@
  **********************************************************************/
 public class Board extends BoardSpaceType {
 
-    //amount of spaces on the board
-    public final static int spaces = 40;
+    /*amount of spaces on the board*/
+    final int SPACES = 40;
 
-    //private final Square[] board;
-    private BoardSpaceType[] board = new BoardSpaceType[spaces];
+    /*Array to hold the types of the spaces*/
+    private BoardSpaceType[] board = new BoardSpaceType[SPACES];
 
-    //int array to contain which players owns which space
-    private int[] ownedProperties = new int[spaces];
+    /*int array to contain which players owns which space*/
+    private int[] ownedProperties = new int[SPACES];
 
 
     /*******************************************************************
-    * Constructor that sets the board array with the boardSpaceType     * that goes to that specific space type
+    * Constructor that sets the board array with the boardSpaceType     * that goes to that specific space type.
     ******************************************************************/
     public Board() {
 
@@ -28,7 +28,7 @@ public class Board extends BoardSpaceType {
         int i = 0;
 
         //loop through spaces array and set the types of the spaces
-        while (i < spaces) {
+        while (i < SPACES) {
 
             //these spaces are misc spaces
             if (i == 0 || i ==2 || i == 4 || i == 7 || i == 10 || i == 17 || i == 20 || i == 22 || i == 30 || i == 33 || i ==  36 || i == 38) {
@@ -45,7 +45,7 @@ public class Board extends BoardSpaceType {
         }
 
         //set owned property array values to 0 because no one owns properties initially
-        for(int j = 0; j < spaces; j++) {
+        for(int j = 0; j < SPACES; j++) {
             ownedProperties[i] = 0;
         }
     }
@@ -53,7 +53,7 @@ public class Board extends BoardSpaceType {
     
     /****************************************************************** 
      * Method to return the type of space the space spaceidentifier is
-     * for example, is it a property or a misc space
+     * for example, is it a property or a misc space.
      * 
      * @param spaceIdentifier int representation of space
      * @return BoardSpaceType
