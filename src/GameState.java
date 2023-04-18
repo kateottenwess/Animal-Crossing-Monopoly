@@ -460,7 +460,6 @@ public class GameState implements MouseListener, ActionListener {
 
     }
 
-
     /******************************************************************
      * Getter to return the current player
      * 
@@ -497,38 +496,38 @@ public class GameState implements MouseListener, ActionListener {
     public String pickCCCard(){
         int randInt = (int) (Math.random() * 9);
 
-        if (ccCards[randInt] == ccCards[0]){
+        if (ccCards[randInt].equals(ccCards[0])){
             currentPlayer.setBells(currentPlayer.getBells() + 50);
         }
-        if (ccCards[randInt] == ccCards[1]){
+        if (ccCards[randInt].equals(ccCards[1])){
             currentPlayer.setBells(currentPlayer.getBells() + 100);
         }
-        if (ccCards[randInt] == ccCards[2]){
+        if (ccCards[randInt].equals(ccCards[2])){
             currentPlayer.setBoardPos(10);
             currentPlayer.setCoordinates(jailSpace);
             samePlayer = false;
         }
-        if (ccCards[randInt] == ccCards[3]){
+        if (ccCards[randInt].equals(ccCards[3])){
             //TODO: get out of jail
         }
-        if (ccCards[randInt] == ccCards[4]){
+        if (ccCards[randInt].equals(ccCards[4])){
             currentPlayer.setBells(currentPlayer.getBells() + 200);
             currentPlayer.setBoardPos(10);
             currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
         }
-        if (ccCards[randInt] == ccCards[5]){
+        if (ccCards[randInt].equals(ccCards[5])){
             currentPlayer.setBells(currentPlayer.getBells() + 25);
         }
-        if (ccCards[randInt] == ccCards[6]){
+        if (ccCards[randInt].equals(ccCards[6])){
             currentPlayer.setBells(currentPlayer.getBells() + 20);
         }
-        if (ccCards[randInt] == ccCards[7]){
+        if (ccCards[randInt].equals(ccCards[7])){
             currentPlayer.setBells(currentPlayer.getBells() + 100);
         }
-        if (ccCards[randInt] == ccCards[8]){
+        if (ccCards[randInt].equals(ccCards[8])){
             currentPlayer.setBells(currentPlayer.getBells() + 150);
         }
-        if (ccCards[randInt] == ccCards[1]){
+        if (ccCards[randInt].equals(ccCards[1])){
             currentPlayer.setBells(currentPlayer.getBells() + 200);
         }
 
@@ -544,41 +543,41 @@ public class GameState implements MouseListener, ActionListener {
     public String pickChanceCards(){
         int randInt = (int) (Math.random() * 9);
 
-        if (chanceCards[randInt] == chanceCards[0]) {
+        if (chanceCards[randInt].equals(chanceCards[0])) {
             currentPlayer.setBoardPos(currentPlayer.getBoardPos() - 3);
             currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
         }
-        else if (chanceCards[randInt] == chanceCards[1]){
+        else if (chanceCards[randInt].equals(chanceCards[1])){
             currentPlayer.setBoardPos(0);
             currentPlayer.setCoordinates(passGo1);
             currentPlayer.setBells(currentPlayer.getBells() + 200);
         }
-        else if(chanceCards[randInt] == chanceCards[2]){
+        else if(chanceCards[randInt].equals(chanceCards[2])){
             currentPlayer.setBells(currentPlayer.getBells() + 50);
         }
-        else if(chanceCards[randInt] == chanceCards[3]){
+        else if(chanceCards[randInt].equals(chanceCards[3])){
             currentPlayer.setBoardPos(34);
             currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
         }
-        else if(chanceCards[randInt] == chanceCards[4]){
+        else if(chanceCards[randInt].equals(chanceCards[4])){
             //TODO: get out of jail
         }
-        else if(chanceCards[randInt] == chanceCards[5]){
+        else if(chanceCards[randInt].equals(chanceCards[5])){
             currentPlayer.setBoardPos(39);
             currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
         }
-        else if(chanceCards[randInt] == chanceCards[6]){
+        else if(chanceCards[randInt].equals(chanceCards[6])){
             currentPlayer.setBells(currentPlayer.getBells() - 15);
         }
-        else if(chanceCards[randInt] == chanceCards[7]){
+        else if(chanceCards[randInt].equals(chanceCards[7])){
             currentPlayer.setBoardPos(10);
             currentPlayer.setCoordinates(jailSpace);
             samePlayer = false;
         }
-        else if(chanceCards[randInt] == chanceCards[8]){
+        else if(chanceCards[randInt].equals(chanceCards[8])){
             currentPlayer.setBoardPos(11);
         }
-        else if(chanceCards[randInt] == chanceCards[9]){
+        else if(chanceCards[randInt].equals(chanceCards[9])){
             currentPlayer.setBells(currentPlayer.getBells() + 150);
         }
 
