@@ -320,9 +320,9 @@ public class GameState implements MouseListener, ActionListener {
     "ADVANCE TO RAYMOND'S HOUSE","PAY POOR TAX OF 15 BELLS","GO TO JAIL","ADVANCE TOKEN TO CHRISSY'S HOUSE","YOUR BUSINESS MATURES: COLLECT 150 BELLS"};
 
     // List to hold each players properties
-    private static ArrayList<String> P1props;
+    private static ArrayList<String> P1props = new ArrayList<String>();
 
-    private static ArrayList<String> P2props;
+    private static ArrayList<String> P2props = new ArrayList<String>();
 
 
     /*******************************************************************
@@ -785,32 +785,33 @@ public class GameState implements MouseListener, ActionListener {
 
         // PROPERTIES BUTTON
         else if (code.getY() >= 10 && code.getY() <= 60 && code.getX() >= 803 && code.getX() <= 932) {
+            JPanel p = new JPanel();
             JFrame propertiesBtn = new JFrame();
             propertiesBtn.setSize(500, 200);
 
-            JLabel propertiesLabel = new JLabel("Properties you own will show up here:");
-            JLabel properties;
-            if (currentPlayer == players.get(1)) {
+            //JLabel propertiesLabel = new JLabel("Properties you own will show up here:");
+            //JLabel properties;
+            if (currentPlayer.getName().equals("player1")) {
                 for (int i = 0; i < P1props.size(); i++) {
-                    properties = new JLabel(P1props.get(i));
+                    JLabel properties = new JLabel("\n" + P1props.get(i) + "\n");
                     for (int j = 30; j < 200; j += 20) {
-                        properties.setBounds(200, j, 100, 10);
+                        properties.setBounds(100, j, 100, 20);
                     }
-                    propertiesBtn.add(properties);
+                    p.add(properties);
                 }
             } else {
                 for (int i = 0; i < P2props.size(); i++) {
-                    properties = new JLabel(P2props.get(i));
+                    JLabel properties = new JLabel("\n" + P2props.get(i) + "\n");
                     for (int j = 30; j < 200; j += 20) {
-                        properties.setBounds(200, j, 100, 10);
+                        properties.setBounds(100, j, 100, 20);
                     }
-                    propertiesBtn.add(properties);
+                    p.add(properties);
                 }
             }
             // Jlabel propertiesList = new JLabel(currentPlayer.getProperties());
-            propertiesLabel.setBounds(200, 10, 100, 10);
-            propertiesBtn.add(propertiesLabel);
-
+            //propertiesLabel.setBounds(100, 10, 10, 20);
+            //propertiesBtn.add(propertiesLabel);
+            propertiesBtn.add(p);
             returnFrame = propertiesBtn;
             stateChanged = true;
         } else {
@@ -863,7 +864,7 @@ public class GameState implements MouseListener, ActionListener {
             JLabel propRentInc = new JLabel("Rent Increase: " + String.valueOf(prop.getRentIncreaseRate()) + " bells");
             JLabel propMort = new JLabel("Mortgage Price: " + String.valueOf(prop.getMortgage()) + " bells");
 
-            propLabel.setBounds(100, 50, 100, 10);
+            propLabel.setBounds(100, 50, 300, 10);
             propPrice.setBounds(100, 70, 100, 10);
             propRent.setBounds(100, 90, 100, 10);
             propHouse.setBounds(100, 110, 300, 10);
@@ -884,6 +885,11 @@ public class GameState implements MouseListener, ActionListener {
                 public void actionPerformed(ActionEvent e) {
                     currentPlayer.setBells(currentPlayer.getBells() - prop.getPurchaseCost());
                     prop.setOwned(true, currentPlayer);
+                    if(currentPlayer.getName().equals("player1")){
+                        P1props.add(prop.getPropertyName());
+                    } else{
+                        P2props.add(prop.getPropertyName());
+                    }
                     System.out.println("CurrentPlayer: " + currentPlayer.getName());
 
                     propDisplay.dispose();
