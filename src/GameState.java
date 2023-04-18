@@ -592,19 +592,19 @@ public class GameState implements MouseListener, ActionListener {
     }
 
     @Override
-    public void mousePressed(MouseEvent e) {
+    public void mousePressed(final MouseEvent e) {
     }
 
     @Override
-    public void mouseReleased(MouseEvent e) {
+    public void mouseReleased(final MouseEvent e) {
     }
 
     @Override
-    public void mouseEntered(MouseEvent e) {
+    public void mouseEntered(final MouseEvent e) {
     }
 
     @Override
-    public void mouseExited(MouseEvent e) {
+    public void mouseExited(final MouseEvent e) {
     }
 
     /******************************************************************
@@ -613,11 +613,11 @@ public class GameState implements MouseListener, ActionListener {
      * @param MouseEvent e
      ******************************************************************/
     @Override
-    public void mouseClicked(MouseEvent e) {
+    public void mouseClicked(final MouseEvent e) {
 
         // get coordinates of mouse event
         Point code = e.getPoint();
-        System.out.println("x: " + (int)code.getX() + " y: " + (int)code.getY());
+        System.out.println("x: " + (int) code.getX() + " y: " + (int) code.getY());
 
         // ROLL DICE BUTTON
         if (code.getY() >= 240 && code.getY() <= 278 && code.getX() >= 692 && code.getX() <= 830) {
@@ -671,7 +671,7 @@ public class GameState implements MouseListener, ActionListener {
                     samePlayer = false;
 
                     // Jail.jailPlayer(currentPlayer);
-                    
+
                 }
 
                 // if we arent going to jail
@@ -689,82 +689,81 @@ public class GameState implements MouseListener, ActionListener {
 
                     // it is a misc space
                     if (prop == null) {
-                        //if current player is on income tax
+                        // if current player is on income tax
                         if (currentPlayer.getBoardPos() == 4) {
                             JFrame incomeTax = new JFrame();
                             incomeTax.setSize(200, 100);
-                           
+
                             JLabel tax = new JLabel("You owe income tax.");
-            
+
                             tax.setBounds(200, 30, 200, 10);
                             incomeTax.add(tax);
-                            
+
                             if (currentPlayer.getBells() < 200) {
                                 gameOver = true;
-                            }
-                            else {
+                            } else {
                                 currentPlayer.setBells(currentPlayer.getBells() - 200);
                             }
-                         
+
                             freeParking += 200;
                             returnFrame = incomeTax;
                         }
-                        
+
                         else if (currentPlayer.getBoardPos() == 38) {
                             JFrame luxuryTax = new JFrame();
                             luxuryTax.setSize(200, 100);
-                           
+
                             JLabel tax = new JLabel("You owe luxury tax.");
-            
+
                             tax.setBounds(200, 30, 200, 10);
                             luxuryTax.add(tax);
-                            
+
                             if (currentPlayer.getBells() < 100) {
                                 gameOver = true;
                             } else {
                                 currentPlayer.setBells(currentPlayer.getBells() - 100);
                             }
-                         
+
                             freeParking += 100;
                             returnFrame = luxuryTax;
-                        } 
-                        else if (currentPlayer.getBoardPos() == 2 || currentPlayer.getBoardPos() == 17 || currentPlayer.getBoardPos() == 33) {
+                        } else if (currentPlayer.getBoardPos() == 2 || currentPlayer.getBoardPos() == 17
+                                || currentPlayer.getBoardPos() == 33) {
 
                             JFrame cc = new JFrame();
                             cc.setSize(500, 100);
 
                             String chosen = pickCCCard();
-                           
+
                             JLabel card = new JLabel("<html>Community Chest<br/>" + chosen + "</html>");
-            
+
                             card.setBounds(200, 30, 200, 10);
                             cc.add(card);
-                            
+
                             returnFrame = cc;
 
-
-                        } else if (currentPlayer.getBoardPos() == 7 || currentPlayer.getBoardPos() == 22 || currentPlayer.getBoardPos() == 36) {
+                        } else if (currentPlayer.getBoardPos() == 7 || currentPlayer.getBoardPos() == 22
+                                || currentPlayer.getBoardPos() == 36) {
                             JFrame chance = new JFrame();
                             chance.setSize(500, 100);
 
                             String chosen = pickChanceCards();
-                           
+
                             JLabel card = new JLabel("<html>Chance<br/>" + chosen + "</html>");
-            
+
                             card.setBounds(200, 30, 200, 10);
                             chance.add(card);
-                            
+
                             returnFrame = chance;
 
                         } else if (currentPlayer.getBoardPos() == 20) {
                             JFrame free = new JFrame();
                             free.setSize(500, 100);
-                           
+
                             JLabel card = new JLabel("Free Docking! You get " + freeParking + " bells");
-            
+
                             card.setBounds(200, 30, 200, 10);
                             free.add(card);
-                            
+
                             currentPlayer.setBells(currentPlayer.getBells() + freeParking);
 
                             returnFrame = free;
@@ -777,7 +776,6 @@ public class GameState implements MouseListener, ActionListener {
 
             stateChanged = true;
         }
-        
 
         // PROPERTIES BUTTON
         else if (code.getY() >= 10 && code.getY() <= 60 && code.getX() >= 803 && code.getX() <= 932) {
@@ -785,8 +783,8 @@ public class GameState implements MouseListener, ActionListener {
             JFrame propertiesBtn = new JFrame();
             propertiesBtn.setSize(500, 200);
 
-            //JLabel propertiesLabel = new JLabel("Properties you own will show up here:");
-            //JLabel properties;
+            // JLabel propertiesLabel = new JLabel("Properties you own will show up here:");
+            // JLabel properties;
             if (currentPlayer.getName().equals("player1")) {
                 for (int i = 0; i < P1props.size(); i++) {
                     JLabel properties = new JLabel("\n" + P1props.get(i) + "\n");
@@ -805,8 +803,8 @@ public class GameState implements MouseListener, ActionListener {
                 }
             }
             // Jlabel propertiesList = new JLabel(currentPlayer.getProperties());
-            //propertiesLabel.setBounds(100, 10, 10, 20);
-            //propertiesBtn.add(propertiesLabel);
+            // propertiesLabel.setBounds(100, 10, 10, 20);
+            // propertiesBtn.add(propertiesLabel);
             propertiesBtn.add(p);
             returnFrame = propertiesBtn;
             stateChanged = true;
@@ -821,7 +819,7 @@ public class GameState implements MouseListener, ActionListener {
      * @param ActionEvent e
      ******************************************************************/
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(final ActionEvent e) {
         JButton chosen = (JButton) e.getSource();
         try {
             if (chosen.equals(yes)) {
@@ -829,7 +827,7 @@ public class GameState implements MouseListener, ActionListener {
                     player1.setBells(player1.getBells() - prop.getPurchaseCost());
                     prop.setOwned(true, player1);
                     gui.repaintTool();
-                    
+
                 } else {
                     player2.setBells(player2.getBells() - prop.getPurchaseCost());
                     prop.setOwned(true, player2);
@@ -843,7 +841,6 @@ public class GameState implements MouseListener, ActionListener {
         }
     }
 
-
     private void propertySpace() {
         if (prop.canBuy(currentPlayer.getBells(), prop)) {
 
@@ -851,7 +848,7 @@ public class GameState implements MouseListener, ActionListener {
             JFrame propDisplay = new JFrame();
 
             propDisplay.setSize(400, 300);
-            JLabel propLabel = new JLabel(prop.getPropertyName() );
+            JLabel propLabel = new JLabel(prop.getPropertyName());
             JLabel propPrice = new JLabel("Cost:" + String.valueOf(prop.getPurchaseCost()) + " bells");
             JLabel propRent = new JLabel("Rent: " + String.valueOf(prop.getRentCost()) + " bells");
             JLabel propHouse = new JLabel("With one house: " + String.valueOf(prop.getOneHouse()) + " bells");
@@ -874,14 +871,14 @@ public class GameState implements MouseListener, ActionListener {
             // Ask player on frame if they wanna buy
             JButton yes = new JButton("yes");
             yes.setBounds(60, 400, 95, 30);
-            
+
             yes.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
+                public void actionPerformed(final ActionEvent e) {
                     currentPlayer.setBells(currentPlayer.getBells() - prop.getPurchaseCost());
                     prop.setOwned(true, currentPlayer);
-                    if(currentPlayer.getName().equals("player1")){
+                    if (currentPlayer.getName().equals("player1")) {
                         P1props.add(prop.getPropertyName());
-                    } else{
+                    } else {
                         P2props.add(prop.getPropertyName());
                     }
                     System.out.println("CurrentPlayer: " + currentPlayer.getName());
@@ -894,7 +891,7 @@ public class GameState implements MouseListener, ActionListener {
             JButton no = new JButton("no");
             no.setBounds(80, 400, 95, 30);
             no.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
+                public void actionPerformed(final ActionEvent e) {
                     propDisplay.dispose();
                 }
             });
