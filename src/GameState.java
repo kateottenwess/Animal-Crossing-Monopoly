@@ -29,12 +29,6 @@ public class GameState implements MouseListener, ActionListener {
     /* JFrame that is returned if roll results in a pop up window */
     private JFrame returnFrame;
 
-    /* Button for player to choose option yes */
-    private JButton yes;
-
-    /* Button for player to choose option no */
-    private JButton no;
-
     /* int value of x coordinate */
     private int x;
 
@@ -333,10 +327,6 @@ public class GameState implements MouseListener, ActionListener {
         dice = new Dice();
         gui = new GUI();
 
-        // create buttons for buying properties
-        yes = new JButton();
-        no = new JButton();
-
         // set up players
         players = new ArrayList<>();
         player1 = new Player(1, "player1");
@@ -494,7 +484,7 @@ public class GameState implements MouseListener, ActionListener {
             samePlayer = false;
         }
         if (ccCards[randInt].equals(ccCards[3])) {
-            //TODO: get out of jail
+            
         }
         if (ccCards[randInt].equals(ccCards[4])) {
             currentPlayer.setBells(currentPlayer.getBells() + 200);
@@ -541,7 +531,7 @@ public class GameState implements MouseListener, ActionListener {
             currentPlayer.setBoardPos(34);
             currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
         } else if (chanceCards[randInt].equals(chanceCards[4])) {
-            //TODO: get out of jail
+            
         } else if (chanceCards[randInt].equals(chanceCards[5])) {
             currentPlayer.setBoardPos(39);
             currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
@@ -599,6 +589,8 @@ public class GameState implements MouseListener, ActionListener {
         // ROLL DICE BUTTON
         if (code.getY() >= 240 && code.getY() <= 278 && code.getX() >= 692 && code.getX() <= 830) {
 
+            changePlayer();
+
             // initialize return frame to null
             returnFrame = null;
 
@@ -640,8 +632,6 @@ public class GameState implements MouseListener, ActionListener {
                     currentPlayer.setBoardPos(10);
                     currentPlayer.setCoordinates(jailSpace);
                     samePlayer = false;
-
-                    // Jail.jailPlayer(currentPlayer);
 
                 } else {
 
@@ -733,23 +723,36 @@ public class GameState implements MouseListener, ActionListener {
                             currentPlayer.setBells(currentPlayer.getBells() + freeParking);
 
                             returnFrame = free;
+                        } else if (currentPlayer.getBoardPos() == 30) {
+                            JFrame jail = new JFrame();
+                            jail.setSize(500, 100);
+
+                            JLabel card = new JLabel("Go to Jail! Do not collect 200 Bells!");
+
+                            card.setBounds(200, 30, 200, 10);
+                            jail.add(card);
+
+                            currentPlayer.setBoardPos(10);
+                            currentPlayer.setCoordinates(jailSpace);
+                            samePlayer = false;
+
+                            returnFrame = jail;
                         }
                     } else {
+
                         propertySpace();
                     }
                 }
             }
 
             stateChanged = true;
-            changePlayer();
+
             // PROPERTIES BUTTON
         } else if (code.getY() >= 10 && code.getY() <= 60 && code.getX() >= 803 && code.getX() <= 932) {
             JPanel p = new JPanel();
             JFrame propertiesBtn = new JFrame();
             propertiesBtn.setSize(500, 200);
 
-            // JLabel propertiesLabel = new JLabel("Properties you own will show up here:");
-            // JLabel properties;
             if (currentPlayer.getName().equals("player1")) {
                 for (int i = 0; i < P1props.size(); i++) {
                     JLabel properties = new JLabel("\n" + P1props.get(i) + "\n");
@@ -767,9 +770,7 @@ public class GameState implements MouseListener, ActionListener {
                     p.add(properties);
                 }
             }
-            // Jlabel propertiesList = new JLabel(currentPlayer.getProperties());
-            // propertiesLabel.setBounds(100, 10, 10, 20);
-            // propertiesBtn.add(propertiesLabel);
+            
             propertiesBtn.add(p);
             returnFrame = propertiesBtn;
             stateChanged = true;
@@ -784,27 +785,13 @@ public class GameState implements MouseListener, ActionListener {
      ******************************************************************/
     @Override
     public void actionPerformed(final ActionEvent e) {
-        JButton chosen = (JButton) e.getSource();
-        try {
-            if (chosen.equals(yes)) {
-                if (currentPlayer.getName().equalsIgnoreCase(player1.getName())) {
-                    player1.setBells(player1.getBells() - prop.getPurchaseCost());
-                    prop.setOwned(true, player1);
-                    gui.repaintTool();
-
-                } else {
-                    player2.setBells(player2.getBells() - prop.getPurchaseCost());
-                    prop.setOwned(true, player2);
-                    gui.repaintTool();
-                }
-            }
-            stateChanged = true;
-        } catch (Exception no) {
-            // close the window
-            SwingUtilities.getWindowAncestor((JFrame) e.getSource()).dispose();
-        }
     }
 
+
+    /******************************************************************
+     * Method to handle the logic of if the player lands on a property 
+     * space.
+     ******************************************************************/
     private void propertySpace() {
         if (prop.canBuy(currentPlayer.getBells(), prop)) {
 
@@ -849,7 +836,6 @@ public class GameState implements MouseListener, ActionListener {
 
                     propDisplay.dispose();
                     returnFrame = propDisplay;
-                    changePlayer();
                 }
             });
 
@@ -871,6 +857,7 @@ public class GameState implements MouseListener, ActionListener {
             propDisplay.repaint();
 
             returnFrame = propDisplay;
+            
             //if it can't be purchased, check if its owned
         } else if (prop.isOwned()) {
             JFrame isOwnedFrame = new JFrame();
@@ -909,6 +896,9 @@ public class GameState implements MouseListener, ActionListener {
     }
 
 
+    /******************************************************************
+     * Method to handle the logic of changing the player.
+     ******************************************************************/
     private void changePlayer() {
         // if the player did not roll a double, it is no longer their turn after this
         if (!samePlayer) {
