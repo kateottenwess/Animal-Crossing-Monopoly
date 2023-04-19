@@ -30,35 +30,35 @@ public class Property extends BoardSpaceType {
     /* Number of houses on property */
     private int numHouses;
 
-    /* which player owns specific property */
-    private Player playerOwning;
-
     /* Rent increase rate when more than one home is placed */
     private double rentIncreaseRate;
 
     /* Boolean representing if the property is owned or not */
     private boolean owned;
 
+    /* Player who owns specific property */
+    private Player playerOwning;
+
     /* Percent multiplied by mortgage price- this is price to unmortgage */
-    final static double UNMORTAGE_PERC = 1.1;
+    final double UNMORTAGE_PERC = 1.1;
 
     /* Initial cost of railroad purchase */
-    final static double RR_INITIAL_COST = 25;
+    final double RR_INITIAL_COST = 25;
 
     /* Rate of increase of railroad rent */
-    final static double RR_INCREASE = 2;
+    final double RR_INCREASE = 2;
 
     /* Rate purchase cost is multiplied by to get mortgage cost */
-    final static double MORTGAGE_PERC_OF_PURCHASE = 0.5;
+    final double MORTGAGE_PERC_OF_PURCHASE = 0.5;
 
     /* Rate * value of dice roll is the amount of rent if one is owned */
-    final static int UTILITIES_ONE_OWNED = 4;
+    final int UTILITIES_ONE_OWNED = 4;
 
     /* Rate * value of dice roll is the amount of rent if both are owned by the same player */
-    final static int UTILITIES_TWO_OWNED = 10;
+    final int UTILITIES_TWO_OWNED = 10;
 
     /* Max amount of homes allowed on property */
-    final static int MAX_AMOUNT_HOUSES = 4;
+    final int MAX_AMOUNT_HOUSES = 4;
 
 
     /*******************************************************************
@@ -100,15 +100,6 @@ public class Property extends BoardSpaceType {
      ******************************************************************/
     public String getPropertyName() {
         return this.propertyName;
-    }
-
-
-    /******************************************************************
-     * Getter to return property color.
-     * @return String
-     ******************************************************************/
-    public String getColor() {
-        return this.color;
     }
 
 
@@ -204,15 +195,6 @@ public class Property extends BoardSpaceType {
      ******************************************************************/
     public int getNumHouses() {
         return this.numHouses;
-    }
-
-
-    /******************************************************************
-     * Setter that increases number of houses on property.
-     * @param numHouses int number of houses purchased
-     ******************************************************************/
-    public void increaseNumHouses(int numHouses) {
-        this.numHouses += numHouses;
     }
 
     

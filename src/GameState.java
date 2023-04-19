@@ -599,8 +599,6 @@ public class GameState implements MouseListener, ActionListener {
         // ROLL DICE BUTTON
         if (code.getY() >= 240 && code.getY() <= 278 && code.getX() >= 692 && code.getX() <= 830) {
 
-            changePlayer();
-
             // initialize return frame to null
             returnFrame = null;
 
@@ -743,6 +741,7 @@ public class GameState implements MouseListener, ActionListener {
             }
 
             stateChanged = true;
+            changePlayer();
             // PROPERTIES BUTTON
         } else if (code.getY() >= 10 && code.getY() <= 60 && code.getX() >= 803 && code.getX() <= 932) {
             JPanel p = new JPanel();
@@ -850,6 +849,7 @@ public class GameState implements MouseListener, ActionListener {
 
                     propDisplay.dispose();
                     returnFrame = propDisplay;
+                    changePlayer();
                 }
             });
 
