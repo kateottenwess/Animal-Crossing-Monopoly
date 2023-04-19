@@ -850,8 +850,6 @@ public class GameState implements MouseListener, ActionListener {
                     propDisplay.dispose();
                     returnFrame = propDisplay;
                     changePlayer();
-                    stateChanged = true;
-                  
                 }
             });
 
@@ -860,7 +858,6 @@ public class GameState implements MouseListener, ActionListener {
             no.addActionListener(new ActionListener() {
                 public void actionPerformed(final ActionEvent e) {
                     propDisplay.dispose();
-                    stateChanged = true;
                 }
             });
 
