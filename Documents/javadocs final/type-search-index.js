@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"Board"},{"p":"<Unnamed>","l":"BoardSpaceType"},{"p":"<Unnamed>","l":"Dice"},{"p":"<Unnamed>","l":"GameState"},{"p":"<Unnamed>","l":"GUI"},{"p":"<Unnamed>","l":"MiscSpaces"},{"p":"<Unnamed>","l":"Player"},{"p":"<Unnamed>","l":"Property"}];updateSearchResults();
