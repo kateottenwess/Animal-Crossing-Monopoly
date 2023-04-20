@@ -845,12 +845,13 @@ public class GameState implements MouseListener, ActionListener {
                 } else {
                     player1.setBells(player1.getBells() + prop.getRentCost());
                 }
-        } else {
-            if (currentPlayer.getBells() <= 0) {
-                gameOver = true;
-            }
+        } //else {
+        if (currentPlayer.getBells() <= 0) {
+            gameOver = true;
+        }else{
             gameOver = false;
         }
+        //}*/
         
         if (gameOver == true) {
             //make jframe for this
