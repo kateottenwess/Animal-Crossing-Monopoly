@@ -114,12 +114,12 @@ public class GUI {
 
         }
 
-        Thread.sleep(30);
+        //Thread.sleep(30);
     }
         
-    public void repaintTool() {
+    /*public void repaintTool() {
         frame.repaint();
-    }
+    }*/
 
 
 

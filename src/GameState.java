@@ -278,10 +278,10 @@ public class GameState implements MouseListener, ActionListener {
 
     // -1 or NA means it is not applicible for this specific property type
     /* Property object for AbleSisters (water works) */
-    Property ableSis = new Property("Able Sisters", 28, 150, -1);
+    Property ableSis = new Property("Able Sisters", 28, 150, 20);
 
     /* Property object for Nooks Cranny (electrical) */
-    Property nooksCranny = new Property("Nooks Cranny", 12, 150, -1);
+    Property nooksCranny = new Property("Nooks Cranny", 12, 150, 20);
 
     // railroads
     /* Property object for Reading Railroad */
@@ -547,14 +547,6 @@ public class GameState implements MouseListener, ActionListener {
         return chanceCards[randInt];
     }
 
-
-    /******************************************************************
-     * Getter to return the current players bells.
-     * @return int bells of current player
-     ******************************************************************/
-    public int getPlayerBells() {
-        return currentPlayer.getBells();
-    }
 
     @Override
     public void mousePressed(final MouseEvent e) {
