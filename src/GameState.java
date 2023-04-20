@@ -450,48 +450,48 @@ public class GameState implements MouseListener, ActionListener {
         int randInt = (int) (Math.random() * 9);
 
         if (ccCards[randInt].equals(ccCards[0])) {
-            System.out.println("“Test 9: Community Chest working”");
+            System.out.println("Test 9: Community Chest working");
             currentPlayer.setBells(currentPlayer.getBells() + 50);
             
         }
         if (ccCards[randInt].equals(ccCards[1])) {
-            System.out.println("“Test 9: Community Chest working”");
+            System.out.println("Test 9: Community Chest working");
             currentPlayer.setBells(currentPlayer.getBells() + 100);
             
         }
         if (ccCards[randInt].equals(ccCards[2])) {
-            System.out.println("“Test 9: Community Chest working”");
+            System.out.println("Test 9: Community Chest working");
             currentPlayer.setBoardPos(10);
             currentPlayer.setCoordinates(jailSpace);
             samePlayer = false;
         }
         if (ccCards[randInt].equals(ccCards[3])) {
-            System.out.println("“Test 9: Community Chest working”");
+            System.out.println("Test 9: Community Chest working");
         }
         if (ccCards[randInt].equals(ccCards[4])) {
-            System.out.println("“Test 9: Community Chest working”");
+            System.out.println("Test 9: Community Chest working");
             currentPlayer.setBells(currentPlayer.getBells() + 200);
             currentPlayer.setBoardPos(10);
             currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
         }
         if (ccCards[randInt].equals(ccCards[5])) {
-            System.out.println("“Test 9: Community Chest working”");
+            System.out.println("Test 9: Community Chest working");
             currentPlayer.setBells(currentPlayer.getBells() + 25);
         }
         if (ccCards[randInt].equals(ccCards[6])) {
-            System.out.println("“Test 9: Community Chest working”");
+            System.out.println("Test 9: Community Chest working");
             currentPlayer.setBells(currentPlayer.getBells() + 20);
         }
         if (ccCards[randInt].equals(ccCards[7])) {
-            System.out.println("“Test 9: Community Chest working”");
+            System.out.println("Test 9: Community Chest working");
             currentPlayer.setBells(currentPlayer.getBells() + 100);
         }
         if (ccCards[randInt].equals(ccCards[8])) {
-            System.out.println("“Test 9: Community Chest working”");
+            System.out.println("Test 9: Community Chest working");
             currentPlayer.setBells(currentPlayer.getBells() + 150);
         }
         if (ccCards[randInt].equals(ccCards[1])) {
-            System.out.println("“Test 9: Community Chest working”");
+            System.out.println("Test 9: Community Chest working");
             currentPlayer.setBells(currentPlayer.getBells() + 200);
         }
 
