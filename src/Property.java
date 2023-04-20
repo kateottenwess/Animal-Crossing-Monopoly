@@ -90,15 +90,6 @@ public class Property {
     }
 
 
-     /******************************************************************
-     * Getter to return if property is owned or not.
-     * @return boolean
-     ******************************************************************/
-    public boolean getOwned() {
-        return this.owned;
-    }
-
-
     /******************************************************************
      * Getter to return property purchase cost.
      * @return int
@@ -149,8 +140,8 @@ public class Property {
     public boolean canBuy(int bells, Property p) {
         boolean answer = false;
 
-        if (p.getPurchaseCost() < bells) {
-            if (!p.getOwned()) {
+        if (p.getPurchaseCost() <= bells) {
+            if (!p.isOwned()) {
                 answer = true;
             }
         }
