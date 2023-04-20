@@ -217,90 +217,90 @@ public class GameState implements MouseListener, ActionListener {
     public static ArrayList<Property> props = new ArrayList<Property>();
 
     /* Property object for Rodney */
-    Property rodney = new Property("Rodney's House", 1, 60, 2, 30, "brown", 10);
+    Property rodney = new Property("Rodney's House", 1, 60, 2);
 
     /* Property object for Rocket */
-    Property rocket = new Property("Rocket's House", 3, 60, 4, 30, "brown", 20);
+    Property rocket = new Property("Rocket's House", 3, 60, 4);
 
     /* Property object for Melba */
-    Property melba = new Property("Melba's House", 6, 100, 6, 50, "light blue", 30);
+    Property melba = new Property("Melba's House", 6, 100, 6);
 
     /* Property object for Marina */
-    Property marina = new Property("Marina's House", 8, 100, 6, 50, "light blue", 30);
+    Property marina = new Property("Marina's House", 8, 100, 6);
 
     /* Property object for Mitzi */
-    Property mitzi = new Property("Mitzi's House", 9, 120, 8, 60, "light blue", 40);
+    Property mitzi = new Property("Mitzi's House", 9, 120, 8);
 
     /* Property object for Flora */
-    Property flora = new Property("Flora's House", 14, 140, 10, 70, "pink", 50);
+    Property flora = new Property("Flora's House", 14, 140, 10);
 
     /* Property object for Rosie */
-    Property rosie = new Property("Rosie's House", 13, 140, 10, 70, "pink", 50);
+    Property rosie = new Property("Rosie's House", 13, 140, 10);
 
     /* Property object for Chrissy */
-    Property chrissy = new Property("Chrissy's House", 11, 160, 12, 80, "pink", 60);
+    Property chrissy = new Property("Chrissy's House", 11, 160, 12);
 
     /* Property object for Bones */
-    Property bones = new Property("Bones House", 19, 180, 14, 90, "orange", 70);
+    Property bones = new Property("Bones House", 19, 180, 14);
 
     /* Property object for Cephalobot */
-    Property cephalobot = new Property("Cephalobot's House", 16, 180, 14, 90, "orange", 70);
+    Property cephalobot = new Property("Cephalobot's House", 16, 180, 14);
 
     /* Property object for Hopkins */
-    Property hopkins = new Property("Hopkin's House", 18, 200, 16, 100, "orange", 80);
+    Property hopkins = new Property("Hopkin's House", 18, 200, 16);
 
     /* Property object for Octavin */
-    Property octavin = new Property("Octavin's House", 21, 220, 18, 110, "red", 90);
+    Property octavin = new Property("Octavin's House", 21, 220, 18);
 
     /* Property object for Fang */
-    Property fang = new Property("Fang's House", 23, 220, 18, 110, "red", 90);
+    Property fang = new Property("Fang's House", 23, 220, 18);
 
     /* Property object for Kabuki */
-    Property kabuki = new Property("Kabuki's House", 24, 240, 20, 120, "red", 100);
+    Property kabuki = new Property("Kabuki's House", 24, 240, 20);
 
     /* Property object for Stitches */
-    Property stitches = new Property("Stiches's House", 26, 260, 22, 130, "yellow", 110);
+    Property stitches = new Property("Stiches's House", 26, 260, 22);
 
     /* Property object for Shino */
-    Property shino = new Property("Shino's House", 27, 260, 22, 130, "yellow", 110);
+    Property shino = new Property("Shino's House", 27, 260, 22);
 
     /* Property object for Bob */
-    Property bob = new Property("Bob's House", 29, 280, 24, 140, "yellow", 120);
+    Property bob = new Property("Bob's House", 29, 280, 24);
 
     /* Property object for Francine */
-    Property francine = new Property("Francine's House", 31, 300, 26, 150, "green", 130);
+    Property francine = new Property("Francine's House", 31, 300, 26);
 
     /* Property object for Judy */
-    Property judy = new Property("Judy's House", 32, 300, 26, 150, "green", 130);
+    Property judy = new Property("Judy's House", 32, 300, 26);
 
     /* Property object for Diana */
-    Property diana = new Property("Diana's House", 34, 320, 28, 160, "green", 150);
+    Property diana = new Property("Diana's House", 34, 320, 28);
 
     /* Property object for Marshall */
-    Property marshall = new Property("Marshall's House", 37, 350, 35, 175, "dark blue", 175);
+    Property marshall = new Property("Marshall's House", 37, 350, 35);
 
     /* Property object for Raymond */
-    Property raymond = new Property("Raymond's House", 39, 400, 50, 200, "dark blue", 200);
+    Property raymond = new Property("Raymond's House", 39, 400, 50);
 
     // -1 or NA means it is not applicible for this specific property type
     /* Property object for AbleSisters (water works) */
-    Property ableSis = new Property("Able Sisters", 28, 150, -1, 75, "NA", -1);
+    Property ableSis = new Property("Able Sisters", 28, 150, -1);
 
     /* Property object for Nooks Cranny (electrical) */
-    Property nooksCranny = new Property("Nooks Cranny", 12, 150, -1, 75, "NA", -1);
+    Property nooksCranny = new Property("Nooks Cranny", 12, 150, -1);
 
     // railroads
     /* Property object for Reading Railroad */
-    Property rr1 = new Property("Reading Railroad", 5, 200, 25, 100, "NA", -1);
+    Property rr1 = new Property("Reading Railroad", 5, 200, 25);
 
     /* Property object for Pennslyvania Railroad */
-    Property rr2 = new Property("Pennsylvania Railroad", 15, 200, 25, 100, "NA", -1);
+    Property rr2 = new Property("Pennsylvania Railroad", 15, 200, 25);
 
     /* Property object for B. & O. Railroad */
-    Property rr3 = new Property("B. & O. Railroad", 25, 200, 25, 100, "NA", -1);
+    Property rr3 = new Property("B. & O. Railroad", 25, 200, 25);
 
     /* Property object for Short Line Railroad */
-    Property rr4 = new Property("Short Line", 35, 200, 35, 100, "NA", -1);
+    Property rr4 = new Property("Short Line", 35, 200, 35);
 
     /* String array that holds all of the community cards */
     String[] ccCards = {"GRAND MUSEUM OPENING: COLLECT 50 BELLS", "YOU DUG UP A SACK OF BELLS! COLLECT 100 BELLS", "GO TO JAIL \n DO NOT PASS GO, DO NOT COLLECT 200 BELLS", "GET OUT OF JAIL, FREE!", "ADVANCE TO GO: COLLECT 200 BELLS",
@@ -802,22 +802,13 @@ public class GameState implements MouseListener, ActionListener {
             JLabel propLabel = new JLabel(prop.getPropertyName());
             JLabel propPrice = new JLabel("Cost:" + String.valueOf(prop.getPurchaseCost()) + " bells");
             JLabel propRent = new JLabel("Rent: " + String.valueOf(prop.getRentCost()) + " bells");
-            JLabel propHouse = new JLabel("With one house: " + String.valueOf(prop.getOneHouse()) + " bells");
-            JLabel propRentInc = new JLabel("Rent Increase: " + String.valueOf(prop.getRentIncreaseRate()) + " bells");
-            JLabel propMort = new JLabel("Mortgage Price: " + String.valueOf(prop.getMortgage()) + " bells");
 
             propLabel.setBounds(100, 50, 300, 10);
             propPrice.setBounds(100, 70, 100, 10);
             propRent.setBounds(100, 90, 100, 10);
-            propHouse.setBounds(100, 110, 300, 10);
-            propRentInc.setBounds(100, 130, 300, 10);
-            propMort.setBounds(100, 150, 300, 20);
             propDisplay.add(propLabel);
             propDisplay.add(propPrice);
             propDisplay.add(propRent);
-            propDisplay.add(propHouse);
-            propDisplay.add(propRentInc);
-            propDisplay.add(propMort);
 
             // Ask player on frame if they wanna buy
             JButton yes = new JButton("yes");

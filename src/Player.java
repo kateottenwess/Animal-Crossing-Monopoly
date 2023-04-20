@@ -57,16 +57,6 @@ public class Player {
 
 
     /******************************************************************
-     * Getter to return the player number.
-     * 
-     * @return int
-     ******************************************************************/
-    public int getPlayerNum() {
-        return playerNum;
-    }
-
-
-    /******************************************************************
      * Setter to set player board position.
      * 
      * @param boardPos int

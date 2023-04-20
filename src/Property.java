@@ -9,9 +9,6 @@ public class Property {
     /* Name of the property */
     private String propertyName;
 
-    /* Color of the property */
-    private String color;
-
     /* Integer value of what space it is on the board */
     private int spaceIdentifier;
 
@@ -20,18 +17,6 @@ public class Property {
 
     /* Cost to rent the property */
     private int rentCost;
-
-    /* Cost to mortgage property */
-    private int mortgage;
-
-    /* Cost of rent with one house */
-    private int oneHouse;
-
-    /* Number of houses on property */
-    private int numHouses;
-
-    /* Rent increase rate when more than one home is placed */
-    private double rentIncreaseRate;
 
     /* Boolean representing if the property is owned or not */
     private boolean owned;
@@ -73,23 +58,16 @@ public class Property {
      * @param mortgage price received from mortgaging the property
      * @param rentIncreaseRate the rate rent increases when homes are 
      *                         added to the property
-     * @param color color of the property
      * @param oneHouse price of one house to place on the property
      * @param owned boolean representing if owned or not
      * @param numHouses number of houses on property
      ******************************************************************/
-    public Property(String name, int space, int purchase, int rent,
-            double rentIncreaseRate, String color, int oneHouse) {
+    public Property(String name, int space, int purchase, int rent) {
         this.propertyName = name;
         this.spaceIdentifier = space;
         this.purchaseCost = purchase;
         this.rentCost = rent;
-        this.mortgage = (int) MORTGAGE_PERC_OF_PURCHASE * purchase;
-        this.rentIncreaseRate = rentIncreaseRate;
-        this.color = color;
-        this.oneHouse = oneHouse;
         this.owned = false;
-        this.numHouses = 0;
         this.playerOwning = null;
     }
 
@@ -140,33 +118,6 @@ public class Property {
 
 
     /******************************************************************
-     * Getter to return property mortgage.
-     * @return int
-     ******************************************************************/
-    public int getMortgage() {
-        return this.mortgage;
-    }
-
-
-    /******************************************************************
-     * Getter to return price of one house for the property.
-     * @return int
-     ******************************************************************/
-    public int getOneHouse() {
-        return this.oneHouse;
-    }
-
-
-    /******************************************************************
-     * Getter to return property rent increase rate.
-     * @return double
-     ******************************************************************/
-    public double getRentIncreaseRate() {
-        return this.rentIncreaseRate;
-    }
-
-
-    /******************************************************************
      * Getter to return if property is owned.
      * @return boolean
      ******************************************************************/
@@ -190,65 +141,11 @@ public class Property {
 
 
     /******************************************************************
-     * Getter to return number of house on property.
-     * @return bint number of houses
+     * Method that determines if a space is purchasable or not.
+     * @param bells int value of current players bells
+     * @param p Property to be bought
+     * @return boolean, true if purchasable, false otherwise
      ******************************************************************/
-    public int getNumHouses() {
-        return this.numHouses;
-    }
-
-    
-    /******************************************************************
-     * Method to increase the rent of a property if houses are purchased
-     * If 1 is return, the rent cost could be increased, else it can't  
-     * be increased.
-     * @param houseNum number of houses purchased
-     ******************************************************************/
-    public void increaseRent(int houseNum) {
-
-        //if there is one house on the property
-        if (houseNum == 1) {
-
-            //increase rent to price with one house
-            this.rentCost = this.oneHouse;
-        } 
-        
-        //if there are more than one house and less than the max amount of 
-        //houses permitted on the property, increase rent by num houses * one house
-        else if (houseNum <= MAX_AMOUNT_HOUSES) {
-            this.rentCost = (int) (this.rentIncreaseRate * this.oneHouse) * houseNum;
-        }
-    }
-
-    
-    /******************************************************************
-     * Method that returns the property that correlates to integer    
-     * space. Returns null if no property is associated to said space.
-     * @param space int value of space on board
-     * @return property on space, null if no property
-     ******************************************************************/
-    public Property getProperty(int space) {
-
-        //temporary Property for property that is potentially found
-        Property propFound;
-
-        //loop through properties to find if a property is found
-        for (int i = 0; i <= GameState.props.size(); i++) {
-
-            //
-            if (GameState.props.indexOf(i) == space) {
-
-                //if there is a property on space, return property
-                propFound = GameState.props.get(i);
-                return propFound;
-            }
-        }
-
-        //if no property is on space, return null
-        return null;
-    }
-
-
     public boolean canBuy(int bells, Property p) {
         boolean answer = false;
 
