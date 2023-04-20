@@ -1,0 +1,1264 @@
+commit 120fd4f490c0404cc522fb9786ac14f9d72a430f
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Thu Apr 20 12:45:17 2023 -0400
+
+    begone intellij
+
+commit 037762599ae2a60b778b33e5d7c17eceeea51a98
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Thu Apr 20 12:44:54 2023 -0400
+
+    new javadocs
+
+commit 185e0ef8a5e1f25c599359dbc59cb5d9deb4bfd5
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Thu Apr 20 11:51:05 2023 -0400
+
+    code coverage fixes
+
+commit e9030c7359664a21f5aaa5c57f2a069e4492e39b
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Thu Apr 20 11:47:37 2023 -0400
+
+    fixed smth
+
+commit 2ada378c312aa45eb3fc6815a7f99ee22b4bd13c
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Thu Apr 20 11:44:27 2023 -0400
+
+    added integration testing
+
+commit 2cf443c578243b0ffb2b278926cad85fde90697a
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Thu Apr 20 11:10:23 2023 -0400
+
+    gameOver works now i think
+
+commit 3081053d1cb20e6bfbb5ff062a2599ef213940a6
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Apr 19 23:13:29 2023 -0400
+
+    more testing and removing things i found we dont use
+
+commit feeb754635e218174e34d07a80976dfc51a5e6a7
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Apr 19 22:36:02 2023 -0400
+
+    more testing- player(unit)
+
+commit 3a4979dea45fadc1362199207b1e4d4bfba19e12
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Apr 19 22:07:31 2023 -0400
+
+    edited property class and unit testing for property
+
+commit 3f7e1b57e60cf62a61ac8af5ad665d3081d6d0d9
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Apr 19 21:45:58 2023 -0400
+
+    got rid of things we dont use
+
+commit 3899fb79b17006940b31e686996b17d63e39d58b
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Apr 19 21:26:20 2023 -0400
+
+    we dont use this stuff
+
+commit ed2877d695d2ffb3e9e9c10277650623b62ced3c
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Apr 19 21:03:25 2023 -0400
+
+    unit testing for dice
+
+commit f9fd28c6c89afd891508d6e920e0411e26239452
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Wed Apr 19 20:12:11 2023 -0400
+
+    junit test setup
+
+commit 184fca2f621ce14b6ea2e08db8d001f31fa5056c
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Wed Apr 19 20:01:35 2023 -0400
+
+    player testing
+
+commit 98ac16766b359d95f7e74c68aed825d6c8da5a8d
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Apr 19 17:16:22 2023 -0400
+
+    changes
+
+commit 406acee2f73adec2cacd3e0f0a3abb1f2b88c3e2
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Apr 19 11:30:49 2023 -0400
+
+    Revert "almost"
+    
+    This reverts commit f2bb4d35c7753c85afed1b1e4b43d91737f73363.
+
+commit f2bb4d35c7753c85afed1b1e4b43d91737f73363
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Apr 19 11:01:14 2023 -0400
+
+    almost
+
+commit 8f0cec8eb696f23bf9696c5af2945b60c43bdf4e
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Wed Apr 19 10:16:31 2023 -0400
+
+    deleting the silly files!
+
+commit 042818aa8ffa3577f91e7aa3f3aae4ee8a43c685
+Merge: b8c3536 53f02a5
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Wed Apr 19 10:00:57 2023 -0400
+
+    Merge branch 'main' of https://github.com/kateottenwess/Animal-Crossing-Monopoly
+
+commit b8c353639f5e05c34221a1e9b45d72539b9304ab
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Wed Apr 19 10:00:52 2023 -0400
+
+    JAVADOCS BABYYYYYYYYYYYYYYYYYYYYYY
+
+commit 53f02a55db8c8184fc15a529bb45fb4918db0d3b
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Tue Apr 18 21:29:06 2023 -0400
+
+    i made more changes
+
+commit 5990f1577e561aab2b6cf7d357505a5397e39ecd
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Tue Apr 18 19:47:32 2023 -0400
+
+    Board javaness
+
+commit 4af3c02235799716bdc9b63a82fd3c3f271d79bf
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Tue Apr 18 19:33:44 2023 -0400
+
+    Player class cleanup
+
+commit 86fe98060aaf08659521a6fee0ef07f9ceb34f88
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Apr 18 18:04:19 2023 -0400
+
+    final checkstyle fixes :100:
+
+commit 1df11f44e9114d98e3e2f74cf00532c862249327
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Apr 18 17:43:20 2023 -0400
+
+    ROLL BACK IF PROJECT BROKEN: checkstyle quick fix
+
+commit f6f9e7fb1f3bc62980649442507fd13835608ecc
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Apr 18 17:39:32 2023 -0400
+
+    checkstyle back in da game
+
+commit 0a99e82ad802f7c4947ae62f2ad77086c8df0c38
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Apr 18 17:29:59 2023 -0400
+
+    another PMD equals fix
+
+commit cc8ef21c1ce3ec84402c849d6e5e8c0bd98db27c
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Apr 18 17:24:54 2023 -0400
+
+    bye bye this thing idk what it did but its gone now
+
+commit 7bbae2551a74d868a4c76a46a6fffcdbda50b6a9
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Apr 18 17:21:13 2023 -0400
+
+    PMD againsies
+
+commit d63811965c80bb6f0bbadfc9fa98b7f94a3c6f51
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Apr 18 11:25:32 2023 -0400
+
+    PMD equals fixes
+
+commit 96f3f142d71540e3fb0cada8fd6663c92843a978
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Mon Apr 17 22:05:20 2023 -0400
+
+    props button we up
+
+commit 5bd95deec1b55ae423f56200da76b68f4c532846
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Mon Apr 17 17:19:47 2023 -0400
+
+    trying diff way....
+
+commit 943f12bd4f420153d56faf51e79050315c9f5bf8
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Mon Apr 17 17:02:11 2023 -0400
+
+    work plz?
+
+commit da72a434f91f989eebe86acc50d5ac5b981b7188
+Merge: 8b2e294 ec12b77
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Mon Apr 17 16:58:32 2023 -0400
+
+    im as dumb as a rock
+
+commit 8b2e2949896b8adab7f508df9f2e96a9b6c48582
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Mon Apr 17 16:55:02 2023 -0400
+
+    trying to get the frame to repaint
+
+commit ec12b773627e5e6a102fa437c96e4c991390ad66
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Mon Apr 17 14:11:26 2023 -0400
+
+    money works/free docking works/ cards work
+
+commit 1f8f33301b99d4a7318e9a2b65d222e84acf3f13
+Merge: db53d4b 105b724
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Mon Apr 17 13:24:18 2023 -0400
+
+    Merge branch 'main' of https://github.com/kateottenwess/Animal-Crossing-Monopoly
+
+commit db53d4b783cab2f1e0ee871228be7a17ddfb800d
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Mon Apr 17 13:24:16 2023 -0400
+
+    office hours schtuff
+
+commit 105b7240971c40f6bf368a473beba1aaee0b9c7d
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Mon Apr 17 13:22:14 2023 -0400
+
+    more game over stuff
+
+commit 14cbaf9ed599e460995f4cb91126e566eae1d374
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Mon Apr 17 13:00:01 2023 -0400
+
+    game over jframe
+
+commit 6d37b90ee7fc245c05239fe087c8f7f4081bccaa
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Mon Apr 17 12:14:17 2023 -0400
+
+    i added comments i think
+
+commit 82a4225037a2f9974be091141f5142bf2b4b6c23
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Mon Apr 17 11:01:46 2023 -0400
+
+    fixed properties
+
+commit 345b545ac377c83d416e616932490e489e09deeb
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Mon Apr 17 10:48:13 2023 -0400
+
+    got rid of cc and chance
+
+commit bdd67fe1491c5a78218c74b4d47e4ec08fc357b6
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Sun Apr 16 23:15:37 2023 -0400
+
+    fixed funky clicky debug tool again
+
+commit bf9f0832298e573922254efb4f1b18eb15aecf27
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Sun Apr 16 23:14:21 2023 -0400
+
+    made tool to click to see point in output for spacing
+
+commit 5406238064fb2eb3696d4e25bb67b5eacc4729f2
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Sun Apr 16 23:13:07 2023 -0400
+
+    changed property popup window size
+
+commit 9efe215bd947c6e2e23c8ebc55143cd0dce02a14
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Sun Apr 16 23:08:55 2023 -0400
+
+    fixed money subtracting from wrong player, fixed spacing
+
+commit 531971de287b9ff2f1586a39b5c157dfdf3ec646
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Sun Apr 16 21:28:21 2023 -0400
+
+    cards JFrame gone
+
+commit 5692c2d7c388886074a7ac23f4c4b1d9c72d5ba9
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Sun Apr 16 20:40:18 2023 -0400
+
+    card button gone
+
+commit 6f24551db2498288b83855437e856bd0e011c05f
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Sun Apr 16 19:44:10 2023 -0400
+
+    worked on tax, comunity chest and chance
+
+commit de3963fb2941462401676c9a743edb79d56bc9d7
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Sat Apr 15 21:17:52 2023 -0400
+
+    renty poo
+
+commit 3085bc64ab4c369346ef97deb59223b7a055c29b
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Sat Apr 15 21:11:06 2023 -0400
+
+    worked on what happens when landing on non prop spaces
+
+commit 72d1bbd78cba49160f1404b23b743875c02513ce
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Fri Apr 14 12:42:53 2023 -0400
+
+    more on properties
+
+commit a927717624189af3b068945e2848f386ac349945
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Fri Apr 14 09:53:12 2023 -0400
+
+    Revert "moved project to package"
+    
+    This reverts commit 323fa87ece9a90621b9d0d62ef1a74ed3390d991.
+
+commit 3e9ec7d5e7afc27c6c7ef39a932cd9ed9311f65c
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Thu Apr 13 22:33:18 2023 -0400
+
+    PMD Fixes
+
+commit 323fa87ece9a90621b9d0d62ef1a74ed3390d991
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Thu Apr 13 22:20:07 2023 -0400
+
+    moved project to package
+
+commit b9b798f2b59c93bdf655881a1bec52c3173c1dda
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Thu Apr 13 22:17:22 2023 -0400
+
+    fjskafjdksal;fjkdsla;fjkdsla
+
+commit d26dddac25c848ddc0c01d24363e44244dc306fd
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Thu Apr 13 16:14:08 2023 -0400
+
+    property frame OPPPP LETS GO
+
+commit f446d104f171303239c7fae2df2c8787075ee445
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Thu Apr 13 14:50:46 2023 -0400
+
+    more javadocs
+
+commit 16db7285b2918f771903b43dea1e54c827e1d549
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Thu Apr 13 13:18:41 2023 -0400
+
+    got some javadoc comments done, have more to go
+
+commit a4904527ea3afa4e42c5108193ac058094e0785f
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Wed Apr 12 22:35:08 2023 -0400
+
+    property window layout
+
+commit f9e42dad782a300e53613c7c22262ac81b995bf5
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Apr 12 21:21:26 2023 -0400
+
+    fixed passing go
+
+commit c03e71d396913f2c8e602960526955f0102d076b
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Apr 12 21:18:25 2023 -0400
+
+    cleaned
+
+commit 6aaa054c08b110749fc98bd57eaa570b53607193
+Merge: 45a826b 924f1a1
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Apr 12 21:16:40 2023 -0400
+
+    Merge branch 'working-player-moving-'
+
+commit 45a826b1eddfc580c0217123cb24d1af545a0430
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Apr 12 21:06:17 2023 -0400
+
+    move is funcitonal
+
+commit 924f1a11d4cd059eb9d13a8d185dab25219c53d1
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Wed Apr 12 18:14:51 2023 -0400
+
+    money
+
+commit 28ab38abfcba4e3b5851670496b2a7f40bcc063e
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Wed Apr 12 18:11:20 2023 -0400
+
+    wee litle change
+
+commit 72ee47185fa544246ef6a175b45524f9ddf75671
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Wed Apr 12 18:02:08 2023 -0400
+
+    points 2
+
+commit e38259d13f031d70ae040c7f3beeace0a3bb3e1b
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Wed Apr 12 17:58:52 2023 -0400
+
+    new points 1
+
+commit 6d513d2145a406158638fe48565a233adffaf41c
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Wed Apr 12 17:51:37 2023 -0400
+
+    uh
+
+commit 1c0242348cd5eee07acc6bb08fb1a9241240fb9a
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Apr 12 12:55:42 2023 -0400
+
+    im not sure how to close panel if no selected
+
+commit 1045b0ea27a7a191b830ec0f9d4f8dce5b0921a1
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Tue Apr 11 17:20:45 2023 -0400
+
+    i suppose i did things
+
+commit 35892be2c4bd706695545e9cd589e73050c95d19
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Tue Apr 11 14:51:29 2023 -0400
+
+    new board
+
+commit 47f10ed2554aeff206a8861a0987f5cd3380b894
+Merge: 9dd3432 df9bacb
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Tue Apr 11 14:42:27 2023 -0400
+
+    Merge branch 'main' of https://github.com/kateottenwess/Animal-Crossing-Monopoly
+
+commit 9dd3432d88f3b0338254b14833e6ced74362128b
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Tue Apr 11 14:42:07 2023 -0400
+
+    update points
+
+commit df9bacb454879a2d5cce2c181b1b853dfd86a691
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Apr 11 13:15:09 2023 -0400
+
+    fixed getproperty issue
+
+commit 220ce38d3d1afac57af794234a4e50556d1c59d2
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Mon Apr 10 22:16:21 2023 -0400
+
+    ive been working on this for 8 hours straight im about to start sobbing
+
+commit dbae8fdcfc188f550ccc836e07480ce1e435b87f
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Mon Apr 10 18:48:34 2023 -0400
+
+    add player 2 to screen
+
+commit 74d7a82c3b34cd37e70c4c58c5f5237a402a5fd1
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Mon Apr 10 12:26:48 2023 -0400
+
+    office hours stuff
+
+commit de27ea9e18548ea44b98d981d698f856cdb5d424
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Sat Apr 8 19:12:44 2023 -0400
+
+    Almost done with buying properties windows
+
+commit f1d5b6e8cad3ea492661fcc5e9791b4776c5c0c0
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Thu Apr 6 20:06:35 2023 -0400
+
+    dice numbers in the right place <3
+
+commit 91433a2dd3556e03c4d8c875aeaa01814f7892b4
+Merge: 468a070 39027fd
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Thu Apr 6 20:02:15 2023 -0400
+
+    Merge branch 'main' of https://github.com/kateottenwess/Animal-Crossing-Monopoly
+
+commit 468a070d124856ed8b4af5decb5bde29328cd2cb
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Thu Apr 6 20:02:02 2023 -0400
+
+    delete dice pics bye bye
+
+commit 39027fdaebf5bbc457ddd12f7d339097aaf7edaa
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Thu Apr 6 20:01:09 2023 -0400
+
+    dice numbers in
+
+commit d98616621d5bf0c141f38ac15421133086d58af6
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Thu Apr 6 19:46:26 2023 -0400
+
+    move moves around the board now
+
+commit 1815c42c325fb946799f7be8db2a1eb049b3fce7
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Thu Apr 6 19:26:25 2023 -0400
+
+    got rid of clicking props
+
+commit b49df12ec034fbfc331431285d7419ac8700e10d
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Thu Apr 6 19:22:16 2023 -0400
+
+    cleared previous position
+
+commit afac8e77faf371e52ead6bb93c2839504b7e29fa
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Thu Apr 6 13:43:49 2023 -0400
+
+    checkstyle. my worst enemy.
+
+commit 0ff4008dbdc00a4d0b93bcee6df9399ebff460e1
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Tue Apr 4 20:07:32 2023 -0400
+
+    um i did stuff mianly in gamestate
+
+commit a9f38143629ea2649b5c33fb211413f499e6a400
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Tue Apr 4 17:00:10 2023 -0400
+
+    buy property and mortgage stuffs
+
+commit 0b46148799cf0682aab93b7def0c289d8ef9fd9b
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Tue Mar 28 10:47:06 2023 -0400
+
+    new jpeg
+
+commit 91ccef4593c73d82a879ada313f7739e557839ac
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Mon Mar 27 21:33:49 2023 -0400
+
+    community chest & chance rough draft
+
+commit 06eaee1ef48074c74c078878bf3ecb78e4969aa0
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Mon Mar 27 20:20:06 2023 -0400
+
+    got the icon to move- not well
+
+commit 68961fcc25d8fa77b0626a343a2339526758f552
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Mon Mar 27 10:23:26 2023 -0400
+
+    framey wamey
+
+commit 8c35098ffff19a57b887244b18b3eaf339118281
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Mon Mar 27 10:08:55 2023 -0400
+
+    gui stuff for pre-meeting
+
+commit d664ce8451636294e6766982c1e7b72754604dfa
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Thu Mar 23 10:57:20 2023 -0400
+
+    dice schtuff
+
+commit f8b740578407ee9c6e3250b992c4a71968ee4a0f
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Wed Mar 22 21:54:42 2023 -0400
+
+    changed some images n stuff
+
+commit 8acde6506c66d9234beb70a3a34a44e7b225c092
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Wed Mar 22 09:49:02 2023 -0400
+
+    javafx stuff testing
+
+commit 490e2dccbebe60d2ae1e5e2c1e1c58b71645ea63
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Wed Mar 22 09:45:10 2023 -0400
+
+    Frames for clicking on spaces
+
+commit 9ab6af5ee33654a10d10e44bd5a92e048749fff8
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Mar 21 20:13:26 2023 -0400
+
+    working version still
+
+commit 3ccb347f49b0dbf76bf019987d3cfad49227233b
+Merge: 0dbee5d 9f0df0f
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Mar 21 20:00:59 2023 -0400
+
+    Merge branch 'main' of https://github.com/kateottenwess/Animal-Crossing-Monopoly
+
+commit 0dbee5da361894f4a362f21fc1c84524f0e50992
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Mar 21 20:00:42 2023 -0400
+
+    Revert "Update GUI.java"
+    
+    This reverts commit 588e967e4b2ac97336cf67ca6e43f209d70cba82.
+
+commit 9f0df0fa283ec64bb8e98c45829608c46e430601
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Tue Mar 21 19:51:48 2023 -0400
+
+    fixed diceness
+
+commit 6f9f4e21e53ad5f72c9dd7c3bbac363bf9525df7
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Tue Mar 21 19:47:30 2023 -0400
+
+    Update GUI.java
+
+commit fdf17a1495b86571050076ef3c3ce5c4d9ec53d0
+Merge: e0b260f 588e967
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Mar 21 19:32:41 2023 -0400
+
+    Merge branch 'main' of https://github.com/kateottenwess/Animal-Crossing-Monopoly
+
+commit e0b260f16cd2aff9384609712b82d40e2d2a61a7
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Mar 21 19:32:38 2023 -0400
+
+    lets try dis
+
+commit 588e967e4b2ac97336cf67ca6e43f209d70cba82
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Tue Mar 21 19:21:00 2023 -0400
+
+    Update GUI.java
+
+commit 8cffcbf4a9bf7e41206d096796c2a04e0b2684d6
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Mar 21 19:04:17 2023 -0400
+
+    update gui to make random player idk
+
+commit 37d4acfb0d4fbc426721ce44db95fe4c569feadb
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Tue Mar 21 17:44:15 2023 -0400
+
+    tried to initialize player
+
+commit c7fc044e47fae3e265a4094adf3e4a7fc8741c26
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Tue Mar 21 16:38:38 2023 -0400
+
+    Update GUI.java
+
+commit 0373bd6c15f274fbd3a67c569232b8360761b2db
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Tue Mar 21 15:34:33 2023 -0400
+
+    got the pic to pop up
+
+commit 0795716848bf9c4f67b4dfdd66f930ed425dd13a
+Merge: 9eefb8a 08bb552
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Mar 21 12:56:39 2023 -0400
+
+    Merge branch 'main' of https://github.com/kateottenwess/Animal-Crossing-Monopoly
+
+commit 9eefb8adbe6b1c604a20425b846d10fb700ddd5d
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Mar 21 12:55:58 2023 -0400
+
+    Update GUI.java
+
+commit 08bb552ee0fb08b13bce773645cd0e4682e19616
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Tue Mar 21 11:42:29 2023 -0400
+
+    wee little change
+
+commit 274a181e955e1ef4e1c91e2b679df914e8de223d
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Mar 21 10:22:25 2023 -0400
+
+    changed some shit
+
+commit 95a40335db037f6a864807fabc70bf53fb8a178a
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Mar 21 08:44:03 2023 -0400
+
+    you can roll dice from gamestate i think now
+
+commit 21297fd2b8260bb3f3726efa4fb49794622cd185
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Mar 21 08:34:24 2023 -0400
+
+    run game from gamestate now
+
+commit 8f5f2d52fc840329c00ea9ef6a9fbe53ba71e279
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Mar 21 08:23:39 2023 -0400
+
+    what is going on with these exceptions dawg
+
+commit 904035a0f0b22ea53e779999bcddd79646da9acf
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Mon Mar 20 17:57:30 2023 -0400
+
+    idk whats going on sososososos
+
+commit b5e701e2f452e13603a2dd67b334aacd4cf59721
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Mon Mar 20 17:41:56 2023 -0400
+
+    changed stuff around
+
+commit 7d70f86f66c383662e6887a7a67acaf776b095f0
+Merge: 74501e1 e336aae
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Mon Mar 20 12:16:43 2023 -0400
+
+    Merge branch 'main' of https://github.com/kateottenwess/Animal-Crossing-Monopoly
+
+commit 74501e15576748e45678490af9b76f2fbf540ff1
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Mon Mar 20 12:16:32 2023 -0400
+
+    Update GameState.java
+
+commit e336aae8a386be2b46889bdcb114ec32ed47ae07
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Mon Mar 20 12:15:40 2023 -0400
+
+    icon added
+
+commit 8d64676cc49f43728b21ea1f144b5e0cda8183ae
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Mon Mar 20 12:06:38 2023 -0400
+
+    Create GameState.Java
+
+commit caf8967ca7f37fd15b5dbc09436801499bf6043d
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Mon Mar 20 12:00:32 2023 -0400
+
+    changed move to take in 2 ints
+
+commit dab991b1a87a7a647bd50e392cdda35683049b2e
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Mon Mar 20 10:45:30 2023 -0400
+
+    Finished dice window but layout = not great
+
+commit 83d894079fa16eb794d19aaa3a645f4d0954d9d2
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Sun Mar 19 14:16:00 2023 -0400
+
+    just pushing what i got for now
+
+commit bc74929417c37494120da7d520e638ba6b33f010
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Sun Mar 19 13:29:30 2023 -0400
+
+    dice not angry anymore yahoo
+
+commit 2f519dc10bf53deb6fe3129344da93897d239766
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Sun Mar 19 13:27:39 2023 -0400
+
+    Update Player.java
+
+commit 1b3ba8365c92350306cac45e0fb76f600d249468
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Sun Mar 19 13:25:45 2023 -0400
+
+    move again
+
+commit 6f8e46f32361c0227b3cacd7eed2001c3955600d
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Sun Mar 19 13:22:21 2023 -0400
+
+    move hehehehe
+
+commit 0ab1f4756bb462e9715775897a77fec2c5a38b14
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Sun Mar 19 13:13:02 2023 -0400
+
+    added playernum
+
+commit eb6c3b9e2cc26389e73de5d9f1a3dc4fff224cf1
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Sun Mar 19 13:11:32 2023 -0400
+
+    fixedy poo
+
+commit 7300cd52faa7cc56f78dc5039b57f63aee2fed03
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Sun Mar 19 13:03:12 2023 -0400
+
+    move method teehee
+
+commit 19b85b97e593007e0b92e26b91fccdf91384a6a7
+Merge: 45853bf d582918
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Sun Mar 19 12:38:45 2023 -0400
+
+    Merge branch 'main' of https://github.com/kateottenwess/Animal-Crossing-Monopoly
+
+commit 45853bfe1159c55ce07c33d5269bb92aa26522a8
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Sun Mar 19 12:38:42 2023 -0400
+
+    players in board
+
+commit 0e427520e9b84adfca992c5d3a687b909997efb8
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Sun Mar 19 12:38:31 2023 -0400
+
+    board player
+
+commit d58291865dd40d6b66f34ecaf95fe5db0ab3d5ba
+Merge: c36a1cd f0821c8
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Sun Mar 19 12:27:15 2023 -0400
+
+    Merge branch 'main' of https://github.com/kateottenwess/Animal-Crossing-Monopoly
+
+commit c36a1cd8059c0a6c643bbf2b23cb65d1deb390e6
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Sun Mar 19 12:26:31 2023 -0400
+
+    New board image
+
+commit f0821c801b7e0123c0005f9237fa8ecc93207d76
+Merge: 1013ef8 08b3b61
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Sun Mar 19 12:21:33 2023 -0400
+
+    Merge branch 'main' of https://github.com/kateottenwess/Animal-Crossing-Monopoly
+
+commit 1013ef8a3d71df0946666961645402bf650bc5a1
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Sun Mar 19 12:21:23 2023 -0400
+
+    i fixed some funny lookin stuff
+
+commit 08b3b6188f8b65eaf7dae7dcbf48583d1e89e74e
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Sun Mar 19 12:19:35 2023 -0400
+
+    made the owned properties arry
+
+commit 7fb1756439f1d50cf7fd188affe3bf959779e22d
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Sun Mar 19 12:18:57 2023 -0400
+
+    i changed the owned players
+
+commit 9fff742746f1893e33cc4001b82d8ba156b94e79
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Fri Mar 17 15:52:41 2023 -0400
+
+    added checkstyle sun config
+
+commit d4311708b5eacae21fd533840a76d5ee17df8286
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 13:18:17 2023 -0400
+
+    added webpage file for javadoc
+
+commit f5b79722df0950b7657b6d12d7ac526722473cff
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 13:13:34 2023 -0400
+
+    i had 2 javadocs
+
+commit cdb0cffd5c2d5a58c0a71d2b626ce5b04df6de16
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 13:13:16 2023 -0400
+
+    i had 2 javadocs oops
+
+commit 312f8c2e2ddbc3d34ce72dbf77803bfa8539c3cd
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 13:09:30 2023 -0400
+
+    Update workspace.xml
+
+commit 8de625d76e32ea2207ab5e67300e374f1cd13dfa
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 13:09:15 2023 -0400
+
+    ok i think this works?
+
+commit 33adaeddb599ff44f0b6c860cc8438e741231111
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 12:56:45 2023 -0400
+
+    Revert "Revert "javadoc""
+    
+    This reverts commit 3a549535f9e71cd38848873b8bd713753aaa43ba.
+
+commit 392e0164c7ff557424ccf939e7f1209221d3c3ae
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 12:49:14 2023 -0400
+
+    i need to do this differently
+
+commit 3a549535f9e71cd38848873b8bd713753aaa43ba
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 12:48:56 2023 -0400
+
+    Revert "javadoc"
+    
+    This reverts commit 2f0d8b8827f7b9738ba91103ebf87d42d75b9e94.
+
+commit 2f0d8b8827f7b9738ba91103ebf87d42d75b9e94
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 12:48:22 2023 -0400
+
+    javadoc
+
+commit f2758a8b6137afe711f3e5f11c5967942b2fa243
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Fri Mar 17 10:17:17 2023 -0400
+
+    javadocs for jail
+
+commit b22c18dafa9f390d3d00ec7e3ff1df6f2c5dca6a
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 10:11:38 2023 -0400
+
+    finished javadocs and create doc folder
+
+commit bdf62c882b5f54d74a1d18065d273aafe32abe35
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 09:51:41 2023 -0400
+
+    player javadocs
+
+commit 34cc66c3729b4ec9348e66ee37c7fd01e92eebf1
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 09:44:13 2023 -0400
+
+    jail javadoc
+
+commit bb3df501ae3155b960859de223d4fcc5fecf1061
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 09:29:33 2023 -0400
+
+    finished dice javadocs
+
+commit 36f232524b40732e0afad2fb81f098a49ce847ac
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 09:22:10 2023 -0400
+
+    Revert "more javadocs"
+    
+    This reverts commit 26358b2746b0ad6eff3a0470ace49f2961efc1f4.
+
+commit 26358b2746b0ad6eff3a0470ace49f2961efc1f4
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 09:20:33 2023 -0400
+
+    more javadocs
+
+commit 754ff6557bdba1e039b1fd99882754ac23eb39d5
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 09:19:29 2023 -0400
+
+    finished BoardSpaceType javadoc
+
+commit 06a7294ecf5e57efcf3a4f28c13671b5adca5761
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 09:16:21 2023 -0400
+
+    finished board javadocs
+
+commit db9ddeaff52532bd123c8d47794a19a668ad155b
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 09:14:35 2023 -0400
+
+    Finished Javadocs on board
+
+commit 651e4d706c0e1a9493ed76a574f4f1e9479a9ada
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 09:07:04 2023 -0400
+
+    Update gitlog.txt
+
+commit 2b1e63d715ad3c664c625216f6aedef10b976094
+Merge: 10fd96a 81ed634
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Mar 17 09:06:47 2023 -0400
+
+    Merge branch 'main' of https://github.com/kateottenwess/Animal-Crossing-Monopoly
+
+commit 81ed634c63f566a2ef39f289ed19bf204104e232
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Thu Mar 16 21:36:06 2023 -0400
+
+    locations on spaces for game piece
+
+commit ef7611332a838b2c815ee0ced4a5eeae379725d0
+Merge: 6d67615 213fa53
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Thu Mar 16 20:11:05 2023 -0400
+
+    Merge branch 'main' of https://github.com/kateottenwess/Animal-Crossing-Monopoly
+
+commit 6d676153859526995dd6670971272d7cebcc3fe2
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Thu Mar 16 20:08:35 2023 -0400
+
+    beginning of cc class
+
+commit 10fd96a0ea56353f64860d0d34bdf5cacae4fbd6
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Thu Mar 16 20:03:42 2023 -0400
+
+    Create gitlog.txt
+    
+    this is our git log
+
+commit 213fa53ce2da99fd8140a2b40762562d9955d6b7
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Thu Mar 16 19:56:06 2023 -0400
+
+    oops i accidentally deleted wat abby added
+
+commit a33d325da74b69007386c07ae997faceba0abf72
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Thu Mar 16 19:53:58 2023 -0400
+
+    javadoc comments slay not done
+
+commit a58bc72190037a4b4fba62350bf4b2a1b002d9ba
+Author: abbyysvec <asveccollege@gmail.com>
+Date:   Wed Mar 15 11:23:31 2023 -0400
+
+    added area to click for bar on top
+
+commit 412e865eaf414e2f488b280b81d1d2cd6cd2bc96
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Wed Mar 15 10:54:54 2023 -0400
+
+    moving jpg to resources
+
+commit 6430134da38562b64bc03ad035956da6698e0ad6
+Author: abbyysvec <124712353+abbyysvec@users.noreply.github.com>
+Date:   Wed Mar 15 10:49:52 2023 -0400
+
+    Add files via upload
+
+commit 7af7ed64b9224e4881691493ed06f6d4087abca5
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Mar 15 10:47:30 2023 -0400
+
+    i am a fool
+
+commit a3c822e9f3c44cdbafe8f24d826e0058469c87a9
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Mar 15 10:47:00 2023 -0400
+
+    dice boi
+
+commit 3b556223a491db4893ca7d12be6181bba14bad23
+Merge: 034088f 0fbd5ab
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Wed Mar 15 10:44:20 2023 -0400
+
+    Merge branch 'main' of https://github.com/kateottenwess/Animal-Crossing-Monopoly
+
+commit 034088f7b28f575d7daa42b0272701287076fe49
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Wed Mar 15 10:44:05 2023 -0400
+
+    jail and dice stuff
+
+commit 0fbd5abc6d741e3aa945255de73919cbf3cf7339
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Mar 15 10:43:38 2023 -0400
+
+    i dont know if i changed anythuing
+
+commit 78bc79e2ea4140466e512e14bb7f4228828ba3e9
+Merge: 33a8c0f 8e4dacf
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Mar 15 10:27:27 2023 -0400
+
+    Merge branch 'main' of https://github.com/kateottenwess/Animal-Crossing-Monopoly
+
+commit 33a8c0f5e4c713860804bff67930e53da81edd9e
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Mar 15 10:27:22 2023 -0400
+
+    updteed property
+
+commit 8e4dacfc5c43f9016007a1eb4a4513888c021c22
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Wed Mar 15 10:22:45 2023 -0400
+
+    Create Dice.java
+    
+    dice class slay
+
+commit afe14cbbe922c8a75dff0f155299bd42704b1a11
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Tue Mar 14 20:16:08 2023 -0400
+
+    it says i need to commit again
+
+commit 64a2e698634e34575afaafb6b0e021fa8a342db6
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Tue Mar 14 20:15:36 2023 -0400
+
+    i believe i filled the boardy poo
+
+commit 3adbe0e3bf281c5d41119c26c2c825f2847846c2
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Mar 14 09:00:41 2023 -0400
+
+    Update Square.java
+    
+    i think this is good for what we have now idfk
+
+commit ea0c324ab7ead31ede44758dfff605cee3b9b76e
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Mar 14 08:52:34 2023 -0400
+
+    Added jail to space types, updated square to work with properties and property types
+    
+    doesn't work yet with types of spaces for telling what type of Square it is for getters and setters
+
+commit 559d7b6900759f7799d1e82692ffbc5103a40636
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Mar 14 08:40:57 2023 -0400
+
+    Create Square.java for functionality with board/player/property
+    
+    only has functionality with player class rn
+
+commit 5b437a06176d793c8e5aa0f9070eec30e9c512a2
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Mar 1 18:30:23 2023 -0500
+
+    i did more with property
+
+commit bb72d6996875421e0945e75077066910709135a0
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Mar 1 18:14:37 2023 -0500
+
+    made the board
+
+commit b6d064338be9058dc41f643508ee4c2fbba45bfd
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Mar 1 12:54:18 2023 -0500
+
+    um i made sum changes
+
+commit 44e9c25d1bfd7877935d3eee5faa9bfae2ce799d
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Mar 1 11:06:10 2023 -0500
+
+    Update Property.java
+    
+    fixed spaces
+
+commit 896337b9d32d8bbf7cba596e6023f67075bba50e
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Mar 1 11:01:46 2023 -0500
+
+    Update Property.java
+    
+    got all house properties done- i think spaces are off
+
+commit 82ce1cf271c478a7c74d1e2e17d54aafcbfbfb04
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Wed Mar 1 10:01:24 2023 -0500
+
+    testing the gh thingy
+
+commit 3b2f840efa0d99c6f89aecbdd8f182904c72ad79
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Mar 1 09:56:54 2023 -0500
+
+    hm
+
+commit 5fa2c42d1d58a90f081096f367dcde042fceb4a6
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Wed Mar 1 09:56:09 2023 -0500
+
+    actually no linked list teehee
+
+commit 19d3c5ee94b4932cb72465c32d4163ff3a4cda64
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Tue Feb 28 22:52:02 2023 -0500
+
+    made linked list for properties-will it be needed?
+
+commit 242c593b3f8879d73f8c833739df4516a14bc535
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Tue Feb 28 20:43:21 2023 -0500
+
+    Focus on setting up Properties
+
+commit b6bbfe48023b786eb1c97fe9fe269925c2ad9a9d
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Feb 28 09:29:40 2023 -0500
+
+    README
+
+commit 7c24cefb850c79e6f58c2c1e1429932806226e11
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Feb 28 09:27:47 2023 -0500
+
+    Create Jail.java
+    
+    jail class for use in board and square
+
+commit 72447b94cd3be257b32fa7d98c677e2186f28db2
+Author: Kira <breitenk@mail.gvsu.edu>
+Date:   Tue Feb 28 09:15:47 2023 -0500
+
+    changing shit to be able to push from IDEs for java
+
+commit 7558bad913a12f36dbcbbf61323dd4d9b929b151
+Author: kirab24 <112416483+kirab24@users.noreply.github.com>
+Date:   Tue Feb 28 08:33:36 2023 -0500
+
+    just 2 classes that we're gonna need w/ some ideas
+
+commit 9f7a76dc78a14c0a1251be067d4b4b41cddad1c3
+Author: kirab24 <112416483+kirab24@users.noreply.github.com>
+Date:   Sun Feb 26 14:11:01 2023 -0500
+
+    Bare bones player class
+    
+    Bare bones player class
+
+commit ee8715fe86489e987cc15dd7c60c914a47b4ba9e
+Author: Kate Ottenwess <90808295+kateottenwess@users.noreply.github.com>
+Date:   Fri Feb 3 10:48:01 2023 -0500
+
+    Initial commit
