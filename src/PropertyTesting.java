@@ -6,7 +6,7 @@ import org.junit.Test;
 public class PropertyTesting {
 
     Property p = new Property("Test Property", 16, 200, 50);
-    Player player = new Player(1, "Kate");
+    Player player = new Player("Kate");
 
     
     /**************************************************************
@@ -50,7 +50,7 @@ public class PropertyTesting {
 
     @Test
     public void testSetOwned() {
-        p.setOwned(true, player);
+        p.setOwned(true);
 
         assertTrue(p.isOwned() == true);
     }
@@ -72,7 +72,7 @@ public class PropertyTesting {
 
     @Test
     public void testCanBuyFalseOwned() {
-        p.setOwned(true, player);
+        p.setOwned(true);
         
         assertFalse(p.canBuy(300, p));
     }

@@ -21,9 +21,6 @@ public class Property {
     /* Boolean representing if the property is owned or not */
     private boolean owned;
 
-    /* Player who owns specific property */
-    private Player playerOwning;
-
     /* Percent multiplied by mortgage price- this is price to unmortgage */
     final double UNMORTAGE_PERC = 1.1;
 
@@ -68,7 +65,6 @@ public class Property {
         this.purchaseCost = purchase;
         this.rentCost = rent;
         this.owned = false;
-        this.playerOwning = null;
     }
 
 
@@ -121,13 +117,11 @@ public class Property {
      * Setter to set if property is owned or not.
      * @param owned boolean
      ******************************************************************/
-    public void setOwned(boolean owned, Player player) {
+    public void setOwned(boolean owned) {
 
         //set owned to owned boolean
         this.owned = owned;
 
-        //set who owns the property
-        this.playerOwning = player;
     }
 
 

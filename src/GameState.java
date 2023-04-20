@@ -329,8 +329,8 @@ public class GameState implements MouseListener, ActionListener {
 
         // set up players
         players = new ArrayList<>();
-        player1 = new Player(1, "player1");
-        player2 = new Player(2, "player2");
+        player1 = new Player("player1");
+        player2 = new Player("player2");
 
         player1.setCoordinates(passGo1);
         player2.setCoordinates(passGo2);
@@ -440,13 +440,6 @@ public class GameState implements MouseListener, ActionListener {
 
     }
 
-    /******************************************************************
-     * Getter to return the current player.
-     * @return Player current player
-     ******************************************************************/
-    public Player getCurrentPlayer() {
-        return currentPlayer;
-    }
 
     /******************************************************************
      * Getter to return player 1.
@@ -817,7 +810,7 @@ public class GameState implements MouseListener, ActionListener {
             yes.addActionListener(new ActionListener() {
                 public void actionPerformed(final ActionEvent e) {
                     currentPlayer.setBells(currentPlayer.getBells() - prop.getPurchaseCost());
-                    prop.setOwned(true, currentPlayer);
+                    prop.setOwned(true);
                     if (currentPlayer.getName().equals("player1")) {
                         P1props.add(prop.getPropertyName());
                     } else {

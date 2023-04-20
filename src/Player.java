@@ -14,9 +14,6 @@ public class Player {
     /*Coordinates of player on board*/
     private Point coordinates;
 
-    /*Players number*/
-    private int playerNum;
-
     /*integer value of players board position*/
     private int boardPos;
 
@@ -28,8 +25,7 @@ public class Player {
      * Constructor that initializes the players name, money amount, and
      * board position.
      ******************************************************************/
-    public Player(int playerNum, String name) {
-        this.playerNum = playerNum;
+    public Player(String name) {
         this.name = name;
         this.bells = 1500;
         this.boardPos = 0;
