@@ -450,37 +450,48 @@ public class GameState implements MouseListener, ActionListener {
         int randInt = (int) (Math.random() * 9);
 
         if (ccCards[randInt].equals(ccCards[0])) {
+            System.out.println("“Test 9: Community Chest working”");
             currentPlayer.setBells(currentPlayer.getBells() + 50);
+            
         }
         if (ccCards[randInt].equals(ccCards[1])) {
+            System.out.println("“Test 9: Community Chest working”");
             currentPlayer.setBells(currentPlayer.getBells() + 100);
+            
         }
         if (ccCards[randInt].equals(ccCards[2])) {
+            System.out.println("“Test 9: Community Chest working”");
             currentPlayer.setBoardPos(10);
             currentPlayer.setCoordinates(jailSpace);
             samePlayer = false;
         }
         if (ccCards[randInt].equals(ccCards[3])) {
-            
+            System.out.println("“Test 9: Community Chest working”");
         }
         if (ccCards[randInt].equals(ccCards[4])) {
+            System.out.println("“Test 9: Community Chest working”");
             currentPlayer.setBells(currentPlayer.getBells() + 200);
             currentPlayer.setBoardPos(10);
             currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
         }
         if (ccCards[randInt].equals(ccCards[5])) {
+            System.out.println("“Test 9: Community Chest working”");
             currentPlayer.setBells(currentPlayer.getBells() + 25);
         }
         if (ccCards[randInt].equals(ccCards[6])) {
+            System.out.println("“Test 9: Community Chest working”");
             currentPlayer.setBells(currentPlayer.getBells() + 20);
         }
         if (ccCards[randInt].equals(ccCards[7])) {
+            System.out.println("“Test 9: Community Chest working”");
             currentPlayer.setBells(currentPlayer.getBells() + 100);
         }
         if (ccCards[randInt].equals(ccCards[8])) {
+            System.out.println("“Test 9: Community Chest working”");
             currentPlayer.setBells(currentPlayer.getBells() + 150);
         }
         if (ccCards[randInt].equals(ccCards[1])) {
+            System.out.println("“Test 9: Community Chest working”");
             currentPlayer.setBells(currentPlayer.getBells() + 200);
         }
 
@@ -496,31 +507,40 @@ public class GameState implements MouseListener, ActionListener {
         int randInt = (int) (Math.random() * 9);
 
         if (chanceCards[randInt].equals(chanceCards[0])) {
+            System.out.println("Test 8: Chance Spaces working");
             currentPlayer.setBoardPos(currentPlayer.getBoardPos() - 3);
             currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
         } else if (chanceCards[randInt].equals(chanceCards[1])) {
+            System.out.println("Test 8: Chance Spaces working");
             currentPlayer.setBoardPos(0);
             currentPlayer.setCoordinates(passGo1);
             currentPlayer.setBells(currentPlayer.getBells() + 200);
         } else if (chanceCards[randInt].equals(chanceCards[2])) {
+            System.out.println("Test 8: Chance Spaces working");
             currentPlayer.setBells(currentPlayer.getBells() + 50);
         } else if (chanceCards[randInt].equals(chanceCards[3])) {
+            System.out.println("Test 8: Chance Spaces working");
             currentPlayer.setBoardPos(34);
             currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
         } else if (chanceCards[randInt].equals(chanceCards[4])) {
-            
+            System.out.println("Test 8: Chance Spaces working");
         } else if (chanceCards[randInt].equals(chanceCards[5])) {
+            System.out.println("Test 8: Chance Spaces working");
             currentPlayer.setBoardPos(39);
             currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
         } else if (chanceCards[randInt].equals(chanceCards[6])) {
+            System.out.println("Test 8: Chance Spaces working");
             currentPlayer.setBells(currentPlayer.getBells() - 15);
         } else if (chanceCards[randInt].equals(chanceCards[7])) {
+            System.out.println("Test 8: Chance Spaces working");
             currentPlayer.setBoardPos(10);
             currentPlayer.setCoordinates(jailSpace);
             samePlayer = false;
         } else if (chanceCards[randInt].equals(chanceCards[8])) {
+            System.out.println("Test 8: Chance Spaces working");
             currentPlayer.setBoardPos(11);
         } else if (chanceCards[randInt].equals(chanceCards[9])) {
+            System.out.println("Test 8: Chance Spaces working");
             currentPlayer.setBells(currentPlayer.getBells() + 150);
         }
 
@@ -561,11 +581,10 @@ public class GameState implements MouseListener, ActionListener {
 
         // get coordinates of mouse event
         Point code = e.getPoint();
-        System.out.println("x: " + (int) code.getX() + " y: " + (int) code.getY());
 
         // ROLL DICE BUTTON
         if (code.getY() >= 240 && code.getY() <= 278 && code.getX() >= 692 && code.getX() <= 830) {
-
+            
             changePlayer();
 
             // initialize return frame to null
@@ -575,7 +594,7 @@ public class GameState implements MouseListener, ActionListener {
             dice1 = dice.rollDice();
             dice2 = dice.rollDice();
             int totalMove = dice1 + dice2;
-
+            System.out.println("Test 1: Roll Dice Verified");
             // set to boolean- true if player rolled double, stay same player
             samePlayer = dice.doubleRoll(dice1, dice2);
 
@@ -584,23 +603,27 @@ public class GameState implements MouseListener, ActionListener {
                 currentPlayer.setBoardPos(10);
                 currentPlayer.setCoordinates(jailSpace);
                 samePlayer = false;
+                System.out.println("Test 2: Player Move Verified");
                 // if 3 doubles are not rolled in a row
             } else {
 
                 // if passing go, get new position
                 if (totalMove + currentPlayer.getBoardPos() > 39) {
+                    System.out.println("Test 2: Player Move Verified");
 
                     // pass go add 200 bells
                     currentPlayer.setBells(currentPlayer.getBells() + 200);
+                    System.out.println("Test 7: Pass Go Increases Bells");
 
                     // set board position of player
                     currentPlayer.setBoardPos(totalMove - (39 - currentPlayer.getBoardPos()) - 1);
+                    System.out.println("Test 2: Player Move Verified");
 
                     currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
                     // if not passing go, get new position
                 } else {
                     currentPlayer.setBoardPos(currentPlayer.getBoardPos() + totalMove);
-
+                    System.out.println("Test 2: Player Move Verified");
                     currentPlayer.setCoordinates(spacesArray[currentPlayer.getBoardPos()]);
                 }
 
@@ -633,7 +656,7 @@ public class GameState implements MouseListener, ActionListener {
 
                             tax.setBounds(200, 30, 200, 10);
                             incomeTax.add(tax);
-
+                            System.out.println("Test 3: Income Tax Verified");
                             if (currentPlayer.getBells() < 200) {
                                 gameOver = true;
                             } else {
@@ -698,6 +721,7 @@ public class GameState implements MouseListener, ActionListener {
                             free.add(card);
 
                             currentPlayer.setBells(currentPlayer.getBells() + freeParking);
+                            System.out.println("Test 10: Free Docking working");
 
                             returnFrame = free;
                         } else if (currentPlayer.getBoardPos() == 30) {
@@ -794,13 +818,14 @@ public class GameState implements MouseListener, ActionListener {
             yes.addActionListener(new ActionListener() {
                 public void actionPerformed(final ActionEvent e) {
                     currentPlayer.setBells(currentPlayer.getBells() - prop.getPurchaseCost());
+                    System.out.println("Test 4: Property Purchase Verified");
                     prop.setOwned(true);
                     if (currentPlayer.getName().equals("player1")) {
                         P1props.add(prop.getPropertyName());
                     } else {
                         P2props.add(prop.getPropertyName());
                     }
-                    System.out.println("CurrentPlayer: " + currentPlayer.getName());
+                    
 
                     propDisplay.dispose();
                     returnFrame = propDisplay;
@@ -811,6 +836,7 @@ public class GameState implements MouseListener, ActionListener {
             no.setBounds(80, 400, 95, 30);
             no.addActionListener(new ActionListener() {
                 public void actionPerformed(final ActionEvent e) {
+                    System.out.println("Test 5: Property Purchase Declined Verified");
                     propDisplay.dispose();
                 }
             });
@@ -832,6 +858,7 @@ public class GameState implements MouseListener, ActionListener {
                 isOwnedFrame.setSize(200, 100);
                 JLabel owned = new JLabel("Sorry, this property is already in ownership- you owe rent!");
                 JLabel rentOwe = new JLabel("You owe: " + prop.getRentCost() + " bells.");
+                System.out.println("Test 6: Rent Deduction Verified");
                 owned.setBounds(200, 10, 400, 20);
                 rentOwe.setBounds(200, 30, 200, 10);
                 isOwnedFrame.add(owned);
