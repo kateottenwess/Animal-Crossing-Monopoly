@@ -4,7 +4,7 @@
  * @author Kate Ottenwess, Kira B, Abby Svec
  * @version Winter 2023
  **********************************************************************/
-public class Property extends BoardSpaceType {
+public class Property {
 
     /* Name of the property */
     private String propertyName;

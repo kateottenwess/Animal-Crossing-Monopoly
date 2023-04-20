@@ -14,12 +14,6 @@ public class DiceTesting {
      *  
     ****************************************************************/ 
 
-    /* Test to make sure Dice in game are dice objects */
-    // @Test
-    // public void testDiceinGameS() {
-        
-    // }
-
 
     /**************************************************************
      * 
