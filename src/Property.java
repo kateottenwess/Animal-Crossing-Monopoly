@@ -21,26 +21,11 @@ public class Property {
     /* Boolean representing if the property is owned or not */
     private boolean owned;
 
-    /* Percent multiplied by mortgage price- this is price to unmortgage */
-    final double UNMORTAGE_PERC = 1.1;
-
     /* Initial cost of railroad purchase */
     final double RR_INITIAL_COST = 25;
 
-    /* Rate of increase of railroad rent */
-    final double RR_INCREASE = 2;
-
-    /* Rate purchase cost is multiplied by to get mortgage cost */
-    final double MORTGAGE_PERC_OF_PURCHASE = 0.5;
-
     /* Rate * value of dice roll is the amount of rent if one is owned */
     final int UTILITIES_ONE_OWNED = 4;
-
-    /* Rate * value of dice roll is the amount of rent if both are owned by the same player */
-    final int UTILITIES_TWO_OWNED = 10;
-
-    /* Max amount of homes allowed on property */
-    final int MAX_AMOUNT_HOUSES = 4;
 
 
     /*******************************************************************
@@ -52,12 +37,6 @@ public class Property {
      * @param space the space on the board
      * @param purchase purchase price of the property
      * @param rent rent price of the property
-     * @param mortgage price received from mortgaging the property
-     * @param rentIncreaseRate the rate rent increases when homes are 
-     *                         added to the property
-     * @param oneHouse price of one house to place on the property
-     * @param owned boolean representing if owned or not
-     * @param numHouses number of houses on property
      ******************************************************************/
     public Property(String name, int space, int purchase, int rent) {
         this.propertyName = name;

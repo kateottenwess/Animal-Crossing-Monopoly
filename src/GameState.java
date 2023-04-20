@@ -29,12 +29,6 @@ public class GameState implements MouseListener, ActionListener {
     /* JFrame that is returned if roll results in a pop up window */
     private JFrame returnFrame;
 
-    /* int value of x coordinate */
-    private int x;
-
-    /* int value of y coordinate */
-    private int y;
-
     /* Player object to hold the current player of turn */
     private static Player currentPlayer;
 
@@ -325,6 +319,11 @@ public class GameState implements MouseListener, ActionListener {
 
         // create dice
         dice = new Dice();
+
+        //set dice values to -1 for testing purposes
+        dice1 = -1;
+        dice2 = -1;
+
         gui = new GUI();
 
         // set up players
@@ -400,21 +399,6 @@ public class GameState implements MouseListener, ActionListener {
         return dice2;
     }
 
-    /******************************************************************
-     * Getter to return x coordinate of point.
-     * @return int value of x-coordinate
-     ******************************************************************/
-    public int getX() {
-        return x;
-    }
-
-    /******************************************************************
-     * Getter to return y coordinate of point.
-     * @return int value of y-coordinate
-     ******************************************************************/
-    public int getY() {
-        return y;
-    }
 
     /******************************************************************
      * Getter to return if game is over or not.
